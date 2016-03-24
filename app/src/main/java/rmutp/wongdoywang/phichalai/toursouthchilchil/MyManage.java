@@ -1,5 +1,6 @@
 package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -41,4 +42,44 @@ public class MyManage {
         readSQLiteDatabase = myOpenHelper.getReadableDatabase();
 
     } //Constructor
+
+    public long addTour(String strProvince,
+                        String strDistrict,
+                        String strName,
+                        String strCategory,
+                        String strDescription,
+                        String strImage,
+                        String strLat,
+                        String strlng,
+                        String strRange) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(column_Province, strProvince);
+        contentValues.put(column_District, strDistrict);
+        contentValues.put(column_Name, strName);
+        contentValues.put(column_Category, strCategory);
+        contentValues.put(column_Description, strDescription);
+        contentValues.put(column_Image, strImage);
+        contentValues.put(column_Lat, strLat);
+        contentValues.put(column_Lng, strlng);
+        contentValues.put(column_Range, strRange);
+
+        return writeSqliteDatabase.insert(tour_table, null, contentValues);
+
+
+
+    }
+
+    public long addUser(String strUser,
+                        String strPassword,
+                        String strName,
+                        String strEmail) {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(column_User, strUser);
+        contentValues.put(column_Password, strPassword);
+        contentValues.put(column_Name, strName);
+        contentValues.put(column_Email, strEmail);
+
+        return writeSqliteDatabase.insert(user_table, null, contentValues);
+    }
 } // M C

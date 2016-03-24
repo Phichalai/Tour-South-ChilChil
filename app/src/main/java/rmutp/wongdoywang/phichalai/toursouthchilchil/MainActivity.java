@@ -19,8 +19,19 @@ public class MainActivity extends AppCompatActivity {
         //request database
         myManage = new MyManage(this);
 
+        //test add value
+        testaddValue();
+
+
+
 
     }//Main Method
+
+    private void testaddValue() {
+        myManage.addUser("user", "pass", "name", "email");
+        myManage.addTour("province", "district", "name", "Cat", "descrip", "image",
+                "lat", "lng", "range");
+    }
 
     public void clickSignUpMain(View view) {
         startActivity(new Intent(MainActivity.this,SignUpActivity.class));
