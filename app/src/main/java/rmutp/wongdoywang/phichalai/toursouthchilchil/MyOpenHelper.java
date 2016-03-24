@@ -23,12 +23,12 @@ public class MyOpenHelper  extends SQLiteOpenHelper{
             "_id integer primary key, " +
             "Province text, " +
             "District text, " +
-            "NAME text, " +
+            "Name text, " +
             "Category text, " +
             "Description text, " +
             "Image text, " +
             "Lat text, " +
-            "lng text, " +
+            "Lng text, " +
             "Range text);";
 
 

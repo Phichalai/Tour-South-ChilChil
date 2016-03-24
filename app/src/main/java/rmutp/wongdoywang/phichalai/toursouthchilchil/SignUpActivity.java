@@ -69,7 +69,7 @@ public class SignUpActivity extends AppCompatActivity {
             nameValuePairs.add(new BasicNameValuePair("isAdd","true"));
             nameValuePairs.add(new BasicNameValuePair("User",userString));
             nameValuePairs.add(new BasicNameValuePair("Password",passwordString));
-            nameValuePairs.add(new BasicNameValuePair("NAME", nameString));
+            nameValuePairs.add(new BasicNameValuePair("Name", nameString));
             nameValuePairs.add(new BasicNameValuePair("Email", emailString));
 
             HttpClient httpClient = new DefaultHttpClient();
