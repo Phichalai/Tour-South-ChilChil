@@ -13,35 +13,34 @@ public class MyManage {
 
     //Explicit
     private MyOpenHelper myOpenHelper;
-    private SQLiteDatabase writeSqliteDatabase, readSQLiteDatabase;
+    private SQLiteDatabase writeSqLiteDatabase, readSqLiteDatabase;
 
     public static final String user_table = "userTABLE";
-    private static final String column_id = "id";
-    private static final String column_User = "User";
-    private static final String column_Password = "Password";
-    private static final String column_Name = "Name";
-    private static final String column_Email = "Email";
-
+    public static final String column_id = "_id";
+    public static final String column_User = "User";
+    public static final String column_Password = "Password";
+    public static final String column_Name = "Name";
+    public static final String column_Email = "Email";
 
     public static final String tour_table = "tourTABLE";
-    private static final String column_Province = "Province";
-    private static final String column_District = "District";
-    private static final String column_Category = "Category";
-    private static final String column_Description = "Description";
-    private static final String column_Image = "Image";
-    private static final String column_Lat = "Lat";
-    private static final String column_Lng = "Lng";
-    private static final String column_Range = "Range";
+    public static final String column_Province = "Province";
+    public static final String column_District = "District";
+    public static final String column_Category = "Category";
+    public static final String column_Description = "Description";
+    public static final String column_Image = "Image";
+    public static final String column_Lat = "Lat";
+    public static final String column_Lng = "Lng";
+    public static final String column_Range = "Range";
 
 
     public MyManage(Context context) {
 
         //Create & Connected
         myOpenHelper = new MyOpenHelper(context);
-        writeSqliteDatabase = myOpenHelper.getWritableDatabase();
-        readSQLiteDatabase = myOpenHelper.getReadableDatabase();
+        writeSqLiteDatabase = myOpenHelper.getWritableDatabase();
+        readSqLiteDatabase = myOpenHelper.getReadableDatabase();
 
-    } //Constructor
+    }   // Constructor
 
     public long addTour(String strProvince,
                         String strDistrict,
@@ -50,8 +49,9 @@ public class MyManage {
                         String strDescription,
                         String strImage,
                         String strLat,
-                        String strlng,
+                        String strLng,
                         String strRange) {
+
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_Province, strProvince);
         contentValues.put(column_District, strDistrict);
@@ -60,13 +60,10 @@ public class MyManage {
         contentValues.put(column_Description, strDescription);
         contentValues.put(column_Image, strImage);
         contentValues.put(column_Lat, strLat);
-        contentValues.put(column_Lng, strlng);
+        contentValues.put(column_Lng, strLng);
         contentValues.put(column_Range, strRange);
 
-        return writeSqliteDatabase.insert(tour_table, null, contentValues);
-
-
-
+        return writeSqLiteDatabase.insert(tour_table, null, contentValues);
     }
 
     public long addUser(String strUser,
@@ -80,6 +77,8 @@ public class MyManage {
         contentValues.put(column_Name, strName);
         contentValues.put(column_Email, strEmail);
 
-        return writeSqliteDatabase.insert(user_table, null, contentValues);
+        return writeSqLiteDatabase.insert(user_table, null, contentValues);
     }
-} // M C
+
+
+}   // Main Class
