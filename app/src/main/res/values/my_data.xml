@@ -27,7 +27,6 @@
         <item>อำเภอเขาพนม</item>
         <item>อำเภอเหนือคลอง</item>
         <item>อำเภอคลองท่อม</item>
-        <item></item>
     </string-array>
 
     <string-array name="district1">
@@ -100,6 +99,27 @@
         <item>test 5</item>
     </string-array>
     <string-array name="district10">
+        <item>test 1</item>
+        <item>test 2</item>
+        <item>test 3</item>
+        <item>test 4</item>
+        <item>test 5</item>
+    </string-array>
+    <string-array name="district11">
+        <item>test 1</item>
+        <item>test 2</item>
+        <item>test 3</item>
+        <item>test 4</item>
+        <item>test 5</item>
+    </string-array>
+    <string-array name="district12">
+        <item>test 1</item>
+        <item>test 2</item>
+        <item>test 3</item>
+        <item>test 4</item>
+        <item>test 5</item>
+    </string-array>
+    <string-array name="district13">
         <item>test 1</item>
         <item>test 2</item>
         <item>test 3</item>
