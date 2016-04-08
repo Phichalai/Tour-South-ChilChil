@@ -34,5 +34,6 @@
         android:id="@+id/button4"
         android:layout_alignParentLeft="false"
         android:layout_alignParentTop="false"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:onClick="clickBackDistrict" />
 </RelativeLayout>
