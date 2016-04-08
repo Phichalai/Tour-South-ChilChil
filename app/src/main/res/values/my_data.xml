@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="province">
+
+        <item>กระบี่</item>
+        <item>ชุมพร</item>
+        <item>ตรัง</item>
+        <item>นครศรีธรรมราช</item>
+        <item>นาราธิวาส</item>
+        <item>ปัตตานี</item>
+        <item>พังงา</item>
+        <item>พัทลุง</item>
+        <item>ภูเก็ต</item>
+        <item>ยะลา</item>
+        <item>ระนอง</item>
+        <item>สงขลา</item>
+        <item>สตูล</item>
+        <item>สุราษฎร์ธานี</item>
+
+    </string-array>
+
+</resources>
