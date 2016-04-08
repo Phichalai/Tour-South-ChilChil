@@ -1,12 +1,15 @@
 package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -15,7 +18,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -23,19 +25,20 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
-
     //Explicit
     private MyManage myManage;
-
+    private EditText userEditText, passwordEditText;
+    private  String userString, passwordString;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
+        //Bind Widget
+        userEditText = (EditText) findViewById(R.id.editText);
+        passwordEditText = (EditText) findViewById(R.id.editText2);
 
 //Request Database
         myManage = new MyManage(this);
@@ -58,6 +61,59 @@ public class MainActivity extends AppCompatActivity {
     }
 // Main Method
 
+
+    public void clickSignInMain(View view) {
+
+        userString = userEditText.getText().toString().trim();
+        passwordString = passwordEditText.getText().toString().trim();
+
+        //Ceck Space
+        if (userString.equals("") || passwordString.equals("")) {
+            //Have Space
+            MyAlertDialog myAlertDialog = new MyAlertDialog();
+            myAlertDialog.myDialog(this,"มีช่องว่าง", "กรุณากรอกทุกช่อง ค่ะ ");
+        } else {
+            //No space
+            checkUser();
+        }
+
+    }// clickSingin
+
+    private void checkUser() {
+
+        try {
+
+            SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                    MODE_PRIVATE, null);
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABLE WHERE User = " + "'"+userString + "'", null);
+            cursor.moveToFirst();
+            String[] resultStrings = new String[cursor.getColumnCount()];
+            for (int i = 0; i < cursor.getColumnCount(); i++) {
+                resultStrings[i] = cursor.getString(i);
+            }//for
+            cursor.close();
+
+            //Check Password
+            if (passwordString.equals(resultStrings[2])) {
+                Toast.makeText(this,"ยินดีต้อนรับ" + resultStrings[3],
+                        Toast.LENGTH_SHORT).show();
+
+            } else {
+
+                MyAlertDialog myAlertDialog = new MyAlertDialog();
+                myAlertDialog.myDialog(this,"Password False",
+                        "กรุณาพิมพ์ใหม่ คุณพิมพ์ Password ผิด");
+
+            }
+
+        } catch (Exception e) {
+            MyAlertDialog myAlertDialog = new MyAlertDialog();
+            myAlertDialog.myDialog(this,"ไม่มี User นี้" ,
+                    "ไม่มี" + userString + "ในฐานข้อมูลของเรา");
+        }
+
+    }//checkuser
+
     private void synJSONtoSQLite()
     {
 
@@ -76,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
             InputStream inputStream = null;
 
-            String[] urlStrings = {"http://swiftcodingthai.com/saa/php_get_user_master.php",
+            String[] urlStrings = {"http://swiftcodingthai.com/saa/php_get_user_phichalai.php",
 
                     "http://swiftcodingthai.com/saa/php_get_tour_master.php"};
 
