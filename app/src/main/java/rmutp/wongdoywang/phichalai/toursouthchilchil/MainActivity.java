@@ -1,5 +1,6 @@
 package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
 //Syn JSON to SQLIte
         synJSONtoSQLite();
+
 
 
     }
@@ -298,6 +301,11 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(MainActivity.this, SignUpActivity.class));
     }
+
+
+
+
+
 
 
 }   // Main Class

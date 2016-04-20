@@ -2,6 +2,9 @@ package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -21,6 +24,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ImageView imageView;
     private RatingBar ratingBar;
     private String strTour, strProcivce;
+    private float score;
 
 
     @Override
@@ -64,6 +68,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         imageView = (ImageView) findViewById(R.id.imageView3);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
+        //button
+        Button button7 = (Button) findViewById(R.id.button7);
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                score = ratingBar.getRating();
+                Log.d("sfasfsaf", String.valueOf(score));
+            }
+        });
+
+
+
+
+
+
+        //
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener(){
+
+    public void onRatingChanged(RatingBar ratingBar, float rating,
+                                boolean fromUser) {
+        score = rating;
+        Log.d("sfasfsaf", String.valueOf(score));
+            }
+        });
     }//bindWidget
 
     @Override
