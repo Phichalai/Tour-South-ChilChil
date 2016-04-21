@@ -3,20 +3,41 @@ package rmutp.wongdoywang.phichalai.toursouthchilchil;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 public class ProvinceActivity extends AppCompatActivity {
 
     //Explicit
     private ListView listView;
+    private EditText txtSearch;
+    private String tempTxt;
+    private Button search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_province);
-    //create ListView
+
+       txtSearch = (EditText) findViewById(R.id.editText2);
+        search = (Button) findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tempTxt = txtSearch.getText().toString();
+                Log.d("textsearch",tempTxt);
+            }
+        });
+
+
+
+
+
+        //create ListView
         final String[] provinceStrings = getResources().getStringArray(R.array.province);
         MyAdpter myAdpter = new MyAdpter(this, provinceStrings);
         listView = (ListView) findViewById(R.id.listView);

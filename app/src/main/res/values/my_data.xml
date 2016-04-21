@@ -94,11 +94,10 @@
         <item>10 สถานที่ท่องเที่ยวพัทลุง</item>
     </string-array>
     <string-array name="district8">
-        <item>test 1</item>
-        <item>test 2</item>
-        <item>test 3</item>
-        <item>test 4</item>
-        <item>test 5</item>
+        <item>อำเภอเมือง</item>
+        <item>อำเภอกระทู้</item>
+        <item>อำเภอถลาง</item>
+        <item>10 สถานที่ท่องเที่ยวภูเก็ต</item>
     </string-array>
     <string-array name="district9">
         <item>อำเภอเมือง</item>
@@ -111,7 +110,6 @@
         <item>อำเภอเมือง</item>
         <item>อำเภอบันนังสตา</item>
         <item>อำเภอรามัน</item>
-        <item>test 5</item>
     </string-array>
     <string-array name="district11">
         <item>อำเภอเมือง</item>
