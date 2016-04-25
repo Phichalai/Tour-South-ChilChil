@@ -62,7 +62,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-// Main Method
+
+    // Main Method
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        deleteAllData();
+        synJSONtoSQLite();
+    }
 
 
     public void clickSignInMain(View view) {

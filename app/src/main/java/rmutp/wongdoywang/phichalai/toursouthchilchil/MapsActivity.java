@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -75,6 +76,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View view) {
                 score = ratingBar.getRating();
                 Log.d("sfasfsaf", String.valueOf(score));
+                Toast.makeText(MapsActivity.this, "ขอบคุณที่ให้คะแนนค่ะ",
+                        Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
 

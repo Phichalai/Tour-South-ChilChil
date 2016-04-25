@@ -66,12 +66,12 @@
         android:layout_weight="1"
         android:onClick="clickSignInMain"
         android:textColor="#ffffff"
-        android:background="#00bb8f"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_shape" />
 
     <Button
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
         android:id="@+id/button2"
         android:layout_weight="1"
         android:onClick="clickSignUpMain"
-        android:background="#007bff"
+        android:background="@drawable/button_shape1"
         android:textColor="#ffffff"
         android:layout_below="@+id/button"
         android:layout_alignParentLeft="true"
