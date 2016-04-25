@@ -78,11 +78,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-
-
-
-
-
         //
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener(){
 

@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.SignUpActivity"
-    android:background="@drawable/bg600">
+    android:background="@drawable/wall1">
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,7 +26,12 @@
         android:text="sing up"
         android:id="@+id/button3"
         android:layout_alignParentBottom="true"
-        android:onClick="clickSignUpSign" />
+        android:onClick="clickSignUpSign"
+        android:background="#007bff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffff" />
+
 
     <LinearLayout
         android:orientation="vertical"

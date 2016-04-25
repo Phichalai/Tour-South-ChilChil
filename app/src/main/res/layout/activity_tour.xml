@@ -3,41 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wall1"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.TourActivity"
-    android:background="@drawable/bg600">
+    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.TourActivity">
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView8"
-        android:textSize="30sp"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/text" />
+        android:text="New Text"
+        android:textColor="@color/text"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-    <Button
+    <LinearLayout
+        android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:layout_below="@id/textView8"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="ค้นหาสถานที่"
+            android:imeOptions="actionDone"
+            android:textColorHint="@color/text" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="ค้นหา"
+            android:background="#168eff"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <Button
         android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
         android:layout_alignParentRight="false"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentBottom="true"
-        android:onClick="clickBackTour" />
+        android:onClick="clickBackTour"
+        android:text="Back"
+        android:background="#00bb8f"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
     <ListView
+        android:id="@+id/listView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView3"
+        android:layout_above="@+id/button5"
+        android:layout_alignParentBottom="false"
         android:layout_alignParentLeft="false"
         android:layout_alignParentTop="false"
-        android:layout_alignParentBottom="false"
-        android:layout_above="@+id/button5"
-        android:layout_below="@+id/textView8" />
+        android:layout_below="@+id/linear1" />
 </RelativeLayout>

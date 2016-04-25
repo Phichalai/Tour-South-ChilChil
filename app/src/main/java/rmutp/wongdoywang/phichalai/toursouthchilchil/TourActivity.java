@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -17,6 +19,9 @@ public class TourActivity extends AppCompatActivity {
     private String districtString;
     private TextView districtTextView;
     private ListView listView;
+    private EditText txtSearch;
+    private String tempTxt;
+    private Button search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +98,37 @@ public class TourActivity extends AppCompatActivity {
             }//onItem
         });
 
+        txtSearch = (EditText) findViewById(R.id.editText2);
+        search = (Button) findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tempTxt = txtSearch.getText().toString();
+                Log.d("textsearch", tempTxt);
 
+                for (int i = 0; i < tourStrings.length; i++) {
+                    if (tempTxt.equals(tourStrings[i])) {
+                        Log.d("textsearch", "yesssss");
+                        Intent intent = new Intent(TourActivity.this, MapsActivity.class);
+
+                        intent.putExtra("Tour", tourStrings[i]);
+                        intent.putExtra("District", districtStrings[i]);
+                        intent.putExtra("Province", provinceStrings[i]);
+                        intent.putExtra("Image", imageStrings[i]);
+                        intent.putExtra("Description", descriptionStrings[i]);
+                        intent.putExtra("Lat", latStrings[i]);
+                        intent.putExtra("Lng", lngStrings[i]);
+                        intent.putExtra("Range", rangStrings[i]);
+
+                        startActivity(intent);
+                        break;
+                    } else {
+                        Log.d("textsearch", "noooo");
+                    }
+                }
+
+            }
+        });
     }   // showListTour
 
     public void clickBackTour(View view) {

@@ -14,28 +14,11 @@ public class ProvinceActivity extends AppCompatActivity {
 
     //Explicit
     private ListView listView;
-    private EditText txtSearch;
-    private String tempTxt;
-    private Button search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_province);
-
-       txtSearch = (EditText) findViewById(R.id.editText2);
-        search = (Button) findViewById(R.id.search);
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tempTxt = txtSearch.getText().toString();
-                Log.d("textsearch",tempTxt);
-            }
-        });
-
-
-
-
 
         //create ListView
         final String[] provinceStrings = getResources().getStringArray(R.array.province);
