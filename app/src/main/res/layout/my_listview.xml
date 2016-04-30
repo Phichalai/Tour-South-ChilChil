@@ -18,5 +18,12 @@
         android:layout_gravity="center_vertical"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/text" />
+        android:textColor="#FFFFFF"
+
+        android:shadowColor="#333333"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        />
+
 </LinearLayout>
