@@ -21,58 +21,61 @@
     </string-array>
 
     <string-array name="district0">
-        <item>อำเภอเมืองกระบี่</item>
         <item>อำเภอเกาะพีพี</item>
         <item>อำเภอเกาะลันตา</item>
         <item>อำเภอเขาพนม</item>
-        <item>อำเภอเหนือคลอง</item>
         <item>อำเภอคลองท่อม</item>
+        <item>อำเภอเมืองกระบี่</item>
+        <item>อำเภอเหนือคลอง</item>
+        <item>อำเภอเหนือคลอง</item>
+        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
 
     <string-array name="district1">
-        <item>อำเภอเมืองชุมพร</item>
+        <item>อำเภอกระแสสินธุ์</item>
         <item>อำเภอท่าแซะ</item>
         <item>อำเภอประทิว</item>
-        <item>อำเภอกระแสสินธุ์</item>
         <item>อำเภอพะโต๊ะ</item>
+        <item>อำเภอเมืองชุมพร</item>
         <item>อำเภอละแม</item>
         <item>อำเภอสวี</item>
         <item>อำเภอหลังสวน</item>
+        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district2">
-        <item>อำเภอเมืองตรัง</item>
         <item>อำเภอกันตัง</item>
         <item>อำเภอนาโยง</item>
         <item>อำเภอปะเหลียน</item>
+        <item>อำเภอเมืองตรัง</item>
         <item>อำเภอสิเกา</item>
         <item>อำเภอห้วยยอด</item>
     </string-array>
 
     <string-array name="district3">
 
-        <item>อำเภอเมืองนครศรีธรรมราช</item>
         <item>อำเภอขนอม</item>
         <item>อำเภอช้างกลาง</item>
         <item>อำเภอท่าศาลา</item>
         <item>อำเภอทุ่งสง</item>
-        <item>อำเภอนบพิตำ</item>
         <item>อำเภอนาบอน</item>
+        <item>อำเภอนบพิตำ</item>
         <item>อำเภอปากพนัง</item>
         <item>อำเภอพรหมคีรี</item>
+        <item>อำเภอเมืองนครศรีธรรมราช</item>
         <item>อำเภอสิชล</item>
         <item>16 สถานที่เที่ยวนครศรีธรรมราช</item>
     </string-array>
     <string-array name="district4">
-        <item>อำเภอเมืองนราธิวาส</item>
         <item>อำเภอตากใบ</item>
+        <item>อำเภอเมืองนราธิวาส</item>
         <item>อำเภอระแงะ</item>
-        <item>อำเภอสุไหงปาดี</item>
         <item>อำเภอสุไหวโกลก</item>
+        <item>อำเภอสุไหงปาดี</item>
     </string-array>
     <string-array name="district5">
-        <item>อำเภอเมืองปัตตานี</item>
         <item>อำเภอโคกโพธิ์</item>
         <item>อำเภอปะนาเระ</item>
+        <item>อำเภอเมืองปัตตานี</item>
         <item>อำเภอยะหริ่ง</item>
         <item>อำเภอสายบุรี</item>
         <item>อำเภอหนองจิก</item>
@@ -80,72 +83,66 @@
     </string-array>
     <string-array name="district6">
         <item>อำเภอเกาะยาว</item>
-        <item>อำเภอเมืองพังงา</item>
         <item>อำเภอคุระบุรี</item>
         <item>อำเภอตะกั่วทุ่ง</item>
         <item>อำเภอตะกั่วป่า</item>
         <item>อำเภอท้ายเหมือง</item>
+        <item>อำเภอเมืองพังงา</item>
         <item>10 สถานที่ท่องเที่ยวจังหวัดพังงา</item>
     </string-array>
     <string-array name="district7">
         <item>อำเภอเขาชัยสน</item>
         <item>อำเภอเมืองพัทลุง</item>
-        <item>อำเภอเขาชัยสน</item>
         <item>10 สถานที่ท่องเที่ยวพัทลุง</item>
     </string-array>
     <string-array name="district8">
-        <item>อำเภอเมือง</item>
         <item>อำเภอกระทู้</item>
         <item>อำเภอถลาง</item>
+        <item>อำเภอเมือง</item>
         <item>10 สถานที่ท่องเที่ยวภูเก็ต</item>
     </string-array>
     <string-array name="district9">
-        <item>อำเภอเมือง</item>
-        <item>อำเภอกระทู้</item>
-        <item>อำเภอถลาง</item>
-        <item>10 สถานที่ท่องเที่ยวภูเก็ต</item>
-    </string-array>
-    <string-array name="district10">
         <item>อำเภอเบตง</item>
-        <item>อำเภอเมือง</item>
         <item>อำเภอบันนังสตา</item>
+        <item>อำเภอเมือง</item>
         <item>อำเภอรามัน</item>
     </string-array>
-    <string-array name="district11">
-        <item>อำเภอเมือง</item>
+    <string-array name="district10">
         <item>อำเภอกระบุรี</item>
         <item>อำเภอกะเปอร์</item>
         <item>อำเภอละอุ่น</item>
+        <item>อำเภอเมือง</item>
         <item>15 สถานที่ท่องเที่ยวระนอง </item>
     </string-array>
-    <string-array name="district12">
+    <string-array name="district11">
         <item>อำเภอเทพา</item>
-        <item>อำเภอเมืองสงขลา</item>
         <item>อำเภอนาทวี</item>
+        <item>อำเภอเมืองสงขลา</item>
         <item>อำเภอสทิงพระ</item>
         <item>อำเภอหาดใหญ่</item>
         <item>10 สถานที่ท่องเที่ยวสงขลา</item>
     </string-array>
-    <string-array name="district13">
-        <item>อำเภอเมืองสตูล</item>
-        <item>อำเภอควนโดน</item>
+    <string-array name="district12">
         <item>อำเภอควนกาหลง</item>
+        <item>อำเภอควนโดน</item>
         <item>อำเภอทุ่งหว้า</item>
         <item>อำเภอมะนัง</item>
+        <item>อำเภอเมืองสตูล</item>
         <item>อำเภอละงู</item>
         <item>อำเภออุทยานแห่งชาติตะรุเตา</item>
         <item>10 สถานที่ท่องเที่ยวสตูล</item>
     </string-array>
-    <string-array name="district14">
+    <string-array name="district13">
+        <item>อำเภอกาญจนดิษฐ์</item>
         <item>อำเภอเกาะพะงัน</item>
         <item>อำเภอเกาะสมุย</item>
-        <item>อำเภอเมืองสุราษฏร์ธานี</item>
-        <item>อำเภอไชยา</item>
-        <item>อำเภอกาญจนดิษฐ์</item>
         <item>อำเภอคิรีรัฐนิยม</item>
+        <item>อำเภอไชยา</item>
         <item>อำเภอดอนสัก</item>
-        <item>อำเภอบ้านตาขุน</item>
         <item>อำเภอพุนพิน</item>
+        <item>อำเภอบ้านตาขุน</item>
+        <item>อำเภอเมืองสุราษฏร์ธานี</item>
         <item>17 สถานที่ท่องเที่ยวสุราษฎร์ธานี</item>
     </string-array>
+
 </resources>

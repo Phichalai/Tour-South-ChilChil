@@ -22,7 +22,12 @@
                 android:layout_gravity="center_horizontal"
                 android:text="New Text"
                 android:textColor="@color/text"
-                android:textSize="@dimen/h1" />
+                android:textSize="@dimen/h1"
+                android:shadowColor="#333333"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                />
 
             <TextView
                 android:id="@+id/textView10"
@@ -31,7 +36,11 @@
                 android:layout_gravity="center_horizontal"
                 android:text="New Text"
                 android:textColor="@color/text"
-                android:textSize="@dimen/h2" />
+                android:textSize="@dimen/h2"
+                android:shadowColor="#333333"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"/>
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -47,7 +56,12 @@
                 android:text="Description:"
                 android:textColor="@color/text"
                 android:textSize="@dimen/h2"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+
+                android:shadowColor="#333333"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"/>
 
 
             <TextView
@@ -56,9 +70,15 @@
                 android:layout_height="wrap_content"
                 android:text="New Text"
                 android:padding="20dp"
-                android:textColor="@color/text"
+                android:textColor="#FFFFFF"
                 android:textSize="@dimen/h2"
-                android:background="#82ffffff" />
+                android:background="#82ffffff"
+
+                android:shadowColor="#333333"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                />
 
 
             <fragment
