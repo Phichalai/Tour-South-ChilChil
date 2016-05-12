@@ -72,7 +72,7 @@
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/h2"
-                android:background="#82ffffff"
+                android:background="#82171717"
 
                 android:shadowColor="#333333"
                 android:shadowDx="3"
