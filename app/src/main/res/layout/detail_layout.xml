@@ -13,11 +13,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:background="@drawable/beerza">
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="New Text"
@@ -27,32 +29,35 @@
                 android:shadowDx="3"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                />
+                android:paddingLeft="120dp"
+                android:background="#1900ff" />
 
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:text="New Text"
                 android:textColor="@color/text"
                 android:textSize="@dimen/h2"
                 android:shadowColor="#333333"
                 android:shadowDx="3"
                 android:shadowDy="2"
-                android:shadowRadius="1"/>
+                android:shadowRadius="1"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="120dp"
+                android:background="#ff0000" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp" />
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:text="Description:"
                 android:textColor="@color/text"
                 android:textSize="@dimen/h2"
@@ -61,24 +66,26 @@
                 android:shadowColor="#333333"
                 android:shadowDx="3"
                 android:shadowDy="2"
-                android:shadowRadius="1"/>
+                android:shadowRadius="1"
+                android:background="#3700ff"
+                android:layout_marginTop="20dp" />
 
 
             <TextView
                 android:id="@+id/textView12"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="New Text"
                 android:padding="20dp"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/h2"
-                android:background="#82171717"
+                android:background="#0099da"
 
                 android:shadowColor="#333333"
                 android:shadowDx="3"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                />
+                android:layout_weight="7.21" />
 
 
             <fragment
@@ -89,9 +96,9 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_margin="20dp"
 
-                tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.MapsActivity" />
+                tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.MapsActivity"
+                android:layout_marginTop="20dp" />
 
 
             />
