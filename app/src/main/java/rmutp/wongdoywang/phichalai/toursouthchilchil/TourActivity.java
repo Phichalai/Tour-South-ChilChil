@@ -76,7 +76,7 @@ public class TourActivity extends AppCompatActivity {
 
         Log.d("8April", "tourString Lang ==>> " + cursor.getCount());
 
-        MyAdpter myAdapter = new MyAdpter(this, tourStrings);
+        MyAdpter2 myAdapter = new MyAdpter2(this, tourStrings,imageStrings);
         listView.setAdapter(myAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
