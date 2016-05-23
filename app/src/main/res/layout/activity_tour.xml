@@ -9,12 +9,11 @@
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="55dp"
         android:layout_centerHorizontal="true"
-        android:background="#ff0000"
+        android:background="#9d00ff"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:layout_marginBottom="520dp" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView8"
@@ -38,7 +37,7 @@
         android:hint="ค้นหาสถานที่"
         android:imeOptions="actionDone"
         android:textColorHint="@color/text"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="65dp"
         android:layout_marginLeft="20dp" />
 
     <Button
@@ -50,7 +49,7 @@
         android:background="#168eff"
         android:textColor="#ffffff"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="65dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"

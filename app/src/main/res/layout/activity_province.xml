@@ -20,7 +20,7 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:paddingLeft="30dp"
-        android:background="#0000ff" />
+        android:background="#059de4" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
