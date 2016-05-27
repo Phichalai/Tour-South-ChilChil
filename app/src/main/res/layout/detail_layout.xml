@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:weightSum="1"
-            android:background="@drawable/beerza">
+            android:background="#ffffff">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -75,7 +75,7 @@
             <RatingBar
                 android:id="@+id/ratingBar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_gravity="center_horizontal" />
 
             <LinearLayout
@@ -85,14 +85,43 @@
 
                 <Button
                     android:id="@+id/button7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="Range"
                     android:background="@drawable/button_shape"
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ร้านอาหาร"
+                    android:id="@+id/button4"
+                    android:textSize="20dp"
+                    android:background="@drawable/button_shape3"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ที่พัก"
+                    android:id="@+id/button5"
+                    android:textSize="20dp"
+                    android:background="@drawable/button_shape2"
+                    android:textColor="#ffffff" />
             </LinearLayout>
 
         </LinearLayout>
@@ -144,6 +173,7 @@
             android:shadowRadius="1"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp" />
+
     </LinearLayout>
 
 </RelativeLayout>

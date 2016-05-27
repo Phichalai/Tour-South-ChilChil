@@ -39,6 +39,9 @@ public class TourActivity extends AppCompatActivity {
         //Show List Tour
         showListTour();
 
+        //show Province
+        TextView tourTextView = (TextView) findViewById(R.id.textView8);
+        tourTextView.setText("สถานที่ท่องเที่ยว");
 
     }   // Main Method
 
