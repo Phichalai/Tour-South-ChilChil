@@ -59,7 +59,11 @@ public class TourActivity extends AppCompatActivity {
         final String[] imageStrings = new String[cursor.getCount()];
         final String[] latStrings = new String[cursor.getCount()];
         final String[] lngStrings = new String[cursor.getCount()];
-        final String[] rangStrings = new String[cursor.getCount()];
+        final String[] pointStrings = new String[cursor.getCount()];
+
+
+        final String[] resStrings = new String[cursor.getCount()];
+        final String[] hotelStrings = new String[cursor.getCount()];
 
 
         for (int i = 0; i < cursor.getCount(); i++) {
@@ -71,7 +75,12 @@ public class TourActivity extends AppCompatActivity {
             imageStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Image));
             latStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lat));
             lngStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lng));
-            rangStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Range));
+            pointStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_point));
+
+            Log.d("sgsgdsg", "no2421421421424ooo");
+            resStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_res));
+            hotelStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotel));
+
 
             cursor.moveToNext();
         }   //for
@@ -95,7 +104,10 @@ public class TourActivity extends AppCompatActivity {
                 intent.putExtra("Description", descriptionStrings[i]);
                 intent.putExtra("Lat", latStrings[i]);
                 intent.putExtra("Lng", lngStrings[i]);
-                intent.putExtra("Range", rangStrings[i]);
+                intent.putExtra("point", pointStrings[i]);
+
+                intent.putExtra("res", resStrings[i]);
+                intent.putExtra("hotel", hotelStrings[i]);
 
                 startActivity(intent);
             }//onItem
@@ -121,7 +133,12 @@ public class TourActivity extends AppCompatActivity {
                         intent.putExtra("Description", descriptionStrings[i]);
                         intent.putExtra("Lat", latStrings[i]);
                         intent.putExtra("Lng", lngStrings[i]);
-                        intent.putExtra("Range", rangStrings[i]);
+                        intent.putExtra("point", pointStrings[i]);
+
+
+                        intent.putExtra("res", resStrings[i]);
+                        intent.putExtra("hotel", hotelStrings[i]);
+
 
                         startActivity(intent);
                         break;

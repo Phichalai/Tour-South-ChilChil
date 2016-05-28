@@ -29,7 +29,10 @@ public class MyOpenHelper  extends SQLiteOpenHelper{
             "Image text, " +
             "Lat text, " +
             "Lng text, " +
-            "Range text);";
+            "point text, " +
+
+            "res text, " +
+            "hotel text);";
 
 
     public MyOpenHelper(Context context) {

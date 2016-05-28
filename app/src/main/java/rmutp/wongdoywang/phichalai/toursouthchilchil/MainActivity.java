@@ -20,6 +20,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     //Explicit
     private MyManage myManage;
     private EditText userEditText, passwordEditText;
-    private  String userString, passwordString;
+    private String userString, passwordString;
 
 
     @Override
@@ -60,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         synJSONtoSQLite();
 
 
-
     }
 
     // Main Method
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         if (userString.equals("") || passwordString.equals("")) {
             //Have Space
             MyAlertDialog myAlertDialog = new MyAlertDialog();
-            myAlertDialog.myDialog(this,"มีช่องว่าง", "กรุณากรอกทุกช่อง ค่ะ ");
+            myAlertDialog.myDialog(this, "มีช่องว่าง", "กรุณากรอกทุกช่อง ค่ะ ");
         } else {
             //No space
             checkUser();
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
             SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                     MODE_PRIVATE, null);
-            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABLE WHERE User = " + "'"+userString + "'", null);
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABLE WHERE User = " + "'" + userString + "'", null);
             cursor.moveToFirst();
             String[] resultStrings = new String[cursor.getColumnCount()];
             for (int i = 0; i < cursor.getColumnCount(); i++) {
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Check Password
             if (passwordString.equals(resultStrings[2])) {
-                Toast.makeText(this,"ยินดีต้อนรับ" + resultStrings[3],
+                Toast.makeText(this, "ยินดีต้อนรับ" + resultStrings[3],
                         Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(MainActivity.this, ProvinceActivity.class));
@@ -113,21 +113,20 @@ public class MainActivity extends AppCompatActivity {
             } else {
 
                 MyAlertDialog myAlertDialog = new MyAlertDialog();
-                myAlertDialog.myDialog(this,"Password False",
+                myAlertDialog.myDialog(this, "Password False",
                         "กรุณาพิมพ์ใหม่ คุณพิมพ์ Password ผิด");
 
             }
 
         } catch (Exception e) {
             MyAlertDialog myAlertDialog = new MyAlertDialog();
-            myAlertDialog.myDialog(this,"ไม่มี User นี้" ,
+            myAlertDialog.myDialog(this, "ไม่มี User นี้",
                     "ไม่มี" + userString + "ในฐานข้อมูลของเรา");
         }
 
     }//checkuser
 
-    private void synJSONtoSQLite()
-    {
+    private void synJSONtoSQLite() {
 
         StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
                 .
@@ -148,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
 
                     "http://swiftcodingthai.com/saa/php_get_tour_master.php"};
 
-
             try {
 
 
@@ -162,8 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
                 inputStream = httpEntity.getContent();
 
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
 
                 Log.d("test", "Input => " + e.toString());
             }
@@ -191,8 +188,7 @@ public class MainActivity extends AppCompatActivity {
                 strJSON = stringBuilder.toString();
 
 
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
 
                 Log.d("test", "JSON => " + e.toString());
             }
@@ -210,6 +206,8 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
 
+
+                    Log.d("sgsgdsg", String.valueOf(intTimes));
 
                     switch (intTimes) {
 
@@ -235,6 +233,8 @@ public class MainActivity extends AppCompatActivity {
 
                             //for tourTABLE
 
+
+
                             String strPrivince = jsonObject.getString(MyManage.column_Province);
 
                             String strDistrict = jsonObject.getString(MyManage.column_District);
@@ -251,12 +251,15 @@ public class MainActivity extends AppCompatActivity {
 
                             String strLng = jsonObject.getString(MyManage.column_Lng);
 
-                            String strRange = jsonObject.getString(MyManage.column_Range);
+                            String strpoint = jsonObject.getString(MyManage.column_point);
 
+
+                            String res = jsonObject.getString(MyManage.column_res);
+                            String hotel = jsonObject.getString(MyManage.column_hotel);
 
                             myManage.addTour(strPrivince, strDistrict, strName1, strCategory, strDescription,
 
-                                    strImage, strLat, strLng, strRange);
+                                    strImage, strLat, strLng, strpoint, res, hotel);
 
 
                             break;
@@ -266,8 +269,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 //for
 
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
 
                 Log.d("test", "Update => " + e.toString());
 
@@ -301,18 +303,13 @@ public class MainActivity extends AppCompatActivity {
 
         myManage.addTour("province", "district", "name", "Cat", "descrip", "image",
 
-                "lat", "lng", "range");
+                "lat", "lng", "point", "res", "hotel");
     }
 
     public void clickSignUpMain(View view) {
 
         startActivity(new Intent(MainActivity.this, SignUpActivity.class));
     }
-
-
-
-
-
 
 
 }   // Main Class

@@ -30,8 +30,10 @@ public class MyManage {
     public static final String column_Image = "Image";
     public static final String column_Lat = "Lat";
     public static final String column_Lng = "Lng";
-    public static final String column_Range = "Range";
+    public static final String column_point = "point";
 
+    public static final String column_res = "res";
+    public static final String column_hotel = "hotel";
 
     public MyManage(Context context) {
 
@@ -50,7 +52,9 @@ public class MyManage {
                         String strImage,
                         String strLat,
                         String strLng,
-                        String strRange) {
+                        String strpoint,
+                        String strres,
+                        String strhotel) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_Province, strProvince);
@@ -61,7 +65,11 @@ public class MyManage {
         contentValues.put(column_Image, strImage);
         contentValues.put(column_Lat, strLat);
         contentValues.put(column_Lng, strLng);
-        contentValues.put(column_Range, strRange);
+        contentValues.put(column_point, strpoint);
+
+
+        contentValues.put(column_res, strres);
+        contentValues.put(column_hotel, strhotel);
 
         return writeSqLiteDatabase.insert(tour_table, null, contentValues);
     }
