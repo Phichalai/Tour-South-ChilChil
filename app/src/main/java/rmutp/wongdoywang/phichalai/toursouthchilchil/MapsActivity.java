@@ -73,7 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         descripTextView.setText(strDescrip);
 
         String strImge = getIntent().getStringExtra("Image");
-        Picasso.with(this).load(strImge).resize(480,300).into(imageView);
+        Picasso.with(this).load(strImge).resize(480,200).into(imageView);
     }//showView
 
     private void bindWidget() {

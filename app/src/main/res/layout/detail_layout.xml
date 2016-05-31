@@ -19,10 +19,10 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="200dp"
                 android:id="@+id/imageView3"
-                android:layout_marginTop="90dp"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="90dp" />
 
             <TextView
                 android:id="@+id/textView11"
