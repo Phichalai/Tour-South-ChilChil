@@ -9,26 +9,38 @@ import android.widget.RatingBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-/**
- * Created by Phichalai on 2/6/2559.
- */
+import com.squareup.picasso.Picasso;
+
+
 public class WinterdisActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_winterdis);
+        setContentView(R.layout.activity_seasondis);
 
-        ScrollView ScrollView6 = (ScrollView) findViewById(R.id.scrollView6);
-        ImageView ImageView9 = (ImageView) findViewById(R.id.imageView9);
-        TextView TextView37 = (TextView) findViewById(R.id.textView37);
-        TextView TextView38 = (TextView) findViewById(R.id.textView38);
-        TextView TextView39 = (TextView) findViewById(R.id.textView39);
-        TextView TextView40 = (TextView) findViewById(R.id.textView40);
-        TextView TextView45 = (TextView) findViewById(R.id.textView45);
-        TextView TextView46 = (TextView) findViewById(R.id.textView46);
-        TextView TextView47 = (TextView) findViewById(R.id.textView47);
-        TextView TextView48 = (TextView) findViewById(R.id.textView48);
+        TextView namenametourtour = (TextView) findViewById(R.id.nametour);
+        namenametourtour.setText(getIntent().getStringExtra("season1"));
 
+        TextView newtext = (TextView) findViewById(R.id.newtext);
+        newtext.setText(getIntent().getStringExtra("season2"));
+
+        ImageView ImageView = (ImageView) findViewById(R.id.imageView8);
+        Picasso.with(this).load(getIntent().getStringExtra("season3")).resize(480, 200).into(ImageView);
+
+        TextView Description = (TextView) findViewById(R.id.Description);
+        Description.setText(getIntent().getStringExtra("season4"));
+
+        TextView open = (TextView) findViewById(R.id.open);
+        open.setText(getIntent().getStringExtra("season5"));
+
+        TextView emaill = (TextView) findViewById(R.id.emaill);
+        emaill.setText(getIntent().getStringExtra("season6"));
+
+        TextView price = (TextView) findViewById(R.id.price);
+        price.setText(getIntent().getStringExtra("season7"));
+
+        TextView traval = (TextView) findViewById(R.id.traval);
+        traval.setText(getIntent().getStringExtra("season8"));
 
     }
 }

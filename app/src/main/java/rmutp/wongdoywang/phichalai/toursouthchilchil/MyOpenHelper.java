@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MyOpenHelper extends SQLiteOpenHelper {
 
     public static final String database_name = "tour.db";
-    private static final int datebase_version = 1;
+    private static final int datebase_version = 4;
 
     private static final String create_user_table = "create table userTABLE (" +
             "_id integer primary key, " +
@@ -80,7 +80,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "_id integer primary key, " +
             "seasonname, " +
             "seasontour, " +
-            "seasonimage, " +
+            "seasonImage, " +
             "seasondescription, " +
             "seasonopen, " +
             "seasonemail, " +

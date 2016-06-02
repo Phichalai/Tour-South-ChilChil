@@ -28,6 +28,29 @@
         <activity android:name=".ProvinceActivity" />
         <activity android:name=".DistrictActivity" />
         <activity android:name=".TourActivity" />
+        <activity android:name=".CounselActivity" />
+        <activity android:name=".HotelActivity" />
+        <activity android:name=".InterdisActivity" />
+        <activity android:name=".InteresActivity" />
+        <activity android:name=".ManuActivity" />
+        <activity android:name=".ReportActivity" />
+        <activity android:name=".ReporttitelActivity" />
+        <activity android:name=".RestaurantActivity" />
+        <activity android:name=".SeasonActivity" />
+        <activity android:name=".SeasonsummerActivity" />
+        <activity android:name=".SeasonwinterActivity" />
+        <activity android:name=".WinterdisActivity" />
+        <activity android:name=".SummerdisActivity" />
+
+
+
+
+
+
+
+
+
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

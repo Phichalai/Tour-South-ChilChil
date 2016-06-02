@@ -83,16 +83,29 @@ public class MainActivity extends AppCompatActivity {
                     MODE_PRIVATE, null);
             Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABLE WHERE User = " + "'" + userString + "'", null);
             cursor.moveToFirst();
+
+            Log.d("sagdsgd", "userString = " + userString);
+            Log.d("sagdsgd", "pass = " + passwordString);
+            Log.d("sagdsgd", "count" + cursor.getCount());
+
+
+
+
             String[] resultStrings = new String[cursor.getColumnCount()];
             for (int i = 0; i < cursor.getColumnCount(); i++) {
                 resultStrings[i] = cursor.getString(i);
             }
             cursor.close();
 
+            Log.d("sagdsgd", "userdatabase = " + resultStrings[1]);
+            Log.d("sagdsgd", "passdatabase = " + resultStrings[2]);
+            Log.d("sagdsgd", "??? = " + resultStrings[0]);
+
             //Check Password
             if (passwordString.equals(resultStrings[2])) {
                 Toast.makeText(this, "ยินดีต้อนรับ" + resultStrings[3], Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, ProvinceActivity.class));
+               //startActivity(new Intent(MainActivity.this, ProvinceActivity.class));
+              startActivity(new Intent(MainActivity.this, ManuActivity.class));
             } else {
                 MyAlertDialog myAlertDialog = new MyAlertDialog();
                 myAlertDialog.myDialog(this, "Password False",

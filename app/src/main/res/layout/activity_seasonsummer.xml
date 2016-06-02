@@ -45,13 +45,13 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:text="SUMMERNAME"
+            android:text="1111"
             android:id="@+id/button37" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:text="SUMMERNAME"
+            android:text="22222"
             android:id="@+id/button38" />
     </LinearLayout>
 </LinearLayout>

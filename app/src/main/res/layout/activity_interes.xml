@@ -45,13 +45,13 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:text="NAMETOUR"
+            android:text="เกาะเป๊ด"
             android:id="@+id/button47" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:text="NAMETOUR"
+            android:text="เกาะไก่"
             android:id="@+id/button48" />
     </LinearLayout>
 </LinearLayout>

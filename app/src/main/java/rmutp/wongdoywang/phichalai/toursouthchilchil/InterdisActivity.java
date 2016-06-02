@@ -9,9 +9,8 @@ import android.widget.RatingBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-/**
- * Created by Phichalai on 2/6/2559.
- */
+import com.squareup.picasso.Picasso;
+
 public class InterdisActivity extends AppCompatActivity {
 
     @Override
@@ -19,19 +18,37 @@ public class InterdisActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interdis);
 
-        ScrollView ScrollView7 = (ScrollView) findViewById(R.id.scrollView7);
-        ImageView ImageView10 = (ImageView) findViewById(R.id.imageView10);
-        TextView TextView42 = (TextView) findViewById(R.id.textView42);
-        TextView TextView43 = (TextView) findViewById(R.id.textView43);
-        Button Button49 = (Button) findViewById(R.id.button49);
-        EditText open2 = (EditText) findViewById(R.id.open2);
-        EditText call = (EditText) findViewById(R.id.call);
-        EditText Email = (EditText) findViewById(R.id.Email);
-        EditText price2 = (EditText) findViewById(R.id.price2);
-        EditText trivel2 = (EditText) findViewById(R.id.trivel2);
+
         TextView TextView44 = (TextView) findViewById(R.id.textView44);
+        TextView44.setText(getIntent().getStringExtra("interested1"));
 
 
+        ImageView ImageView10 = (ImageView) findViewById(R.id.imageView10);
+        Picasso.with(this).load(getIntent().getStringExtra("interested2")).resize(480, 200).into(ImageView10);
+
+
+        TextView TextView43 = (TextView) findViewById(R.id.textView43);
+        TextView43.setText(getIntent().getStringExtra("interested3"));
+
+
+        TextView open2 = (TextView) findViewById(R.id.open2);
+        open2.setText(getIntent().getStringExtra("interested4"));
+
+
+        TextView call = (TextView) findViewById(R.id.call);
+        call.setText(getIntent().getStringExtra("interested5"));
+
+
+        TextView Email = (TextView) findViewById(R.id.Email);
+        Email.setText(getIntent().getStringExtra("interested6"));
+
+
+        TextView price2 = (TextView) findViewById(R.id.price2);
+        price2.setText(getIntent().getStringExtra("interested7"));
+
+
+        TextView travel = (TextView) findViewById(R.id.travel);
+        travel.setText(getIntent().getStringExtra("interested8"));
 
     }
-    }
+}
