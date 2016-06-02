@@ -7,6 +7,7 @@ import android.os.StrictMode;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -40,6 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private RatingBar ratingBar;
     private String strTour, strProcivce;
     private float score;
+    private int star = 0;
 
 
     @Override
@@ -47,18 +49,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_layout);
 
-        //Bind Widget
-        bindWidget();
+        bindWidget();  //Bind Widget
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //show View
-        showView();
+        showView();  //show View
 
-    }//Main Method
+
+
+        Log.d("sgsagsag",getIntent().getStringExtra("res1"));
+        Log.d("sgsagsag",getIntent().getStringExtra("res2"));
+        Log.d("sgsagsag",getIntent().getStringExtra("res3"));
+        Log.d("sgsagsag",getIntent().getStringExtra("res4"));
+        Log.d("sgsagsag",getIntent().getStringExtra("res5"));
+        Log.d("sgsagsag",getIntent().getStringExtra("res6"));
+        Log.d("sgsagsag",getIntent().getStringExtra("res7"));
+        Log.d("sgsagsag","------------------------------------------------------------");
+
+        Log.d("sgsagsag",getIntent().getStringExtra("hotel1"));
+        Log.d("sgsagsag",getIntent().getStringExtra("hotel2"));
+        Log.d("sgsagsag",getIntent().getStringExtra("hotel3"));
+        Log.d("sgsagsag",getIntent().getStringExtra("hotel4"));
+        Log.d("sgsagsag",getIntent().getStringExtra("hotel5"));
+        Log.d("sgsagsag",getIntent().getStringExtra("hotel6"));
+        Log.d("sgsagsag",getIntent().getStringExtra("hotel7"));
+
+    }
 
     private void showView() {
 
@@ -92,7 +111,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String temppoint = getIntent().getStringExtra("point");
 
         int point = Integer.parseInt(temppoint);
-        int star = 0;
 
         if(point > 100){
             star = 5;
@@ -108,8 +126,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             star = 0;
         }
 
-        RatingBar ratingBar2 = (RatingBar) dialog.findViewById(R.id.ratingBar2);
+        final RatingBar ratingBar2 = (RatingBar) dialog.findViewById(R.id.ratingBar2);
         ratingBar2.setRating(star);
+
+        ratingBar2.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
 
         Button button6 = (Button) dialog.findViewById(R.id.button6);
         button6.setOnClickListener(new View.OnClickListener() {
@@ -190,7 +215,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onRatingChanged(RatingBar ratingBar, float rating,
                                         boolean fromUser) {
                 score = rating;
-                Log.d("sfasfsaf", String.valueOf(score));
             }
         });
     }//bindWidget

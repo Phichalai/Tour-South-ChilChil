@@ -56,32 +56,25 @@
                     android:shadowRadius="1"
                     android:layout_weight="7.21" />
 
-                <fragment
-                    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.MapsActivity"
-                    android:id="@+id/fragment4"
-                    android:name="com.google.android.gms.maps.SupportMapFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp" />
-
-                <RatingBar
-                    android:id="@+id/ratingBar7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:layout_gravity="center_horizontal" />
-
                 <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:layout_height="match_parent" >
 
-                    <Button
-                        android:id="@+id/button44"
+                    <TextView
+                        android:id="@+id/textView39"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:text="Range"
-                        android:background="@drawable/button_shape"
-                        android:textColor="#ffffff" />
-
+                        android:layout_height="wrap_content"
+                        android:text="open"
+                        android:padding="20dp"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:background="#ffffff"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowDx="3"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:layout_weight="7.21" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -89,14 +82,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
 
-                    <Button
-                        android:layout_width="fill_parent"
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="ที่พัก"
-                        android:id="@+id/button45"
-                        android:textSize="20dp"
-                        android:background="@drawable/button_shape2"
-                        android:textColor="#ffffff" />
+                        android:text="e-mail"
+                        android:padding="20dp"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:background="#ffffff"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowDx="3"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:layout_weight="7.21" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -104,20 +103,47 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
 
-                    <Button
-                        android:layout_width="fill_parent"
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="ร้านอาหาร"
-                        android:id="@+id/button46"
-                        android:textSize="20dp"
-                        android:background="@drawable/button_shape3"
-                        android:textColor="#ffffff" />
+                        android:text="price4"
+                        android:padding="20dp"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:background="#ffffff"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowDx="3"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:layout_weight="7.21" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="traval3"
+                        android:padding="20dp"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:background="#ffffff"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowDx="3"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:layout_weight="7.21" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
         <LinearLayout
-            android:id="@+id/linearLayout33"
+            android:id="@+id/linearLayout16"
             android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_centerHorizontal="true"
@@ -126,11 +152,11 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView39"
+                android:id="@+id/textView47"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="New Text"
+                android:text="SEASON"
                 android:textColor="@color/text"
                 android:textSize="@dimen/h1"
                 android:shadowColor="#333333"
@@ -140,7 +166,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout34"
+            android:id="@+id/linearLayout18"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
@@ -150,10 +176,10 @@
             android:layout_marginTop="48dp" >
 
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/textView48"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="tourname"
                 android:textColor="@color/text"
                 android:textSize="@dimen/h2"
                 android:shadowColor="#333333"

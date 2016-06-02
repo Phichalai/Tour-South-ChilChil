@@ -52,6 +52,11 @@ public class TourActivity extends AppCompatActivity {
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM tourTABLE WHERE District = " + "'" + districtString + "'", null);
         cursor.moveToFirst();
 
+
+        Log.d("sgsagsag", "count " + String.valueOf(cursor.getCount()));
+        final String[] id = new String[cursor.getCount()];
+
+
         final String[] provinceStrings = new String[cursor.getCount()];
         final String[] districtStrings = new String[cursor.getCount()];
         final String[] tourStrings = new String[cursor.getCount()];
@@ -60,13 +65,15 @@ public class TourActivity extends AppCompatActivity {
         final String[] latStrings = new String[cursor.getCount()];
         final String[] lngStrings = new String[cursor.getCount()];
         final String[] pointStrings = new String[cursor.getCount()];
-
-
         final String[] resStrings = new String[cursor.getCount()];
         final String[] hotelStrings = new String[cursor.getCount()];
 
 
         for (int i = 0; i < cursor.getCount(); i++) {
+
+
+
+            id[i] = cursor.getString(cursor.getColumnIndex("_id"));
 
             provinceStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Province));
             districtStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_District));
@@ -76,14 +83,11 @@ public class TourActivity extends AppCompatActivity {
             latStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lat));
             lngStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lng));
             pointStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_point));
-
-            Log.d("sgsgdsg", "no2421421421424ooo");
             resStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_res));
             hotelStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotel));
 
-
             cursor.moveToNext();
-        }   //for
+        }
         cursor.close();
 
         Log.d("8April", "tourString Lang ==>> " + cursor.getCount());
@@ -95,6 +99,9 @@ public class TourActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                Log.d("sgsagsag",id[i]);
+
+
                 Intent intent = new Intent(TourActivity.this, MapsActivity.class);
 
                 intent.putExtra("Tour", tourStrings[i]);
@@ -105,9 +112,43 @@ public class TourActivity extends AppCompatActivity {
                 intent.putExtra("Lat", latStrings[i]);
                 intent.putExtra("Lng", lngStrings[i]);
                 intent.putExtra("point", pointStrings[i]);
-
                 intent.putExtra("res", resStrings[i]);
                 intent.putExtra("hotel", hotelStrings[i]);
+
+
+
+
+                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                        MODE_PRIVATE, null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM restaurant WHERE _id = " + "'" + id[i] + "'", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("res1", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantname)));
+                intent.putExtra("res2", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimge)));
+                intent.putExtra("res3", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription)));
+                intent.putExtra("res4", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen)));
+                intent.putExtra("res5", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress)));
+                intent.putExtra("res6", cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel)));
+                intent.putExtra("res7", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice)));
+                cursor.moveToNext();
+                cursor.close();
+
+                cursor = sqLiteDatabase.rawQuery("SELECT * FROM hotel WHERE _id = " + "'" + id[i] + "'", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("hotel1", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelname)));
+                intent.putExtra("hotel2", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimage)));
+                intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
+                intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
+                intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
+                intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
+                intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
+                cursor.moveToNext();
+                cursor.close();
+
+
+
+
 
                 startActivity(intent);
             }//onItem
