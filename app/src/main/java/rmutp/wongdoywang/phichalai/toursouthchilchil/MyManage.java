@@ -3,9 +3,6 @@ package rmutp.wongdoywang.phichalai.toursouthchilchil;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-
-import java.util.StringTokenizer;
 
 public class MyManage {
 
@@ -60,6 +57,7 @@ public class MyManage {
     public static final String report_table = "report";
     public static final String column_reportname = "reportname";
     public static final String column_reporttitel = "reporttitel";
+    public static final String column_Imagere ="Imagere";
     public static final String column_reportdesoription = "reportdesoription";
     public static final String column_reportform = "reportform";
 
@@ -126,7 +124,7 @@ public class MyManage {
         contentValues.put(column_Name, strName);
         contentValues.put(column_Category, strCategory);
         contentValues.put(column_Description, strDescription);
-        contentValues.put(column_Image, strImage);
+        contentValues.put(column_Imagere, strImage);
         contentValues.put(column_Lat, strLat);
         contentValues.put(column_Lng, strLng);
         contentValues.put(column_point, strpoint);
@@ -198,12 +196,14 @@ public class MyManage {
 
     public long addreport(String reportname,
                           String reporttitel,
+                          String Imagere,
                           String reportdesoription,
                           String reportform) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_reportname, reportname);
         contentValues.put(column_reporttitel, reporttitel);
+        contentValues.put(column_Imagere, Imagere);
         contentValues.put(column_reportdesoription, reportdesoription);
         contentValues.put(column_reportform, reportform);
 

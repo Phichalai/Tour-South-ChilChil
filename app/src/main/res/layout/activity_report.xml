@@ -78,17 +78,7 @@
             android:text="New Button"
             android:id="@+id/button29" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:text="New Button"
-            android:id="@+id/button30" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:text="New Button"
-            android:id="@+id/button31" />
     </LinearLayout>
 
 </LinearLayout>

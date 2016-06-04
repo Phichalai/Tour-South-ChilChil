@@ -16,11 +16,16 @@ public class ManuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manu);
 
+        //show buttonmanuname
+        Button Button = (Button) findViewById(R.id.button8);
+        Button.setText("สถานที่ท่องเที่ยว");
+
+
         Button Button8 = (Button) findViewById(R.id.button8);
         Button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               startActivity(new Intent(ManuActivity.this, ProvinceActivity.class));
+                startActivity(new Intent(ManuActivity.this, ProvinceActivity.class));
             }
         });
 
@@ -31,7 +36,7 @@ public class ManuActivity extends AppCompatActivity {
                 startActivity(new Intent(ManuActivity.this, InteresActivity.class));
             }
         });
-
+        //show buttonmanuname
         Button Button10 = (Button) findViewById(R.id.button10);
         Button10.setOnClickListener(new View.OnClickListener() {
             @Override

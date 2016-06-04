@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                             String strName1 = jsonObject.getString(MyManage.column_Name);
                             String strCategory = jsonObject.getString(MyManage.column_Category);
                             String strDescription = jsonObject.getString(MyManage.column_Description);
-                            String strImage = jsonObject.getString(MyManage.column_Image);
+                            String strImage = jsonObject.getString(MyManage.column_Imagere);
                             String strLat = jsonObject.getString(MyManage.column_Lat);
                             String strLng = jsonObject.getString(MyManage.column_Lng);
                             String strpoint = jsonObject.getString(MyManage.column_point);
@@ -249,10 +249,11 @@ public class MainActivity extends AppCompatActivity {
                         case 5: //reportTable
                             String reportname = jsonObject.getString(MyManage.column_reportname);
                             String reporttitel = jsonObject.getString(MyManage.column_reporttitel);
+                            String Imagere = jsonObject.getString(MyManage.column_Imagere);
                             String reportdesoription = jsonObject.getString(MyManage.column_reportdesoription);
                             String reportform = jsonObject.getString(MyManage.column_reportform);
 
-                            myManage.addreport(reportname, reporttitel, reportdesoription, reportform);
+                            myManage.addreport(reportname, reporttitel, Imagere,reportdesoription, reportform);
                             break;
 
                         case 6: //restaurantTable

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/beerza">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout25"
@@ -29,32 +28,32 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout26"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="228dp"
-        android:layout_centerHorizontal="true"
-        android:background="#70ffffff"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="130dp" >
+        android:layout_height="140dp"
+        android:id="@+id/imageView9"
+        android:background="@drawable/visasum"
+        android:layout_marginTop="20dp" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="SUMMER"
-            android:id="@+id/button35" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUMMER"
+        android:id="@+id/button35"
+        android:background="@drawable/button_shape2" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="WINTER"
-            android:id="@+id/button36" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/imageView11"
+        android:background="@drawable/visarain"
+        android:layout_marginTop="20dp" />
 
-    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RAINY"
+        android:id="@+id/button36"
+        android:background="@drawable/button_shape1" />
 
 </LinearLayout>

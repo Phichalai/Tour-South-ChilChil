@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/beerza">
 
     <LinearLayout
@@ -31,7 +31,7 @@
     <LinearLayout
         android:id="@+id/linearLayout36"
         android:layout_width="match_parent"
-        android:layout_height="228dp"
+        android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
         android:background="#70ffffff"
         android:gravity="center_horizontal"
@@ -40,18 +40,42 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="130dp" >
+        android:layout_marginBottom="20dp">
+
+        ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView4" />
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="เกาะเป๊ด"
+            android:layout_height="wrap_content"
+            android:text="เกาะไก่"
+            android:id="@+id/button48" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เกาะตาชัย"
             android:id="@+id/button47" />
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="เกาะไก่"
-            android:id="@+id/button48" />
+            android:layout_height="wrap_content"
+            android:text="เกาะกระดาษ"
+            android:id="@+id/button49" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="เกาะกระดาษ"
+            android:id="@+id/button15" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="เกาะกระดาษ"
+            android:id="@+id/button16" />
+
     </LinearLayout>
 </LinearLayout>

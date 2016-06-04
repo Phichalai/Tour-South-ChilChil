@@ -24,7 +24,7 @@ public class RestaurantActivity extends AppCompatActivity {
         TextView address2 = (TextView) findViewById(R.id.address2);
         TextView travel3 = (TextView) findViewById(R.id.travel3);
         TextView price2 = (TextView) findViewById(R.id.price2);
-        EditText EditText11 = (EditText) findViewById(R.id.editText11);
+        TextView TextView12 = (TextView) findViewById(R.id.textView12);
         EditText EditText12 = (EditText) findViewById(R.id.editText12);
         EditText EditText14 = (EditText) findViewById(R.id.editText14);
         TextView TextView16 = (TextView) findViewById(R.id.textView16);
