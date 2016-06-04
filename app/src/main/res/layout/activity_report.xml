@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/beerza">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout22"
@@ -29,56 +28,130 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout21"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_centerHorizontal="true"
-        android:background="#70ffffff"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView45"
+            android:src="@drawable/zareport" />
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="New Button"
-            android:id="@+id/button25" />
+            android:id="@+id/button25"
+            android:background="@drawable/button_shape13"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView48"
+            android:src="@drawable/zareport" />
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="New Button"
-            android:id="@+id/button26" />
+            android:id="@+id/button26"
+            android:background="@drawable/button_shape14"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView49"
+            android:src="@drawable/zareport" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Button"
-            android:id="@+id/button32" />
+            android:id="@+id/button32"
+            android:background="@drawable/button_shape13"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView50"
+            android:src="@drawable/zareport" />
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="New Button"
-            android:id="@+id/button27" />
+            android:id="@+id/button27"
+            android:background="@drawable/button_shape14"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView51"
+            android:src="@drawable/zareport" />
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="New Button"
-            android:id="@+id/button28" />
+            android:id="@+id/button28"
+            android:background="@drawable/button_shape13"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView52"
+            android:src="@drawable/zareport" />
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="New Button"
-            android:id="@+id/button29" />
-
-
+            android:id="@+id/button29"
+            android:background="@drawable/button_shape14"
+            android:textColor="#ffffff" />
     </LinearLayout>
 
 </LinearLayout>

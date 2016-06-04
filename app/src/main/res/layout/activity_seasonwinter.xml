@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/beerza">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout31"
@@ -23,35 +22,125 @@
             android:shadowDx="3"
             android:shadowDy="2"
             android:shadowRadius="1"
-            android:text="WENTER"
+            android:text="RAIN"
             android:textColor="@color/text"
             android:textSize="@dimen/h1" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout32"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="228dp"
-        android:layout_centerHorizontal="true"
-        android:background="#70ffffff"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="130dp" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="WENTERNAME"
-            android:id="@+id/button42" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView42"
+            android:src="@drawable/zakungching" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="WENTERNAME"
-            android:id="@+id/button43" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView43"
+            android:src="@drawable/zapatao" />
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="น้ำตกกรุงชิง"
+            android:id="@+id/button42"
+            android:background="@drawable/button_shape7"
+            android:textColor="#000000" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="น้ำตกพะโต๊ะ "
+            android:id="@+id/button43"
+            android:background="@drawable/button_shape1"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView46"
+            android:src="@drawable/zasamila" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView47"
+            android:src="@drawable/zalawe" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="หาดสมิหลา"
+            android:id="@+id/button23"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_shape1" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="เกาะราวี"
+            android:id="@+id/button30"
+            android:background="@drawable/button_shape7" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView44"
+            android:src="@drawable/zasunset"
+            android:layout_marginLeft="100dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="หาดซันเซ็ท"
+            android:id="@+id/button21"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/button_shape7" />
+
+        />
+    </LinearLayout>
+
 </LinearLayout>
