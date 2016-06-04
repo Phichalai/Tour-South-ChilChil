@@ -23,12 +23,12 @@ public class HotelActivity extends AppCompatActivity {
 
 
         ImageView ImageView6 = (ImageView) findViewById(R.id.imageView6);
-        TextView TextView19 = (TextView) findViewById(R.id.textView19);
-        EditText price1 = (EditText) findViewById(R.id.price1);
-        EditText open = (EditText) findViewById(R.id.open);
-        EditText add = (EditText) findViewById(R.id.add);
-        EditText trivel1 = (EditText) findViewById(R.id.trivel1);
-        RatingBar RatingBar4 = (RatingBar) findViewById(R.id.ratingBar4);
+        TextView textView19 = (TextView) findViewById(R.id.textView19);
+        TextView call1 = (TextView) findViewById(R.id.call1);
+        TextView open1 = (TextView) findViewById(R.id.open1);
+        TextView email1 = (TextView) findViewById(R.id.email1);
+        TextView price1 = (TextView) findViewById(R.id.price1);
+        TextView tavel1 = (TextView) findViewById(R.id.tavel1);
 
 
 

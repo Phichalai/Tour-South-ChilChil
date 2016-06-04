@@ -15,17 +15,17 @@ public class SummerdisActivity extends AppCompatActivity {
         setContentView(R.layout.activity_seasondis);
 
 
-        TextView namenametourtour = (TextView) findViewById(R.id.nametour);
+        TextView namenametourtour = (TextView) findViewById(R.id.season);
         namenametourtour.setText(getIntent().getStringExtra("season1"));
 
-        TextView newtext = (TextView) findViewById(R.id.newtext);
-        newtext.setText(getIntent().getStringExtra("season2"));
+        TextView nametour = (TextView) findViewById(R.id.nametour);
+        nametour.setText(getIntent().getStringExtra("season2"));
 
         ImageView ImageView = (ImageView) findViewById(R.id.imageView8);
         Picasso.with(this).load(getIntent().getStringExtra("season3")).resize(480, 200).into(ImageView);
 
-        TextView Description = (TextView) findViewById(R.id.Description);
-        Description.setText(getIntent().getStringExtra("season4"));
+        TextView newtext = (TextView) findViewById(R.id.newtext);
+        newtext.setText(getIntent().getStringExtra("season4"));
 
         TextView open = (TextView) findViewById(R.id.open);
         open.setText(getIntent().getStringExtra("season5"));

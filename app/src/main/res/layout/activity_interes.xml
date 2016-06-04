@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/beerza">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/linearLayout35"
@@ -29,53 +28,131 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout36"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_centerHorizontal="true"
-        android:background="#70ffffff"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
 
-        ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listView4" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView30"
+            android:src="@drawable/zakadad" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView31"
+            android:src="@drawable/zatachai" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <Button
-            android:layout_width="fill_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="เกาะไก่"
-            android:id="@+id/button48" />
+            android:text="เกาะกระดาน"
+            android:id="@+id/button48"
+            android:background="@drawable/button_shape1"
+            android:textColor="#ffffff" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="เกาะตาชัย"
-            android:id="@+id/button47" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="เกาะกระดาษ"
-            android:id="@+id/button49" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="เกาะกระดาษ"
-            android:id="@+id/button15" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="เกาะกระดาษ"
-            android:id="@+id/button16" />
+            android:id="@+id/button47"
+            android:background="@drawable/button_shape9"
+            android:textColor="#ffffff" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView32"
+            android:src="@drawable/zalaw" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView33"
+            android:src="@drawable/zaeagg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="เกาะเหลาเหลียง"
+            android:id="@+id/button49"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_shape9" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="เกาะไข่นอก"
+            android:id="@+id/button15"
+            android:background="@drawable/button_shape1"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView34"
+            android:src="@drawable/zapayam" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView35"
+            android:src="@drawable/zalanta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="เกาะพยาม"
+            android:id="@+id/button16"
+            android:background="@drawable/button_shape1"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="เกาะลันตา"
+            android:id="@+id/button12"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_shape9" />
+    </LinearLayout>
+
 </LinearLayout>

@@ -16,8 +16,8 @@ public class SeasonsummerActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seasonsummer);
 
-        Button Button37 = (Button) findViewById(R.id.button37);
-        Button37.setOnClickListener(new View.OnClickListener() {
+        Button Button13 = (Button) findViewById(R.id.button13);
+        Button13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -47,8 +47,8 @@ public class SeasonsummerActivity extends AppCompatActivity{
 
 
 
-        Button Button38 = (Button) findViewById(R.id.button38);
-        Button38.setOnClickListener(new View.OnClickListener() {
+        Button Button14 = (Button) findViewById(R.id.button14);
+        Button14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SeasonsummerActivity.this, SummerdisActivity.class);
@@ -61,6 +61,114 @@ public class SeasonsummerActivity extends AppCompatActivity{
                 intent.putExtra("season1", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonname)));
                 intent.putExtra("season2", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontour)));
                intent.putExtra("season3", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonImage)));
+                intent.putExtra("season4", cursor.getString(cursor.getColumnIndex(MyManage.column_seasondescription)));
+                intent.putExtra("season5", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonopen)));
+                intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
+                intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
+                intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+
+                cursor.moveToNext();
+                cursor.close();
+
+                startActivity(intent);
+
+            }
+        });
+        Button Button17 = (Button) findViewById(R.id.button17);
+        Button17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SeasonsummerActivity.this, SummerdisActivity.class);
+
+                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                        MODE_PRIVATE, null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM season WHERE _id = 3", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("season1", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonname)));
+                intent.putExtra("season2", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontour)));
+                intent.putExtra("season3", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonImage)));
+                intent.putExtra("season4", cursor.getString(cursor.getColumnIndex(MyManage.column_seasondescription)));
+                intent.putExtra("season5", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonopen)));
+                intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
+                intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
+                intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+
+                cursor.moveToNext();
+                cursor.close();
+
+                startActivity(intent);
+
+            }
+        });
+        Button Button20 = (Button) findViewById(R.id.button20);
+        Button20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SeasonsummerActivity.this, SummerdisActivity.class);
+
+                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                        MODE_PRIVATE, null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM season WHERE _id = 4", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("season1", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonname)));
+                intent.putExtra("season2", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontour)));
+                intent.putExtra("season3", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonImage)));
+                intent.putExtra("season4", cursor.getString(cursor.getColumnIndex(MyManage.column_seasondescription)));
+                intent.putExtra("season5", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonopen)));
+                intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
+                intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
+                intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+
+                cursor.moveToNext();
+                cursor.close();
+
+                startActivity(intent);
+
+            }
+        });
+        Button Button37 = (Button) findViewById(R.id.button37);
+        Button37.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SeasonsummerActivity.this, SummerdisActivity.class);
+
+                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                        MODE_PRIVATE, null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM season WHERE _id = 5", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("season1", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonname)));
+                intent.putExtra("season2", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontour)));
+                intent.putExtra("season3", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonImage)));
+                intent.putExtra("season4", cursor.getString(cursor.getColumnIndex(MyManage.column_seasondescription)));
+                intent.putExtra("season5", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonopen)));
+                intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
+                intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
+                intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+
+                cursor.moveToNext();
+                cursor.close();
+
+                startActivity(intent);
+
+            }
+        });
+        Button Button38 = (Button) findViewById(R.id.button38);
+        Button38.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SeasonsummerActivity.this, SummerdisActivity.class);
+
+                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                        MODE_PRIVATE, null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM season WHERE _id = 6", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("season1", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonname)));
+                intent.putExtra("season2", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontour)));
+                intent.putExtra("season3", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonImage)));
                 intent.putExtra("season4", cursor.getString(cursor.getColumnIndex(MyManage.column_seasondescription)));
                 intent.putExtra("season5", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonopen)));
                 intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));

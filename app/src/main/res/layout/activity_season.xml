@@ -40,7 +40,8 @@
         android:layout_height="wrap_content"
         android:text="SUMMER"
         android:id="@+id/button35"
-        android:background="@drawable/button_shape2" />
+        android:background="@drawable/button_shape2"
+        android:layout_marginTop="10dp" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -54,6 +55,7 @@
         android:layout_height="wrap_content"
         android:text="RAINY"
         android:id="@+id/button36"
-        android:background="@drawable/button_shape1" />
+        android:background="@drawable/button_shape1"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>
