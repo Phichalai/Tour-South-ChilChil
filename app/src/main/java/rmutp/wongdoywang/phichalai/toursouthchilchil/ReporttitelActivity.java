@@ -5,36 +5,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 /**
  * Created by Phichalai on 2/6/2559.
  */
-public class ReporttitelActivity extends AppCompatActivity{
+public class ReporttitelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporttitel);
 
-       ImageView ImageView7 = (ImageView) findViewById(R.id.imageView7);
+        TextView reporttitel = (TextView) findViewById(R.id.reporttitel);
+        reporttitel.setText(getIntent().getStringExtra("report1"));
 
+        TextView report = (TextView) findViewById(R.id.report);
+        report.setText(getIntent().getStringExtra("report2"));
+
+        ImageView ImageView7 = (ImageView) findViewById(R.id.imageView7);
+        Picasso.with(this).load(getIntent().getStringExtra("report3")).resize(480, 200).into(ImageView7);
 
         TextView dis = (TextView) findViewById(R.id.dis);
-        TextView reporttitel = (TextView) findViewById(R.id.reporttitel);
-        TextView report = (TextView) findViewById(R.id.report);
+        dis.setText(getIntent().getStringExtra("report4"));
 
-
-        String reportname = jsonObject.getString(MyManage.column_reportname);
-        String reporttitel = jsonObject.getString(MyManage.column_reporttitel);
-        String Imagere = jsonObject.getString(MyManage.column_Imagere);
-        String reportdesoription = jsonObject.getString(MyManage.column_reportdesoription);
-        String reportform = jsonObject.getString(MyManage.column_reportform);
-
-
-
-
-
-
-
-
+        TextView from = (TextView) findViewById(R.id.from);
+        from.setText(getIntent().getStringExtra("report5"));
     }
-
 }
