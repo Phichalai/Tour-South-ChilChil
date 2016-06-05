@@ -77,9 +77,8 @@ public class TourActivity extends AppCompatActivity {
 
             provinceStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Province));
             districtStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_District));
-            tourStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Name));
             descriptionStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Description));
-            imageStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Imagere));
+            imageStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Image));
             latStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lat));
             lngStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lng));
             pointStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_point));

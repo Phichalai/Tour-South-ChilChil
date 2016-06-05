@@ -3,6 +3,7 @@ package rmutp.wongdoywang.phichalai.toursouthchilchil;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,7 @@ public class MyAdpter2 extends BaseAdapter{
         Bitmap bmp = null;
         try {
             bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+
         } catch (IOException e) {
             e.printStackTrace();
         }

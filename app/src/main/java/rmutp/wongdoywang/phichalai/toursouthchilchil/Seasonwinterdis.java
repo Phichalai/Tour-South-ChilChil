@@ -48,5 +48,5 @@ public class Seasonwinterdis extends AppCompatActivity {
         traval.setText(getIntent().getStringExtra("season8"));
 
 
-    }
+            }
 }

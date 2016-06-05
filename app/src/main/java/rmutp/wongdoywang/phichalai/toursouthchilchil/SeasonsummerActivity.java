@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SeasonsummerActivity extends AppCompatActivity{
+public class SeasonsummerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +45,6 @@ public class SeasonsummerActivity extends AppCompatActivity{
         });
 
 
-
-
         Button Button14 = (Button) findViewById(R.id.button14);
         Button14.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +58,7 @@ public class SeasonsummerActivity extends AppCompatActivity{
 
                 intent.putExtra("season1", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonname)));
                 intent.putExtra("season2", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontour)));
-               intent.putExtra("season3", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonImage)));
+                intent.putExtra("season3", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonImage)));
                 intent.putExtra("season4", cursor.getString(cursor.getColumnIndex(MyManage.column_seasondescription)));
                 intent.putExtra("season5", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonopen)));
                 intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
@@ -180,7 +178,10 @@ public class SeasonsummerActivity extends AppCompatActivity{
 
                 startActivity(intent);
 
+
             }
         });
+
+
     }
 }

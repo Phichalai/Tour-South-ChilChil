@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
                     "http://swiftcodingthai.com/saa/php_get_tour_phichalai.php?main=restaurant",
                     "http://swiftcodingthai.com/saa/php_get_tour_phichalai.php?main=season",
                     "http://swiftcodingthai.com/saa/php_get_tour_phichalai.php?main=travel"};
-
             try {
                 HttpClient httpClient = new DefaultHttpClient();
                 HttpPost httpPost = new HttpPost(urlStrings[intTimes]);
@@ -196,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                             String strName1 = jsonObject.getString(MyManage.column_Name);
                             String strCategory = jsonObject.getString(MyManage.column_Category);
                             String strDescription = jsonObject.getString(MyManage.column_Description);
-                            String strImage = jsonObject.getString(MyManage.column_Imagere);
+                            String strImage = jsonObject.getString(MyManage.column_Image);
                             String strLat = jsonObject.getString(MyManage.column_Lat);
                             String strLng = jsonObject.getString(MyManage.column_Lng);
                             String strpoint = jsonObject.getString(MyManage.column_point);

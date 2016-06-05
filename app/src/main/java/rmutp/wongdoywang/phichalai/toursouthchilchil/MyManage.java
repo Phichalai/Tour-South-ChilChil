@@ -124,7 +124,7 @@ public class MyManage {
         contentValues.put(column_Name, strName);
         contentValues.put(column_Category, strCategory);
         contentValues.put(column_Description, strDescription);
-        contentValues.put(column_Imagere, strImage);
+        contentValues.put(column_Image, strImage);
         contentValues.put(column_Lat, strLat);
         contentValues.put(column_Lng, strLng);
         contentValues.put(column_point, strpoint);

@@ -84,6 +84,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         strTour = getIntent().getStringExtra("Tour");
         tourTextView.setText(strTour);
 
+
         String strDistrict = getIntent().getStringExtra("District");
         strProcivce = getIntent().getStringExtra("Province");
         provinceTextView.setText(strDistrict + " : " + strProcivce);

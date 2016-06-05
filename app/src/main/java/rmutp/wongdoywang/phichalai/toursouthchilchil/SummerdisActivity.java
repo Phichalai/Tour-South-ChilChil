@@ -1,7 +1,10 @@
 package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,6 +42,14 @@ public class SummerdisActivity extends AppCompatActivity {
         TextView traval = (TextView) findViewById(R.id.traval);
         traval.setText(getIntent().getStringExtra("season8"));
 
+        Button Button33 = (Button) findViewById(R.id.button33);
+        Button33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SummerdisActivity.this, CounselActivity.class);
+                startActivity(intent);
 
+            }
+        });
     }
 }
