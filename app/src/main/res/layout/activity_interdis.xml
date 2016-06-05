@@ -179,6 +179,36 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ร้านอาหาร"
+                        android:id="@+id/button28"
+                        android:textSize="20dp"
+                        android:background="@drawable/button_shape3"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ที่พัก"
+                        android:id="@+id/button29"
+                        android:textSize="20dp"
+                        android:background="@drawable/button_shape2"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
 
@@ -204,6 +234,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="1" />
         </LinearLayout>
+
 
     </RelativeLayout>
 </LinearLayout>

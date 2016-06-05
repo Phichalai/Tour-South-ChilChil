@@ -204,6 +204,15 @@
                         android:textColor="#ffffff" />
                 </LinearLayout>
 
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ที่พักเพิ่มเติม"
+                    android:id="@+id/button31"
+                    android:textSize="20dp"
+                    android:background="@drawable/button_shape2"
+                    android:textColor="#ffffff" />
+
             </LinearLayout>
         </ScrollView>
 

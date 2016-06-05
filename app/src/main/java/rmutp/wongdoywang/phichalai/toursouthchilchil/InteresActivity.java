@@ -121,8 +121,8 @@ public class InteresActivity extends AppCompatActivity {
                 cursor.close();
 
                 startActivity(intent);
-                 }
-            });
+            }
+        });
         Button Button16 = (Button) findViewById(R.id.button16);
         Button16.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,6 +149,7 @@ public class InteresActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button Button12 = (Button) findViewById(R.id.button12);
         Button12.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,8 +176,9 @@ public class InteresActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        }
 
     }
+}
+
 
 
