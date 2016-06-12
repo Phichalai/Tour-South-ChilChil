@@ -58,25 +58,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         showView();  //show View
 
-
-
-        Log.d("sgsagsag",getIntent().getStringExtra("res1"));
-        Log.d("sgsagsag",getIntent().getStringExtra("res2"));
-        Log.d("sgsagsag",getIntent().getStringExtra("res3"));
-        Log.d("sgsagsag",getIntent().getStringExtra("res4"));
-        Log.d("sgsagsag",getIntent().getStringExtra("res5"));
-        Log.d("sgsagsag",getIntent().getStringExtra("res6"));
-        Log.d("sgsagsag",getIntent().getStringExtra("res7"));
-        Log.d("sgsagsag","------------------------------------------------------------");
-
-        Log.d("sgsagsag",getIntent().getStringExtra("hotel1"));
-        Log.d("sgsagsag",getIntent().getStringExtra("hotel2"));
-        Log.d("sgsagsag",getIntent().getStringExtra("hotel3"));
-        Log.d("sgsagsag",getIntent().getStringExtra("hotel4"));
-        Log.d("sgsagsag",getIntent().getStringExtra("hotel5"));
-        Log.d("sgsagsag",getIntent().getStringExtra("hotel6"));
-        Log.d("sgsagsag",getIntent().getStringExtra("hotel7"));
-
     }
 
     private void showView() {
@@ -165,9 +146,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
                     nameValuePairs.add(new BasicNameValuePair("countpoint","true"));
 
-                    Log.d("sfasfsdgdgdaf", String.valueOf(score));
-                    Log.d("sfasfsdgdgdaf", strTour);
-
                     nameValuePairs.add(new BasicNameValuePair("point",String.valueOf(score)));
                     nameValuePairs.add(new BasicNameValuePair("name", strTour));
 
@@ -226,9 +204,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         String strLat = getIntent().getStringExtra("Lat");
         String strLng = getIntent().getStringExtra("Lng");
-
         double douLat = Double.parseDouble(strLat);
         double douLng = Double.parseDouble(strLng);
+
         LatLng latLng = new LatLng(douLat, douLng);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));

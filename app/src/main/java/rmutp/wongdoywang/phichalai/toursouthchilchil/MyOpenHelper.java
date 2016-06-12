@@ -53,6 +53,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "interestedname, " +
             "interestedimage, " +
             "interesteddescription, " +
+            "Lat, " +
+            "Lag, " +
             "interestedopen, " +
             "interestedcall, " +
             "interestedemail, " +

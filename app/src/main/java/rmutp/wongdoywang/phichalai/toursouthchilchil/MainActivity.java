@@ -66,14 +66,18 @@ public class MainActivity extends AppCompatActivity {
         userString = userEditText.getText().toString().trim();
         passwordString = passwordEditText.getText().toString().trim();
 
-        //Ceck Space
+
+        startActivity(new Intent(MainActivity.this, ManuActivity.class));
+        finish();
+
+      /*  //Ceck Space
         if (userString.equals("") || passwordString.equals("")) {
             //Have Space
             MyAlertDialog myAlertDialog = new MyAlertDialog();
             myAlertDialog.myDialog(this, "มีช่องว่าง", "กรุณากรอกทุกช่อง ค่ะ ");
         } else {
             checkUser();    //No space
-        }
+        }*/
     }
 
     private void checkUser() {
@@ -84,28 +88,19 @@ public class MainActivity extends AppCompatActivity {
             Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABLE WHERE User = " + "'" + userString + "'", null);
             cursor.moveToFirst();
 
-            Log.d("sagdsgd", "userString = " + userString);
-            Log.d("sagdsgd", "pass = " + passwordString);
-            Log.d("sagdsgd", "count" + cursor.getCount());
-
-
-
-
             String[] resultStrings = new String[cursor.getColumnCount()];
             for (int i = 0; i < cursor.getColumnCount(); i++) {
                 resultStrings[i] = cursor.getString(i);
             }
             cursor.close();
 
-            Log.d("sagdsgd", "userdatabase = " + resultStrings[1]);
-            Log.d("sagdsgd", "passdatabase = " + resultStrings[2]);
-            Log.d("sagdsgd", "??? = " + resultStrings[0]);
 
-            //Check Password
+           //Check Password
             if (passwordString.equals(resultStrings[2])) {
                 Toast.makeText(this, "ยินดีต้อนรับ" + resultStrings[3], Toast.LENGTH_SHORT).show();
-               //startActivity(new Intent(MainActivity.this, ProvinceActivity.class));
-              startActivity(new Intent(MainActivity.this, ManuActivity.class));
+                //startActivity(new Intent(MainActivity.this, ProvinceActivity.class));
+                startActivity(new Intent(MainActivity.this, ManuActivity.class));
+                finish();
             } else {
                 MyAlertDialog myAlertDialog = new MyAlertDialog();
                 myAlertDialog.myDialog(this, "Password False",
@@ -192,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                         case 1: //tourTABLE
                             String strPrivince = jsonObject.getString(MyManage.column_Province);
                             String strDistrict = jsonObject.getString(MyManage.column_District);
-                            String strName1 = jsonObject.getString(MyManage.column_Name);
+                            String strName1 = jsonObject.getString(MyManage.column_Name1);
                             String strCategory = jsonObject.getString(MyManage.column_Category);
                             String strDescription = jsonObject.getString(MyManage.column_Description);
                             String strImage = jsonObject.getString(MyManage.column_Image);
@@ -220,13 +215,15 @@ public class MainActivity extends AppCompatActivity {
                             String interestedname = jsonObject.getString(MyManage.column_interestedname);
                             String interestedimage = jsonObject.getString(MyManage.column_interestedimage);
                             String interesteddescription = jsonObject.getString(MyManage.column_interesteddescription);
+                            String strLat1 = jsonObject.getString(MyManage.column_Lat1);
+                            String strLag1 = jsonObject.getString(MyManage.column_Lag1);
                             String interestedopen = jsonObject.getString(MyManage.column_interestedopen);
                             String interestedcall = jsonObject.getString(MyManage.column_interestedcall);
                             String interestedemail = jsonObject.getString(MyManage.column_interestedemail);
                             String interestedprice = jsonObject.getString(MyManage.column_interestedprice);
                             String interestedtravel = jsonObject.getString(MyManage.column_interestedtravel);
 
-                            myManage.addinterested(interestedname, interestedimage, interesteddescription,
+                            myManage.addinterested(interestedname, interestedimage, interesteddescription, strLat1, strLag1,
                                     interestedopen, interestedcall, interestedemail, interestedprice,
                                     interestedtravel);
                             break;
@@ -252,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
                             String reportdesoription = jsonObject.getString(MyManage.column_reportdesoription);
                             String reportform = jsonObject.getString(MyManage.column_reportform);
 
-                            myManage.addreport(reportname, reporttitel, Imagere,reportdesoription, reportform);
+                            myManage.addreport(reportname, reporttitel, Imagere, reportdesoription, reportform);
                             break;
 
                         case 6: //restaurantTable

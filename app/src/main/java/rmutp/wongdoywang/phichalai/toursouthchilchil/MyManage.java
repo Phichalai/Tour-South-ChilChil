@@ -19,6 +19,7 @@ public class MyManage {
     public static final String tour_table = "tourTABLE";
     public static final String column_Province = "Province";
     public static final String column_District = "District";
+    public static final String column_Name1 = "Name";
     public static final String column_Category = "Category";
     public static final String column_Description = "Description";
     public static final String column_Image = "Image";
@@ -39,6 +40,8 @@ public class MyManage {
     public static final String column_interestedname = "interestedname";
     public static final String column_interestedimage = "interestedimage";
     public static final String column_interesteddescription = "interesteddescription";
+    public static final String column_Lat1 = "Lat";
+    public static final String column_Lag1 = "Lag";
     public static final String column_interestedopen = "interestedopen";
     public static final String column_interestedcall = "interestedcall";
     public static final String column_interestedemail = "interestedemail";
@@ -57,7 +60,7 @@ public class MyManage {
     public static final String report_table = "report";
     public static final String column_reportname = "reportname";
     public static final String column_reporttitel = "reporttitel";
-    public static final String column_Imagere ="Imagere";
+    public static final String column_Imagere = "Imagere";
     public static final String column_reportdesoription = "reportdesoription";
     public static final String column_reportform = "reportform";
 
@@ -121,7 +124,7 @@ public class MyManage {
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_Province, strProvince);
         contentValues.put(column_District, strDistrict);
-        contentValues.put(column_Name, strName);
+        contentValues.put(column_Name1, strName);
         contentValues.put(column_Category, strCategory);
         contentValues.put(column_Description, strDescription);
         contentValues.put(column_Image, strImage);
@@ -155,6 +158,8 @@ public class MyManage {
     public long addinterested(String interestedname,
                               String interestedimage,
                               String interesteddescription,
+                              String Lat,
+                              String Lag,
                               String interestedopen,
                               String interestedcall,
                               String interestedemail,
@@ -165,6 +170,8 @@ public class MyManage {
         contentValues.put(column_interestedname, interestedname);
         contentValues.put(column_interestedimage, interestedimage);
         contentValues.put(column_interesteddescription, interesteddescription);
+        contentValues.put(column_Lat1, Lat);
+        contentValues.put(column_Lag1, Lag);
         contentValues.put(column_interestedopen, interestedopen);
         contentValues.put(column_interestedcall, interestedcall);
         contentValues.put(column_interestedemail, interestedemail);

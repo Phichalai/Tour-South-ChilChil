@@ -35,6 +35,8 @@ public class InteresActivity extends AppCompatActivity {
                 intent.putExtra("interested6", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedemail)));
                 intent.putExtra("interested7", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedprice)));
                 intent.putExtra("interested8", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedtravel)));
+                intent.putExtra("interested9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat1)));
+                intent.putExtra("interested10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lag1)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -62,6 +64,8 @@ public class InteresActivity extends AppCompatActivity {
                 intent.putExtra("interested6", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedemail)));
                 intent.putExtra("interested7", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedprice)));
                 intent.putExtra("interested8", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedtravel)));
+                intent.putExtra("interested9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat1)));
+                intent.putExtra("interested10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lag1)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -90,6 +94,8 @@ public class InteresActivity extends AppCompatActivity {
                 intent.putExtra("interested6", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedemail)));
                 intent.putExtra("interested7", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedprice)));
                 intent.putExtra("interested8", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedtravel)));
+                intent.putExtra("interested9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat1)));
+                intent.putExtra("interested10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lag1)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -116,6 +122,8 @@ public class InteresActivity extends AppCompatActivity {
                 intent.putExtra("interested6", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedemail)));
                 intent.putExtra("interested7", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedprice)));
                 intent.putExtra("interested8", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedtravel)));
+                intent.putExtra("interested9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat1)));
+                intent.putExtra("interested10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lag1)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -142,6 +150,8 @@ public class InteresActivity extends AppCompatActivity {
                 intent.putExtra("interested6", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedemail)));
                 intent.putExtra("interested7", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedprice)));
                 intent.putExtra("interested8", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedtravel)));
+                intent.putExtra("interested9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat1)));
+                intent.putExtra("interested10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lag1)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -169,6 +179,8 @@ public class InteresActivity extends AppCompatActivity {
                 intent.putExtra("interested6", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedemail)));
                 intent.putExtra("interested7", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedprice)));
                 intent.putExtra("interested8", cursor.getString(cursor.getColumnIndex(MyManage.column_interestedtravel)));
+                intent.putExtra("interested9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat1)));
+                intent.putExtra("interested10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lag1)));
 
                 cursor.moveToNext();
                 cursor.close();

@@ -55,8 +55,6 @@ public class TourActivity extends AppCompatActivity {
 
         Log.d("sgsagsag", "count " + String.valueOf(cursor.getCount()));
         final String[] id = new String[cursor.getCount()];
-
-
         final String[] provinceStrings = new String[cursor.getCount()];
         final String[] districtStrings = new String[cursor.getCount()];
         final String[] tourStrings = new String[cursor.getCount()];
@@ -77,6 +75,7 @@ public class TourActivity extends AppCompatActivity {
 
             provinceStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Province));
             districtStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_District));
+            tourStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Name1));
             descriptionStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Description));
             imageStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Image));
             latStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lat));
@@ -85,11 +84,12 @@ public class TourActivity extends AppCompatActivity {
             resStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_res));
             hotelStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotel));
 
+
+            Log.d("afsafsafsaf","fsafas"+tourStrings[i]);
+
             cursor.moveToNext();
         }
         cursor.close();
-
-        Log.d("8April", "tourString Lang ==>> " + cursor.getCount());
 
         MyAdpter2 myAdapter = new MyAdpter2(this, tourStrings,imageStrings);
         listView.setAdapter(myAdapter);
@@ -98,7 +98,7 @@ public class TourActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Log.d("sgsagsag",id[i]);
+                Log.d("sgsagsag", id[i]);
 
 
                 Intent intent = new Intent(TourActivity.this, MapsActivity.class);
@@ -116,6 +116,7 @@ public class TourActivity extends AppCompatActivity {
 
 
 
+/*
 
                 SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                         MODE_PRIVATE, null);
@@ -144,6 +145,7 @@ public class TourActivity extends AppCompatActivity {
                 intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
                 cursor.moveToNext();
                 cursor.close();
+*/
 
 
 
@@ -166,6 +168,7 @@ public class TourActivity extends AppCompatActivity {
                         Log.d("textsearch", "yesssss");
                         Intent intent = new Intent(TourActivity.this, MapsActivity.class);
 
+
                         intent.putExtra("Tour", tourStrings[i]);
                         intent.putExtra("District", districtStrings[i]);
                         intent.putExtra("Province", provinceStrings[i]);
@@ -174,8 +177,6 @@ public class TourActivity extends AppCompatActivity {
                         intent.putExtra("Lat", latStrings[i]);
                         intent.putExtra("Lng", lngStrings[i]);
                         intent.putExtra("point", pointStrings[i]);
-
-
                         intent.putExtra("res", resStrings[i]);
                         intent.putExtra("hotel", hotelStrings[i]);
 

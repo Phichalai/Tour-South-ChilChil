@@ -5,7 +5,7 @@
     android:background="@drawable/beerza">
 
     <LinearLayout
-        android:id="@+id/linearLayout13"
+        android:id="@+id/linearLayout16"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
@@ -14,7 +14,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
@@ -26,11 +26,10 @@
             android:text="ADMIN"
             android:textColor="@color/text"
             android:textSize="@dimen/h1" />
-
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout12"
+        android:id="@+id/linearLayout18"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
@@ -41,38 +40,24 @@
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="250dp" >
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:text="NEW"
-            android:id="@+id/button18"
-            android:background="@drawable/button_shape1" />
+            android:text="เพิ่ม"
+            android:id="@+id/button40"
+            android:background="@drawable/button_shape1"
+            android:layout_marginTop="20dp" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:text="สถานที่ท่องเที่ยวที่น่าสนใจ"
-            android:id="@+id/button19"
+            android:text="แก้ไข - ลบ"
+            android:id="@+id/button41"
             android:background="@drawable/button_shape6"
             android:layout_marginTop="10dp" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="สถานที่ท่องเที่ยวตามฤดูกาล"
-            android:id="@+id/button34"
-            android:background="@drawable/button_shape4"
-            android:layout_marginTop="10dp" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:text="ข่าวสารการท่องเที่ยว"
-            android:id="@+id/button39"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button_shape7" />
     </LinearLayout>
 
 </LinearLayout>

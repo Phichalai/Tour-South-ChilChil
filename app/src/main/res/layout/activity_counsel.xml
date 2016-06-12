@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linearLayout20"
@@ -11,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:background="#0011ff"
         android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView22"
@@ -29,62 +30,54 @@
     </LinearLayout>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
         android:id="@+id/editText8"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:text="email"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:hint="ชื่อ"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/editText9"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:text="phon"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:hint="อีเมล"
+        android:inputType="textEmailAddress" />
+
+    <EditText
         android:id="@+id/editText10"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="dis"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:hint="เบอร์โทรศัพท์"
+        android:inputType="phone" />
+
+    <EditText
         android:id="@+id/editText7"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp" />
-
-    <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="day"
-        android:ems="10"
-        android:id="@+id/editText11"
+        android:layout_height="80dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="รายละเอียด"
+        android:inputType="textPersonName" />
+
 
     <Button
+        android:id="@+id/button24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SUBMIT"
-        android:onClick="clickSubmit"
-        android:id="@+id/button24"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:onClick="clickSubmit"
+        android:text="SUBMIT" />
 
 </LinearLayout>

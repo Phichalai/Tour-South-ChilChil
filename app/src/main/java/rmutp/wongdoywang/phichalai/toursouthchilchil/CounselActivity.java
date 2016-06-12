@@ -26,93 +26,87 @@ import java.util.ArrayList;
 
 public class CounselActivity extends AppCompatActivity {
 
-        //Explicit ประกาศตัวแปร
-        private EditText counselnameEditText,counselEmailEditText,
-                counselcallEditText, counseldescriptionEditText,
-                counseldatEditText;
-        private String counselnameString, counselEmailString, counselcallString,
-                counseldescriptionString,counseldatString;
+    //Explicit ประกาศตัวแปร
+    private EditText counselnameEditText, counselEmailEditText,
+            counselcallEditText, counseldescriptionEditText;
+    private String counselnameString, counselEmailString, counselcallString,
+            counseldescriptionString;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_counsel);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_counsel);
 
-                //การผูกวิกเกต Bind Widget
-                bindWidget();
-        }//main method
+        //การผูกวิกเกต Bind Widget
+        bindWidget();
+    }//main method
 
 
-        public void clickSubmit (View view) {
+    public void clickSubmit(View view) {
 
-                counselnameString = counselnameEditText.getText().toString().trim();
-                counselEmailString = counselEmailEditText.getText().toString().trim();
-                counselcallString = counselcallEditText.getText().toString().trim();
-                counseldescriptionString = counseldescriptionEditText.getText().toString().trim();
-                counseldatString = counseldatEditText.getText().toString().trim();
-                //Check space การตรวจสอบช่องว่าง
-                if (checkSpace()) {
-                        //Have space มีช่องว่าง
-                        MyAlertDialog myAlertDialog = new MyAlertDialog();
-                        myAlertDialog.myDialog(CounselActivity.this, "มีช่องว่าง",
-                                "กรุณากรอก ทุกช่อง");
+        counselnameString = counselnameEditText.getText().toString().trim();
+        counselEmailString = counselEmailEditText.getText().toString().trim();
+        counselcallString = counselcallEditText.getText().toString().trim();
+        counseldescriptionString = counseldescriptionEditText.getText().toString().trim();
+        //Check space การตรวจสอบช่องว่าง
 
-                } else {
-                        //No space ไม่มีช่องว่าง
-                        updateToserver();
-                }
+        if (checkSpace()) {
+            //Have space มีช่องว่าง
+            MyAlertDialog myAlertDialog = new MyAlertDialog();
+            myAlertDialog.myDialog(CounselActivity.this, "มีช่องว่าง",
+                    "กรุณากรอก ทุกช่อง");
 
-        }//clicksign ปุ่มสมัครสมาขิก
-
-        private void updateToserver() {
-
-                //conected http การคอนเน็ตปรค
-                StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
-                        .Builder().permitAll().build();
-                StrictMode.setThreadPolicy(threadPolicy);
-
-                try {
-
-                        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-                        nameValuePairs.add(new BasicNameValuePair("Addis","true"));
-                        nameValuePairs.add(new BasicNameValuePair("Counselname",counselnameString));
-                        nameValuePairs.add(new BasicNameValuePair("CounselEmail",counselEmailString));
-                        nameValuePairs.add(new BasicNameValuePair("Counselcall",counselcallString));
-                        nameValuePairs.add(new BasicNameValuePair("Counseldescription",counseldescriptionString));
-                        nameValuePairs.add(new BasicNameValuePair("Counseldat",counseldatString));
-
-                        HttpClient httpClient = new DefaultHttpClient();
-                        HttpPost httpPost = new HttpPost("http://swiftcodingthai.com/saa/php_add_user_phichalai.php");
-                        httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs,"UTF-8"));
-                        httpClient.execute(httpPost);
-
-                        Toast.makeText(CounselActivity.this, "บันทึกข้อมูลเรียบร้อยแล้ว ขอบคุณค่ะ",
-                                Toast.LENGTH_SHORT).show();
-                        finish();
-                } catch (Exception e) {
-                        MyAlertDialog myAlertDialog = new MyAlertDialog();
-                        myAlertDialog.myDialog(CounselActivity.this,"Error", "ไม่สามารถเชื่อมต่อ Server ได้");
-                        Log.d("test", "e =" + e.toString());
-                }
-
-        }//updateToDerver เอา user password name email ขึ้น saver
-
-        private boolean checkSpace() {
-
-                boolean bolResult = true;
-
-                bolResult = counselnameString.equals("") || counselEmailString.equals("") ||
-                        counselcallString.equals("") || counseldescriptionString.equals("")
-                        || counseldatString.equals("");
-                return bolResult;
+        } else {
+            //No space ไม่มีช่องว่าง
+            updateToserver();
         }
 
-        private void bindWidget() {
-                counselnameEditText = (EditText) findViewById(R.id.editText8);
-                counselEmailEditText = (EditText) findViewById(R.id.editText9);
-                counselcallEditText = (EditText) findViewById(R.id.editText10);
-                counseldescriptionEditText = (EditText) findViewById(R.id.editText7);
-                counseldatEditText= (EditText) findViewById(R.id.editText11);
+    }//clicksign ปุ่มตกลง
 
+    private void updateToserver() {
+
+        //conected http การคอนเน็ตปรค
+        StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
+                .Builder().permitAll().build();
+        StrictMode.setThreadPolicy(threadPolicy);
+
+        try {
+
+            ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+            nameValuePairs.add(new BasicNameValuePair("countpoint", "counsel"));
+            nameValuePairs.add(new BasicNameValuePair("Counselname", counselnameString));
+            nameValuePairs.add(new BasicNameValuePair("CounselEmail", counselEmailString));
+            nameValuePairs.add(new BasicNameValuePair("Counselcall", counselcallString));
+            nameValuePairs.add(new BasicNameValuePair("Counseldescription", counseldescriptionString));
+
+            HttpClient httpClient = new DefaultHttpClient();
+            HttpPost httpPost = new HttpPost("http://swiftcodingthai.com/saa/php_add_user_phichalai.php");
+            httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
+            httpClient.execute(httpPost);
+
+            Toast.makeText(CounselActivity.this, "บันทึกข้อมูลเรียบร้อยแล้ว ขอบคุณค่ะ",
+                    Toast.LENGTH_SHORT).show();
+            finish();
+        } catch (Exception e) {
+            MyAlertDialog myAlertDialog = new MyAlertDialog();
+            myAlertDialog.myDialog(CounselActivity.this, "Error", "ไม่สามารถเชื่อมต่อ Server ได้");
+            Log.d("test", "e =" + e.toString());
         }
+
+    }//updateToDerver เอา ืทุกอย่างงขึ้น saver
+
+    private boolean checkSpace() {
+        boolean bolResult = true;
+
+        bolResult = counselnameString.equals("") || counselEmailString.equals("") ||
+                counselcallString.equals("") || counseldescriptionString.equals("");
+        return bolResult;
+    }
+
+    private void bindWidget() {
+        counselnameEditText = (EditText) findViewById(R.id.editText8);
+        counselEmailEditText = (EditText) findViewById(R.id.editText9);
+        counselcallEditText = (EditText) findViewById(R.id.editText10);
+        counseldescriptionEditText = (EditText) findViewById(R.id.editText7);
+    }
 }//Main class

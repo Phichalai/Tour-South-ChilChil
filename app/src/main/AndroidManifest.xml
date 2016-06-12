@@ -41,9 +41,9 @@
         <activity android:name=".SeasonwinterActivity" />
         <activity android:name=".WinterdisActivity" />
         <activity android:name=".SummerdisActivity" />
-        <activity android:name=".Seasonwinterdis"/> >
-
-
+        <activity android:name=".Seasonwinterdis"/>
+        <activity android:name=".RestaurantActivityManu"/>
+        <activity android:name=".HotelmanuActivity"/>
 
 
 

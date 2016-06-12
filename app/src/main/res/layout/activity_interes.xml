@@ -34,7 +34,7 @@
         android:layout_marginTop="20dp">
 
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="195dp"
             android:layout_height="100dp"
             android:id="@+id/imageView30"
             android:src="@drawable/zakadad" />
@@ -53,7 +53,7 @@
         android:layout_marginTop="10dp">
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="195dp"
             android:layout_height="wrap_content"
             android:text="เกาะกระดาน"
             android:id="@+id/button48"
@@ -77,7 +77,7 @@
         android:layout_marginTop="5dp">
 
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="195dp"
             android:layout_height="100dp"
             android:id="@+id/imageView32"
             android:src="@drawable/zalaw" />
@@ -96,7 +96,7 @@
         android:layout_marginTop="10dp">
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="195dp"
             android:layout_height="wrap_content"
             android:text="เกาะเหลาเหลียง"
             android:id="@+id/button49"
@@ -120,7 +120,7 @@
         android:layout_marginTop="5dp">
 
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="195dp"
             android:layout_height="100dp"
             android:id="@+id/imageView34"
             android:src="@drawable/zapayam" />
@@ -139,7 +139,7 @@
         android:layout_marginTop="10dp">
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="195dp"
             android:layout_height="wrap_content"
             android:text="เกาะพยาม"
             android:id="@+id/button16"
