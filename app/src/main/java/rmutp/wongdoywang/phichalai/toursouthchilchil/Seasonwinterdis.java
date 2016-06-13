@@ -10,14 +10,25 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.squareup.picasso.Picasso;
 
 
-public class Seasonwinterdis extends AppCompatActivity {
+public class Seasonwinterdis extends AppCompatActivity implements OnMapReadyCallback {
+    private GoogleMap mMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seasonraindis);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map2);
+        mapFragment.getMapAsync(this);
 
         TextView season = (TextView) findViewById(R.id.season);
         season.setText(getIntent().getStringExtra("season1"));
@@ -49,4 +60,21 @@ public class Seasonwinterdis extends AppCompatActivity {
 
 
             }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        mMap = googleMap;
+
+        String strLat = getIntent().getStringExtra("season9");
+        String strLng = getIntent().getStringExtra("season10");
+        double douLat = Double.parseDouble(strLat);
+        double douLng = Double.parseDouble(strLng);
+
+
+        LatLng latLng = new LatLng(douLat, douLng);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
+        mMap.addMarker(new MarkerOptions().position(latLng));
+    }
 }

@@ -270,12 +270,14 @@ public class MainActivity extends AppCompatActivity {
                             String seasontour = jsonObject.getString(MyManage.column_seasontour);
                             String seasonImage = jsonObject.getString(MyManage.column_seasonImage);
                             String seasondescription = jsonObject.getString(MyManage.column_seasondescription);
+                            String strLat2 = jsonObject.getString(MyManage.column_Lat2);
+                            String strLng2 = jsonObject.getString(MyManage.column_Lng2);
                             String seasonopen = jsonObject.getString(MyManage.column_seasonopen);
                             String seasonemail = jsonObject.getString(MyManage.column_seasonemail);
                             String seasonprice = jsonObject.getString(MyManage.column_seasonprice);
                             String seasontours = jsonObject.getString(MyManage.column_seasontours);
 
-                            myManage.addseason(seasonname, seasontour, seasonImage, seasondescription,
+                            myManage.addseason(seasonname, seasontour, seasonImage, seasondescription, strLat2, strLng2,
                                     seasonopen, seasonemail, seasonprice, seasontours);
                             break;
 

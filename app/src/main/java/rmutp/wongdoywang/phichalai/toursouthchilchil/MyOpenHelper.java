@@ -85,6 +85,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "seasontour, " +
             "seasonImage, " +
             "seasondescription, " +
+            "Lat, " +
+            "Lng, " +
             "seasonopen, " +
             "seasonemail, " +
             "seasonprice, " +

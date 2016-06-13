@@ -57,7 +57,7 @@
                     android:layout_weight="7.21" />
 
                 <fragment
-                    android:id="@+id/fragment2"
+                    android:id="@+id/map2"
                     android:name="com.google.android.gms.maps.SupportMapFragment"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
@@ -160,6 +160,36 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ร้านอาหาร"
+                        android:id="@+id/button50"
+                        android:textSize="20dp"
+                        android:background="@drawable/button_shape3"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ที่พัก"
+                        android:id="@+id/button54"
+                        android:textSize="20dp"
+                        android:background="@drawable/button_shape2"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <Button
@@ -167,8 +197,7 @@
                         android:layout_height="wrap_content"
                         android:text="counsel"
                         android:id="@+id/button33"
-                        android:background="@drawable/button_shape1"
-                        android:layout_marginTop="10dp" />
+                        android:background="@drawable/button_shape1" />
                 </LinearLayout>
 
             </LinearLayout>

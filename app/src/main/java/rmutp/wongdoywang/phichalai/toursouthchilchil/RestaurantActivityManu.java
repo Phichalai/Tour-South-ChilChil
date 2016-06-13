@@ -24,7 +24,7 @@ public class RestaurantActivityManu extends AppCompatActivity {
         setContentView(R.layout.activity_restaurantmanu);
 
         name = getIntent().getStringExtra("name");
-        Log.d("safsafsa", name);
+
 
         //create ListView
         listView = (ListView) findViewById(R.id.listView4);
@@ -36,7 +36,6 @@ public class RestaurantActivityManu extends AppCompatActivity {
         Button52.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(RestaurantActivityManu.this, RestaurantActivityManu.class);
 
                 SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
@@ -74,13 +73,13 @@ public class RestaurantActivityManu extends AppCompatActivity {
             case "เกาะเหลาเหลียง":
                 temp_sql = " _id >= 7 AND _id <= 9";
                 break;
-            case "44":
+            case "เกาะไข่นอก ":
                 temp_sql = " _id >= 7 AND _id <= 9";
                 break;
-            case "55555":
+            case "เกาะพยาม ":
                 temp_sql = " _id >= 7 AND _id <= 9";
                 break;
-            case "66666":
+            case "เกาะลันตา ":
                 temp_sql = " _id >= 7 AND _id <= 9";
                 break;
         }
@@ -120,7 +119,11 @@ public class RestaurantActivityManu extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+
             }//onItem
         });
-    }
-}
+
+            }//onItem
+        }
+
+

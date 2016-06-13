@@ -36,6 +36,8 @@ public class SeasonwinterActivity extends AppCompatActivity {
                 intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
                 intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
                 intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+                intent.putExtra("season9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat2)));
+                intent.putExtra("season10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lng2)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -64,6 +66,8 @@ public class SeasonwinterActivity extends AppCompatActivity {
                 intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
                 intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
                 intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+                intent.putExtra("season9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat2)));
+                intent.putExtra("season10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lng2)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -91,6 +95,8 @@ public class SeasonwinterActivity extends AppCompatActivity {
                 intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
                 intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
                 intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+                intent.putExtra("season9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat2)));
+                intent.putExtra("season10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lng2)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -118,6 +124,8 @@ public class SeasonwinterActivity extends AppCompatActivity {
                 intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
                 intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
                 intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+                intent.putExtra("season9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat2)));
+                intent.putExtra("season10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lng2)));
 
                 cursor.moveToNext();
                 cursor.close();
@@ -145,6 +153,8 @@ public class SeasonwinterActivity extends AppCompatActivity {
                 intent.putExtra("season6", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonemail)));
                 intent.putExtra("season7", cursor.getString(cursor.getColumnIndex(MyManage.column_seasonprice)));
                 intent.putExtra("season8", cursor.getString(cursor.getColumnIndex(MyManage.column_seasontours)));
+                intent.putExtra("season9", cursor.getString(cursor.getColumnIndex(MyManage.column_Lat2)));
+                intent.putExtra("season10", cursor.getString(cursor.getColumnIndex(MyManage.column_Lng2)));
 
                 cursor.moveToNext();
                 cursor.close();

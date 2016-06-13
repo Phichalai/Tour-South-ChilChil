@@ -78,6 +78,8 @@ public class MyManage {
     public static final String column_seasontour = "seasontour";
     public static final String column_seasonImage = "seasonImage";
     public static final String column_seasondescription = "seasondescription";
+    public static final String column_Lat2 = "Lat";
+    public static final String column_Lng2 = "Lng";
     public static final String column_seasonopen = "seasonopen";
     public static final String column_seasonemail = "seasonemail";
     public static final String column_seasonprice = "seasonprice";
@@ -241,6 +243,8 @@ public class MyManage {
                           String seasontour,
                           String seasonImage,
                           String seasondescription,
+                          String Lat2,
+                          String Lng2,
                           String seasonopen,
                           String seasonemail,
                           String seasonprice,
@@ -251,6 +255,8 @@ public class MyManage {
         contentValues.put(column_seasontour, seasontour);
         contentValues.put(column_seasonImage, seasonImage);
         contentValues.put(column_seasondescription, seasondescription);
+        contentValues.put(column_Lat2, Lat2);
+        contentValues.put(column_Lng2, Lng2);
         contentValues.put(column_seasonopen, seasonopen);
         contentValues.put(column_seasonemail, seasonemail);
         contentValues.put(column_seasonprice, seasonprice);

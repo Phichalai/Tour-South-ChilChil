@@ -114,6 +114,7 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
                 intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
                 intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
                 intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
+                intent.putExtra("name", getIntent().getStringExtra("interested1"));
 
 
                 cursor.moveToNext();
@@ -133,9 +134,6 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
         String strLng = getIntent().getStringExtra("interested10");
         double douLat = Double.parseDouble(strLat);
         double douLng = Double.parseDouble(strLng);
-
-        Log.d("sfasfasf",strLat);
-        Log.d("sfasfasf",strLng);
 
         LatLng latLng = new LatLng(douLat, douLng);
 
