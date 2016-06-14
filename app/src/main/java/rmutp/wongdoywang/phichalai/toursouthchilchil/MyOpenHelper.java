@@ -23,9 +23,18 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "Name text, " +
             "Category text, " +
             "Description text, " +
+            "Tumboon text, " +
+            "Muban text, " +
             "Image text, " +
+            "Image1 text, " +
+            "Image2 text, " +
             "Lat text, " +
             "Lng text, " +
+            "add_tour text, " +
+            "call text, " +
+            "open text, " +
+            "email text, "+
+            "price text, " +
             "point text, " +
             "res text, " +
             "hotel text);";
@@ -42,24 +51,28 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "_id integer primary key, " +
             "hotelname, " +
             "hotelimage, " +
+            "hotelimageB, " +
+            "hotelimageC, " +
             "hoteldescription, " +
             "hotelprice, " +
             "hoteltime, " +
             "hoteladdress, " +
-            "hoteltravel);";
+            "hoteltravel, " +
+            "hotelurl);";
 
     private static final String create_interested = "create table interested (" +
             "_id integer primary key, " +
             "interestedname, " +
             "interestedimage, " +
+            "interestedimaged, " +
+            "interestedimagee, " +
             "interesteddescription, " +
             "Lat, " +
             "Lag, " +
             "interestedopen, " +
             "interestedcall, " +
             "interestedemail, " +
-            "interestedprice, " +
-            "interestedtravel);";
+            "interestedprice);";
 
     private static final String create_report = "create table report (" +
             "_id integer primary key, " +
@@ -73,24 +86,29 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "_id integer primary key, " +
             "restaurantname, " +
             "restaurantimge, " +
+            "restaurantimgeB, " +
+            "restaurantimgeC, " +
             "restaurantdescription, " +
             "restaurantopen, " +
             "restaurantaddress, " +
             "restauranttravel, " +
-            "restaurantprice);";
+            "restaurantprice, " +
+            "resurl);";
+
 
     private static final String create_season = "create table season (" +
             "_id integer primary key, " +
             "seasonname, " +
             "seasontour, " +
             "seasonImage, " +
+            "seasonImagea, " +
+            "seasonImageb, " +
             "seasondescription, " +
             "Lat, " +
             "Lng, " +
             "seasonopen, " +
             "seasonemail, " +
-            "seasonprice, " +
-            "seasontours);";
+            "seasonprice);";
 
     private static final String create_travel = "create table travel (" +
             "_id integer primary key, " +

@@ -25,8 +25,14 @@ public class HotelActivity extends AppCompatActivity {
         TextView textView20 = (TextView) findViewById(R.id.textView20);
         textView20.setText(getIntent().getStringExtra("hotel1"));
 
-        ImageView ImageView6 = (ImageView) findViewById(R.id.imageView6);
-        Picasso.with(this).load(getIntent().getStringExtra("hotel2")).resize(480, 200).into(ImageView6);
+        ImageView hotela = (ImageView) findViewById(R.id.hotela);
+        Picasso.with(this).load(getIntent().getStringExtra("hotela")).resize(480, 200).into(hotela);
+
+        ImageView hotelb = (ImageView) findViewById(R.id.hotelb);
+        Picasso.with(this).load(getIntent().getStringExtra("hotelb")).resize(480, 200).into(hotelb);
+
+        ImageView hotelc = (ImageView) findViewById(R.id.hotelc);
+        Picasso.with(this).load(getIntent().getStringExtra("hotelc")).resize(480, 200).into(hotelc);
 
         TextView textView19 = (TextView) findViewById(R.id.textView19);
         textView19.setText(getIntent().getStringExtra("hotel3"));
@@ -42,6 +48,9 @@ public class HotelActivity extends AppCompatActivity {
 
         TextView tavel1 = (TextView) findViewById(R.id.tavel1);
         tavel1.setText(getIntent().getStringExtra("hotel7"));
+
+        Button hotelurl = (Button) findViewById(R.id.hotelurl);
+        hotelurl.setText(getIntent().getStringExtra("hotelurl"));
 
 
     }

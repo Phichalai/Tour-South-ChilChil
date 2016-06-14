@@ -190,15 +190,25 @@ public class MainActivity extends AppCompatActivity {
                             String strName1 = jsonObject.getString(MyManage.column_Name1);
                             String strCategory = jsonObject.getString(MyManage.column_Category);
                             String strDescription = jsonObject.getString(MyManage.column_Description);
+                            String strTumboon = jsonObject.getString(MyManage.column_Tumboon);
+                            String strMuban = jsonObject.getString(MyManage.column_Muban);
                             String strImage = jsonObject.getString(MyManage.column_Image);
+                            String strImage1 = jsonObject.getString(MyManage.column_Image1);
+                            String strImage2 = jsonObject.getString(MyManage.column_Image2);
                             String strLat = jsonObject.getString(MyManage.column_Lat);
                             String strLng = jsonObject.getString(MyManage.column_Lng);
+                            String stradd = jsonObject.getString(MyManage.column_add);
+                            String strcall = jsonObject.getString(MyManage.column_call);
+                            String stropen = jsonObject.getString(MyManage.column_open);
+                            String stremail = jsonObject.getString(MyManage.column_email);
+                            String strprice = jsonObject.getString(MyManage.column_price);
                             String strpoint = jsonObject.getString(MyManage.column_point);
                             String res = jsonObject.getString(MyManage.column_res);
                             String hotel = jsonObject.getString(MyManage.column_hotel);
 
                             myManage.addTour(strPrivince, strDistrict, strName1, strCategory,
-                                    strDescription, strImage, strLat, strLng, strpoint, res, hotel);
+                                    strDescription, strTumboon, strMuban, strImage, strImage1, strImage2, strLat, strLng, stradd,
+                                    strcall, stropen, stremail, strprice, strpoint, res, hotel);
                             break;
 
                         case 2: //CounseTable
@@ -214,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
                         case 3: //interestedTable
                             String interestedname = jsonObject.getString(MyManage.column_interestedname);
                             String interestedimage = jsonObject.getString(MyManage.column_interestedimage);
+                            String interestedimaged = jsonObject.getString(MyManage.column_interestedimaged);
+                            String interestedimagee = jsonObject.getString(MyManage.column_interestedimagee);
                             String interesteddescription = jsonObject.getString(MyManage.column_interesteddescription);
                             String strLat1 = jsonObject.getString(MyManage.column_Lat1);
                             String strLag1 = jsonObject.getString(MyManage.column_Lag1);
@@ -221,24 +233,26 @@ public class MainActivity extends AppCompatActivity {
                             String interestedcall = jsonObject.getString(MyManage.column_interestedcall);
                             String interestedemail = jsonObject.getString(MyManage.column_interestedemail);
                             String interestedprice = jsonObject.getString(MyManage.column_interestedprice);
-                            String interestedtravel = jsonObject.getString(MyManage.column_interestedtravel);
 
-                            myManage.addinterested(interestedname, interestedimage, interesteddescription, strLat1, strLag1,
-                                    interestedopen, interestedcall, interestedemail, interestedprice,
-                                    interestedtravel);
+                            myManage.addinterested(interestedname, interestedimage, interestedimaged,
+                                    interestedimagee, interesteddescription, strLat1, strLag1,
+                                    interestedopen, interestedcall, interestedemail, interestedprice );
                             break;
 
                         case 4: //hotelTable
                             String hotelname = jsonObject.getString(MyManage.column_hotelname);
                             String hotelimage = jsonObject.getString(MyManage.column_hotelimage);
+                            String hotelimageB = jsonObject.getString(MyManage.column_hotelimageB);
+                            String hotelimageC = jsonObject.getString(MyManage.column_hotelimageC);
                             String hoteldescription = jsonObject.getString(MyManage.column_hoteldescription);
                             String hotelprice = jsonObject.getString(MyManage.column_hotelprice);
                             String hoteltime = jsonObject.getString(MyManage.column_hoteltime);
                             String hoteladdress = jsonObject.getString(MyManage.column_hoteladdress);
                             String hoteltravel = jsonObject.getString(MyManage.column_hoteltravel);
+                            String hotelurl = jsonObject.getString(MyManage.column_hotelurl);
 
-                            myManage.addhotel(hotelname, hotelimage, hoteldescription, hotelprice, hoteltime,
-                                    hoteladdress, hoteltravel);
+                            myManage.addhotel(hotelname, hotelimage, hotelimageB, hotelimageC,  hoteldescription, hotelprice, hoteltime,
+                                    hoteladdress, hoteltravel, hotelurl);
 
                             break;
 
@@ -255,30 +269,36 @@ public class MainActivity extends AppCompatActivity {
                         case 6: //restaurantTable
                             String restaurantname = jsonObject.getString(MyManage.column_restaurantname);
                             String restaurantimge = jsonObject.getString(MyManage.column_restaurantimge);
+                            String restaurantimgeB = jsonObject.getString(MyManage.column_restaurantimgeB);
+                            String restaurantimgeC = jsonObject.getString(MyManage.column_restaurantimgeC);
                             String restaurantdescription = jsonObject.getString(MyManage.column_restaurantdescription);
                             String restaurantopen = jsonObject.getString(MyManage.column_restaurantopen);
                             String restaurantaddress = jsonObject.getString(MyManage.column_restaurantaddress);
                             String restauranttravel = jsonObject.getString(MyManage.column_restauranttravel);
                             String restaurantprice = jsonObject.getString(MyManage.column_restaurantprice);
+                            String resurl = jsonObject.getString(MyManage.column_resurl);
 
-                            myManage.addrestaurant(restaurantname, restaurantimge, restaurantdescription,
-                                    restaurantopen, restaurantaddress, restauranttravel, restaurantprice);
+                            myManage.addrestaurant(restaurantname, restaurantimge, restaurantimgeB,
+                                    restaurantimgeC, restaurantdescription,
+                                    restaurantopen, restaurantaddress, restauranttravel, restaurantprice,resurl);
                             break;
 
                         case 7: //seasonTable
                             String seasonname = jsonObject.getString(MyManage.column_seasonname);
                             String seasontour = jsonObject.getString(MyManage.column_seasontour);
                             String seasonImage = jsonObject.getString(MyManage.column_seasonImage);
+                            String seasonImagea = jsonObject.getString(MyManage.column_seasonImagea);
+                            String seasonImageb = jsonObject.getString(MyManage.column_seasonImageb);
                             String seasondescription = jsonObject.getString(MyManage.column_seasondescription);
                             String strLat2 = jsonObject.getString(MyManage.column_Lat2);
                             String strLng2 = jsonObject.getString(MyManage.column_Lng2);
                             String seasonopen = jsonObject.getString(MyManage.column_seasonopen);
                             String seasonemail = jsonObject.getString(MyManage.column_seasonemail);
                             String seasonprice = jsonObject.getString(MyManage.column_seasonprice);
-                            String seasontours = jsonObject.getString(MyManage.column_seasontours);
 
-                            myManage.addseason(seasonname, seasontour, seasonImage, seasondescription, strLat2, strLng2,
-                                    seasonopen, seasonemail, seasonprice, seasontours);
+
+                            myManage.addseason(seasonname, seasontour, seasonImage,seasonImagea,seasonImageb, seasondescription, strLat2, strLng2,
+                                    seasonopen, seasonemail, seasonprice );
                             break;
 
                         case 8: //travelTable
@@ -316,7 +336,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void testAddValue() {
         myManage.addUser("user", "pass", "name", "email");
-        myManage.addTour("province", "district", "name", "Cat", "descrip", "image",
+        myManage.addTour("province", "district", "name", "Cat", "descrip", "Tumboon",
+                "Muban", "image", "Image1", "Image2", "add", "call", "open", "email", "price",
                 "lat", "lng", "point", "res", "hotel");
     }
 }

@@ -41,20 +41,23 @@ public class SummerdisActivity extends AppCompatActivity implements OnMapReadyCa
         ImageView ImageView = (ImageView) findViewById(R.id.imageView8);
         Picasso.with(this).load(getIntent().getStringExtra("season3")).resize(480, 200).into(ImageView);
 
+        ImageView imageView57 = (ImageView) findViewById(R.id.imageView57);
+        Picasso.with(this).load(getIntent().getStringExtra("season4")).resize(480, 200).into(imageView57);
+
+        ImageView imageView58 = (ImageView) findViewById(R.id.imageView58);
+        Picasso.with(this).load(getIntent().getStringExtra("season5")).resize(480, 200).into(imageView58);
+
         TextView newtext = (TextView) findViewById(R.id.newtext);
-        newtext.setText(getIntent().getStringExtra("season4"));
+        newtext.setText(getIntent().getStringExtra("season6"));
 
         TextView open = (TextView) findViewById(R.id.open);
-        open.setText(getIntent().getStringExtra("season5"));
+        open.setText(getIntent().getStringExtra("season7"));
 
         TextView emaill = (TextView) findViewById(R.id.emaill);
-        emaill.setText(getIntent().getStringExtra("season6"));
+        emaill.setText(getIntent().getStringExtra("season8"));
 
         TextView price = (TextView) findViewById(R.id.price);
-        price.setText(getIntent().getStringExtra("season7"));
-
-        TextView traval = (TextView) findViewById(R.id.traval);
-        traval.setText(getIntent().getStringExtra("season8"));
+        price.setText(getIntent().getStringExtra("season9"));
 
         Button button50 = (Button) findViewById(R.id.button50);
         button50.setOnClickListener(new View.OnClickListener() {
@@ -100,11 +103,14 @@ public class SummerdisActivity extends AppCompatActivity implements OnMapReadyCa
 
                 intent.putExtra("hotel1", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelname)));
                 intent.putExtra("hotel2", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimage)));
-                intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
-                intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
-                intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
-                intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
-                intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
+                intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageB)));
+                intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageC)));
+                intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
+                intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
+                intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
+                intent.putExtra("hotel8", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
+                intent.putExtra("hotel9", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
+                intent.putExtra("hotel10", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelurl)));
                 intent.putExtra("name", getIntent().getStringExtra("season1"));
 
 
@@ -130,8 +136,8 @@ public class SummerdisActivity extends AppCompatActivity implements OnMapReadyCa
 
         mMap = googleMap;
 
-        String strLat = getIntent().getStringExtra("season9");
-        String strLng = getIntent().getStringExtra("season10");
+        String strLat = getIntent().getStringExtra("season10");
+        String strLng = getIntent().getStringExtra("season11");
         double douLat = Double.parseDouble(strLat);
         double douLng = Double.parseDouble(strLng);
 

@@ -29,20 +29,26 @@ public class RestaurantActivity extends AppCompatActivity {
         ImageView ImageView5 = (ImageView) findViewById(R.id.imageView5);
         Picasso.with(this).load(getIntent().getStringExtra("restaurant2")).resize(480, 200).into(ImageView5);
 
+        ImageView imageView59 = (ImageView) findViewById(R.id.imageView59);
+        Picasso.with(this).load(getIntent().getStringExtra("restaurant3")).resize(480, 200).into(imageView59);
+
+        ImageView imageView60 = (ImageView) findViewById(R.id.imageView60);
+        Picasso.with(this).load(getIntent().getStringExtra("restaurant4")).resize(480, 200).into(imageView60);
+
         TextView TextView15 = (TextView) findViewById(R.id.textView15);
-        TextView15.setText(getIntent().getStringExtra("restaurant3"));
+        TextView15.setText(getIntent().getStringExtra("restaurant5"));
 
         TextView open3 = (TextView) findViewById(R.id.open3);
-        open3.setText(getIntent().getStringExtra("restaurant4"));
+        open3.setText(getIntent().getStringExtra("restaurant6"));
 
         TextView email2 = (TextView) findViewById(R.id.email2);
-        email2.setText(getIntent().getStringExtra("restaurant5"));
+        email2.setText(getIntent().getStringExtra("restaurant7"));
 
         TextView price3 = (TextView) findViewById(R.id.price3);
-        price3.setText(getIntent().getStringExtra("restaurant6"));
+        price3.setText(getIntent().getStringExtra("restaurant8"));
 
         TextView traval2 = (TextView) findViewById(R.id.traval2);
-        traval2.setText(getIntent().getStringExtra("restaurant7"));
+        traval2.setText(getIntent().getStringExtra("restaurant9"));
     }
 }
 

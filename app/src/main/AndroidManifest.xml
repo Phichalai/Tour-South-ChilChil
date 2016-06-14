@@ -41,16 +41,15 @@
         <activity android:name=".SeasonwinterActivity" />
         <activity android:name=".WinterdisActivity" />
         <activity android:name=".SummerdisActivity" />
-        <activity android:name=".Seasonwinterdis"/>
-        <activity android:name=".RestaurantActivityManu"/>
-        <activity android:name=".HotelmanuActivity"/>
-
-
-
-
-
-
-
+        <activity android:name=".Seasonwinterdis" />
+        <activity android:name=".RestaurantActivityManu" />
+        <activity android:name=".HotelmanuActivity" />
+        <activity android:name=".admin_add_interested" />
+        <activity android:name=".admin_add_report" />
+        <activity android:name=".admin_add_season" />
+        <activity android:name=".admin_add_tourTABLE" />
+        <activity android:name=".admin_edit" />
+        <activity android:name=".admin_main" />
 
 
         <!--
@@ -67,7 +66,8 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".admin_menu"></activity>
     </application>
 
 </manifest>

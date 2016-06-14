@@ -59,9 +59,18 @@ public class TourActivity extends AppCompatActivity {
         final String[] districtStrings = new String[cursor.getCount()];
         final String[] tourStrings = new String[cursor.getCount()];
         final String[] descriptionStrings = new String[cursor.getCount()];
+        final String[] TumboonStrings = new String[cursor.getCount()];
+        final String[] MubanStrings = new String[cursor.getCount()];
         final String[] imageStrings = new String[cursor.getCount()];
+        final String[] Image1Strings = new String[cursor.getCount()];
+        final String[] Image2Strings = new String[cursor.getCount()];
         final String[] latStrings = new String[cursor.getCount()];
         final String[] lngStrings = new String[cursor.getCount()];
+        final String[] addStrings = new String[cursor.getCount()];
+        final String[] callStrings = new String[cursor.getCount()];
+        final String[] openStrings = new String[cursor.getCount()];
+        final String[] emailStrings = new String[cursor.getCount()];
+        final String[] priceStrings = new String[cursor.getCount()];
         final String[] pointStrings = new String[cursor.getCount()];
         final String[] resStrings = new String[cursor.getCount()];
         final String[] hotelStrings = new String[cursor.getCount()];
@@ -77,15 +86,21 @@ public class TourActivity extends AppCompatActivity {
             districtStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_District));
             tourStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Name1));
             descriptionStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Description));
+            TumboonStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Tumboon));
+            MubanStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Muban));
             imageStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Image));
+            Image1Strings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Image1));
+            Image2Strings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Image2));
             latStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lat));
             lngStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Lng));
+            addStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_add));
+            callStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_call));
+            openStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_open));
+            emailStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_email));
+            priceStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_price));
             pointStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_point));
             resStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_res));
             hotelStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotel));
-
-
-            Log.d("afsafsafsaf","fsafas"+tourStrings[i]);
 
             cursor.moveToNext();
         }
@@ -98,18 +113,24 @@ public class TourActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Log.d("sgsagsag", id[i]);
-
-
                 Intent intent = new Intent(TourActivity.this, MapsActivity.class);
 
                 intent.putExtra("Tour", tourStrings[i]);
                 intent.putExtra("District", districtStrings[i]);
                 intent.putExtra("Province", provinceStrings[i]);
                 intent.putExtra("Image", imageStrings[i]);
+                intent.putExtra("Image1", Image1Strings[i]);
+                intent.putExtra("Image2", Image2Strings[i]);
                 intent.putExtra("Description", descriptionStrings[i]);
+                intent.putExtra("Tumboon", TumboonStrings[i]);
+                intent.putExtra("Muban", MubanStrings[i]);
                 intent.putExtra("Lat", latStrings[i]);
                 intent.putExtra("Lng", lngStrings[i]);
+                intent.putExtra("add", addStrings[i]);
+                intent.putExtra("call", callStrings[i]);
+                intent.putExtra("open", openStrings[i]);
+                intent.putExtra("email", emailStrings[i]);
+                intent.putExtra("price", priceStrings[i]);
                 intent.putExtra("point", pointStrings[i]);
                 intent.putExtra("res", resStrings[i]);
                 intent.putExtra("hotel", hotelStrings[i]);
@@ -161,21 +182,27 @@ public class TourActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tempTxt = txtSearch.getText().toString();
-                Log.d("textsearch", tempTxt);
 
                 for (int i = 0; i < tourStrings.length; i++) {
                     if (tempTxt.equals(tourStrings[i])) {
-                        Log.d("textsearch", "yesssss");
-                        Intent intent = new Intent(TourActivity.this, MapsActivity.class);
-
+                       Intent intent = new Intent(TourActivity.this, MapsActivity.class);
 
                         intent.putExtra("Tour", tourStrings[i]);
                         intent.putExtra("District", districtStrings[i]);
                         intent.putExtra("Province", provinceStrings[i]);
                         intent.putExtra("Image", imageStrings[i]);
+                        intent.putExtra("Image1", Image1Strings[i]);
+                        intent.putExtra("Image2", Image2Strings[i]);
                         intent.putExtra("Description", descriptionStrings[i]);
+                        intent.putExtra("Tumboon", TumboonStrings[i]);
+                        intent.putExtra("Muban", MubanStrings[i]);
                         intent.putExtra("Lat", latStrings[i]);
                         intent.putExtra("Lng", lngStrings[i]);
+                        intent.putExtra("add", addStrings[i]);
+                        intent.putExtra("call", callStrings[i]);
+                        intent.putExtra("open", openStrings[i]);
+                        intent.putExtra("email", emailStrings[i]);
+                        intent.putExtra("price", priceStrings[i]);
                         intent.putExtra("point", pointStrings[i]);
                         intent.putExtra("res", resStrings[i]);
                         intent.putExtra("hotel", hotelStrings[i]);

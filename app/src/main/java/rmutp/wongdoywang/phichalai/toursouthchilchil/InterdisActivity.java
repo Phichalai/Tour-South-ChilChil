@@ -25,6 +25,7 @@ import com.squareup.picasso.Picasso;
 public class InterdisActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private ImageView imageView3, imageView6, imageView15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,35 +36,39 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
                 .findFragmentById(R.id.fragment);
         mapFragment.getMapAsync(this);
 
-      TextView TextView44 = (TextView) findViewById(R.id.textView44);
+         TextView TextView44 = (TextView) findViewById(R.id.textView44);
         TextView44.setText(getIntent().getStringExtra("interested1"));
 
         ImageView ImageView10 = (ImageView) findViewById(R.id.imageView10);
         Picasso.with(this).load(getIntent().getStringExtra("interested2")).resize(480, 200).into(ImageView10);
 
+        ImageView imagez = (ImageView) findViewById(R.id.imagez);
+        Picasso.with(this).load(getIntent().getStringExtra("interested3")).resize(480, 200).into(imagez);
+
+        ImageView imagezz = (ImageView) findViewById(R.id.imagezz);
+        Picasso.with(this).load(getIntent().getStringExtra("interested4")).resize(480, 200).into(imagezz);
+
 
         TextView TextView43 = (TextView) findViewById(R.id.textView43);
-        TextView43.setText(getIntent().getStringExtra("interested3"));
+        TextView43.setText(getIntent().getStringExtra("interested5"));
 
 
         TextView open2 = (TextView) findViewById(R.id.open2);
-        open2.setText(getIntent().getStringExtra("interested4"));
+        open2.setText(getIntent().getStringExtra("interested6"));
 
 
         TextView call = (TextView) findViewById(R.id.call);
-        call.setText(getIntent().getStringExtra("interested5"));
+        call.setText(getIntent().getStringExtra("interested7"));
 
 
         TextView Email = (TextView) findViewById(R.id.Email);
-        Email.setText(getIntent().getStringExtra("interested6"));
+        Email.setText(getIntent().getStringExtra("interested8"));
 
 
         TextView price2 = (TextView) findViewById(R.id.price2);
-        price2.setText(getIntent().getStringExtra("interested7"));
+        price2.setText(getIntent().getStringExtra("interested9"));
 
 
-        TextView travel = (TextView) findViewById(R.id.travel);
-        travel.setText(getIntent().getStringExtra("interested8"));
 
         Button button28 = (Button) findViewById(R.id.button28);
         button28.setOnClickListener(new View.OnClickListener() {
@@ -78,18 +83,18 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
 
                 intent.putExtra("restaurant1", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantname)));
                 intent.putExtra("restaurant2", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimge)));
-                intent.putExtra("restaurant3", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription)));
-                intent.putExtra("restaurant4", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen)));
-                intent.putExtra("restaurant5", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress)));
-                intent.putExtra("restaurant6", cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel)));
-                intent.putExtra("restaurant7", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice)));
+                intent.putExtra("restaurant3", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeB)));
+                intent.putExtra("restaurant4", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeC)));
+                intent.putExtra("restaurant5", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription)));
+                intent.putExtra("restaurant6", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen)));
+                intent.putExtra("restaurant7", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress)));
+                intent.putExtra("restaurant8", cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel)));
+                intent.putExtra("restaurant9", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice)));
+                intent.putExtra("restaurant10", cursor.getString(cursor.getColumnIndex(MyManage.column_resurl)));
                 intent.putExtra("name", getIntent().getStringExtra("interested1"));
-
 
                 cursor.moveToNext();
                 cursor.close();
-
-
                 startActivity(intent);
 
 
@@ -109,11 +114,14 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
 
                 intent.putExtra("hotel1", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelname)));
                 intent.putExtra("hotel2", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimage)));
-                intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
-                intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
-                intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
-                intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
-                intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
+                intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageB)));
+                intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageC)));
+                intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
+                intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
+                intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
+                intent.putExtra("hotel8", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
+                intent.putExtra("hotel9", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
+                intent.putExtra("hotel10", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelurl)));
                 intent.putExtra("name", getIntent().getStringExtra("interested1"));
 
 
@@ -130,8 +138,8 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
 
         mMap = googleMap;
 
-        String strLat = getIntent().getStringExtra("interested9");
-        String strLng = getIntent().getStringExtra("interested10");
+        String strLat = getIntent().getStringExtra("interested10");
+        String strLng = getIntent().getStringExtra("interested11");
         double douLat = Double.parseDouble(strLat);
         double douLng = Double.parseDouble(strLng);
 

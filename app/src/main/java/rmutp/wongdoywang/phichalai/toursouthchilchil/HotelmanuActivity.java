@@ -3,6 +3,7 @@ package rmutp.wongdoywang.phichalai.toursouthchilchil;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +17,17 @@ public class HotelmanuActivity extends AppCompatActivity {
 
     private ListView listView;
     private String name;
+
+    String[] hotelname;
+    String[] hotelimage;
+    String[] hotelimageB;
+    String[] hotelimageC;
+    String[] hoteldescription;
+    String[] hotelprice;
+    String[] hoteltime;
+    String[] hoteladdress;
+    String[] hoteltravel;
+    String[] hotelurl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +46,7 @@ public class HotelmanuActivity extends AppCompatActivity {
         Button53.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Intent intent = new Intent(HotelmanuActivity.this, HotelmanuActivity.class);
+    /*        Intent intent = new Intent(HotelmanuActivity.this, HotelmanuActivity.class);
 
             SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                 MODE_PRIVATE, null);
@@ -53,7 +65,9 @@ public class HotelmanuActivity extends AppCompatActivity {
 
 
         startActivity(intent);
-
+*/
+                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("http://www.centarahotelsresorts.com/centara/ckk/") );
+                startActivity( browse );
             }
         });
     }
@@ -87,23 +101,29 @@ public class HotelmanuActivity extends AppCompatActivity {
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM hotel WHERE" + temp_sql, null);
         cursor.moveToFirst();
 
-        final String[] hotelname = new String[cursor.getCount()];
-        final String[] hotelimage = new String[cursor.getCount()];
-        final String[] hoteldescription = new String[cursor.getCount()];
-        final String[] hotelprice = new String[cursor.getCount()];
-        final String[] hoteltime = new String[cursor.getCount()];
-        final String[] hoteladdress = new String[cursor.getCount()];
-        final String[] hoteltravel = new String[cursor.getCount()];
+        hotelname = new String[cursor.getCount()];
+        hotelimage = new String[cursor.getCount()];
+        hotelimageB = new String[cursor.getCount()];
+        hotelimageC = new String[cursor.getCount()];
+        hoteldescription = new String[cursor.getCount()];
+        hotelprice = new String[cursor.getCount()];
+        hoteltime = new String[cursor.getCount()];
+        hoteladdress = new String[cursor.getCount()];
+        hoteltravel = new String[cursor.getCount()];
+        hotelurl = new String[cursor.getCount()];
 
         for (int i = 0; i < cursor.getCount(); i++) {
 
             hotelname[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotelname));
             hotelimage[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimage));
+            hotelimageB[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageB));
+            hotelimageC[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageC));
             hoteldescription[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription));
             hotelprice[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice));
             hoteltime[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime));
             hoteladdress[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress));
             hoteltravel[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel));
+            hotelurl[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_hotelurl));
 
             cursor.moveToNext();
         }
@@ -116,6 +136,19 @@ public class HotelmanuActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                    Intent intent = new Intent(HotelmanuActivity.this, HotelActivity.class);
+
+                    intent.putExtra("hotel1", hotelname[i]);
+                    intent.putExtra("hotel2", hotelimage[i]);
+                    intent.putExtra("hotel3", hotelimageB[i]);
+                    intent.putExtra("hotel4", hotelimageC[i]);
+                    intent.putExtra("hotel5", hoteldescription[i]);
+                    intent.putExtra("hotel6", hotelprice[i]);
+                    intent.putExtra("hotel7",  hoteltime[i]);
+                    intent.putExtra("hotel8",hoteladdress[i]);
+                    intent.putExtra("hotel9",  hotelurl[i]);
+
+                    startActivity(intent);
                 }//onItem
             });
     }

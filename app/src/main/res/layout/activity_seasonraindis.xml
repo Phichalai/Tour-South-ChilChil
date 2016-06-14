@@ -27,6 +27,22 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="90dp" />
 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView55" />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView56" />
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/Description"
                     android:layout_width="fill_parent"
@@ -55,6 +71,12 @@
                     android:shadowDy="2"
                     android:shadowRadius="1"
                     android:layout_weight="7.21" />
+
+                <fragment
+                    android:id="@+id/mapseason"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -120,29 +142,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="price4"
-                        android:textColor="#000000"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:textSize="20dp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:id="@+id/imageView29"
-                        android:src="@drawable/zatravel" />
-
-                    <TextView
-                        android:id="@+id/traval"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="traval3"
                         android:textColor="#000000"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"

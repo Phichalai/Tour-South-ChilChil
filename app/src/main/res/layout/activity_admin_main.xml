@@ -46,7 +46,7 @@
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:text="เพิ่ม"
-            android:id="@+id/button40"
+            android:id="@+id/add"
             android:background="@drawable/button_shape1"
             android:layout_marginTop="20dp" />
 
@@ -54,7 +54,7 @@
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:text="แก้ไข - ลบ"
-            android:id="@+id/button41"
+            android:id="@+id/edit"
             android:background="@drawable/button_shape6"
             android:layout_marginTop="10dp" />
 

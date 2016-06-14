@@ -28,7 +28,6 @@
         <item>อำเภอเมืองกระบี่</item>
         <item>อำเภอเหนือคลอง</item>
         <item>อำเภอไร่เลย์</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
 
     <string-array name="district1">
@@ -40,7 +39,6 @@
         <item>อำเภอละแม</item>
         <item>อำเภอสวี</item>
         <item>อำเภอหลังสวน</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district2">
         <item>อำเภอกันตัง</item>
@@ -48,7 +46,6 @@
         <item>อำเภอปะเหลียน</item>
         <item>อำเภอเมืองตรัง</item>
         <item>อำเภอสิเกา</item>
-        <item>อำเภอห้วยยอด</item>
     </string-array>
 
     <string-array name="district3">
@@ -63,7 +60,6 @@
         <item>อำเภอพรหมคีรี</item>
         <item>อำเภอเมืองนครศรีธรรมราช</item>
         <item>อำเภอสิชล</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district4">
         <item>อำเภอตากใบ</item>
@@ -87,7 +83,6 @@
         <item>อำเภอตะกั่วป่า</item>
         <item>อำเภอท้ายเหมือง</item>
         <item>อำเภอเมืองพังงา</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district7">
         <item>อำเภอเขาชัยสน</item>
@@ -97,7 +92,6 @@
         <item>อำเภอกระทู้</item>
         <item>อำเภอถลาง</item>
         <item>อำเภอเมือง</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district9">
         <item>อำเภอเบตง</item>
@@ -110,7 +104,6 @@
         <item>อำเภอกะเปอร์</item>
         <item>อำเภอละอุ่น</item>
         <item>อำเภอเมือง</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district11">
         <item>อำเภอเทพา</item>
@@ -118,7 +111,6 @@
         <item>อำเภอเมืองสงขลา</item>
         <item>อำเภอสทิงพระ</item>
         <item>อำเภอหาดใหญ่</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district12">
         <item>อำเภอควนกาหลง</item>
@@ -128,7 +120,6 @@
         <item>อำเภอเมืองสตูล</item>
         <item>อำเภอละงู</item>
         <item>อำเภออุทยานแห่งชาติตะรุเตา</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
     <string-array name="district13">
         <item>อำเภอกาญจนดิษฐ์</item>
@@ -140,7 +131,6 @@
         <item>อำเภอพุนพิน</item>
         <item>อำเภอบ้านตาขุน</item>
         <item>อำเภอเมืองสุราษฏร์ธานี</item>
-        <item>สถานที่ท่องเที่ยวแนะนำ</item>
     </string-array>
 
 </resources>

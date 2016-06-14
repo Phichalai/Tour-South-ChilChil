@@ -22,9 +22,25 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:id="@+id/imageView6"
+                    android:id="@+id/hotela"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="50dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/hotelb" />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/hotelc" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -179,7 +195,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="ที่พักเพิ่มเติม"
-                    android:id="@+id/button31"
+                    android:id="@+id/hotelurl"
                     android:textSize="20dp"
                     android:background="@drawable/button_shape2"
                     android:textColor="#ffffff" />

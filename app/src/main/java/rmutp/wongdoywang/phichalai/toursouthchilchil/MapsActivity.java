@@ -36,8 +36,11 @@ import java.util.ArrayList;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private TextView tourTextView, provinceTextView, descripTextView;
-    private ImageView imageView;
+    private TextView tourTextView, provinceTextView,
+            descripTextView, tumbonTextView, mobanTextView,
+            addtourTextView, calltourTextView, oprntourTextView,
+            emailtourTextView, pricetourTextView;
+    private ImageView imageView3, imageView6, imageView15;
     private RatingBar ratingBar;
     private String strTour, strProcivce;
     private float score;
@@ -65,25 +68,59 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         strTour = getIntent().getStringExtra("Tour");
         tourTextView.setText(strTour);
 
-
         String strDistrict = getIntent().getStringExtra("District");
         strProcivce = getIntent().getStringExtra("Province");
         provinceTextView.setText(strDistrict + " : " + strProcivce);
+
+        String strtumbon = getIntent().getStringExtra("Tumbon");
+        tumbonTextView.setText(strtumbon);
+
+        String strmoban = getIntent().getStringExtra("Moban");
+        mobanTextView.setText(strmoban);
 
         String strDescrip = getIntent().getStringExtra("Description");
         descripTextView.setText(strDescrip);
 
         String strImge = getIntent().getStringExtra("Image");
-        Picasso.with(this).load(strImge).resize(480,200).into(imageView);
+        Picasso.with(this).load(strImge).resize(480,200).into(imageView3);
+
+        String strImge6 = getIntent().getStringExtra("Image1");
+        Picasso.with(this).load(strImge).resize(480,200).into(imageView6);
+
+        String strImge5 = getIntent().getStringExtra("Image2");
+        Picasso.with(this).load(strImge).resize(480,200).into(imageView15);
+
+        String straddtour = getIntent().getStringExtra("add");
+        addtourTextView.setText(straddtour);
+
+        String strcalltour = getIntent().getStringExtra("call");
+        calltourTextView.setText(strcalltour);
+
+        String stroprntour = getIntent().getStringExtra("open");
+        oprntourTextView.setText(stroprntour);
+
+        String stremailtour = getIntent().getStringExtra("email");
+        emailtourTextView.setText(stremailtour);
+
+        String strpricetour = getIntent().getStringExtra("price");
+        pricetourTextView.setText(strpricetour);
     }//showView
 
     private void bindWidget() {
         tourTextView = (TextView) findViewById(R.id.textView9);
         provinceTextView = (TextView) findViewById(R.id.textView10);
         descripTextView = (TextView) findViewById(R.id.textView12);
-        imageView = (ImageView) findViewById(R.id.imageView3);
+        tumbonTextView = (TextView) findViewById(R.id.tumbon);
+        mobanTextView = (TextView) findViewById(R.id.moban);
+        imageView3 = (ImageView) findViewById(R.id.imageView3);
+        imageView6 = (ImageView) findViewById(R.id.imageView6);
+        imageView15 = (ImageView) findViewById(R.id.imageView15);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-
+        addtourTextView = (TextView) findViewById(R.id.addtour);
+        calltourTextView = (TextView) findViewById(R.id.calltour);
+        oprntourTextView = (TextView) findViewById(R.id.oprntour);
+        emailtourTextView = (TextView) findViewById(R.id.emailtour);
+        pricetourTextView = (TextView) findViewById(R.id.pricetour);
 
 
         final Dialog dialog = new Dialog(MapsActivity.this);

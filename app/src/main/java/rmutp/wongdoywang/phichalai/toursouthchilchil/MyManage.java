@@ -22,9 +22,18 @@ public class MyManage {
     public static final String column_Name1 = "Name";
     public static final String column_Category = "Category";
     public static final String column_Description = "Description";
+    public static final String column_Tumboon = "Tumboon";
+    public static final String column_Muban = "Muban";
     public static final String column_Image = "Image";
+    public static final String column_Image1 = "Image1";
+    public static final String column_Image2 = "Image2";
     public static final String column_Lat = "Lat";
     public static final String column_Lng = "Lng";
+    public static final String column_add = "add_tour";
+    public static final String column_call = "call";
+    public static final String column_open = "open";
+    public static final String column_email = "email";
+    public static final String column_price = "price";
     public static final String column_point = "point";
     public static final String column_res = "res";
     public static final String column_hotel = "hotel";
@@ -39,6 +48,8 @@ public class MyManage {
     public static final String interested_table = "interested";
     public static final String column_interestedname = "interestedname";
     public static final String column_interestedimage = "interestedimage";
+    public static final String column_interestedimaged = "interestedimaged";
+    public static final String column_interestedimagee = "interestedimagee";
     public static final String column_interesteddescription = "interesteddescription";
     public static final String column_Lat1 = "Lat";
     public static final String column_Lag1 = "Lag";
@@ -46,16 +57,18 @@ public class MyManage {
     public static final String column_interestedcall = "interestedcall";
     public static final String column_interestedemail = "interestedemail";
     public static final String column_interestedprice = "interestedprice";
-    public static final String column_interestedtravel = "interestedtravel";
 
     public static final String hotel_table = "hotel";
     public static final String column_hotelname = "hotelname";
     public static final String column_hotelimage = "hotelimage";
+    public static final String column_hotelimageB = "hotelimageB";
+    public static final String column_hotelimageC = "hotelimageC";
     public static final String column_hoteldescription = "hoteldescription";
     public static final String column_hotelprice = "hotelprice";
     public static final String column_hoteltime = "hoteltime";
     public static final String column_hoteladdress = "hoteladdress";
     public static final String column_hoteltravel = "hoteltravel";
+    public static final String column_hotelurl = "hotelurl";
 
     public static final String report_table = "report";
     public static final String column_reportname = "reportname";
@@ -67,23 +80,28 @@ public class MyManage {
     public static final String restaurant_table = "restaurant";
     public static final String column_restaurantname = "restaurantname";
     public static final String column_restaurantimge = "restaurantimge";
+    public static final String column_restaurantimgeB = "restaurantimgeB";
+    public static final String column_restaurantimgeC = "restaurantimgeC";
     public static final String column_restaurantdescription = "restaurantdescription";
     public static final String column_restaurantopen = "restaurantopen";
     public static final String column_restaurantaddress = "restaurantaddress";
     public static final String column_restauranttravel = "restauranttravel";
     public static final String column_restaurantprice = "restaurantprice";
+    public static final String column_resurl = "resurl";
 
     public static final String season_table = "season";
     public static final String column_seasonname = "seasonname";
     public static final String column_seasontour = "seasontour";
     public static final String column_seasonImage = "seasonImage";
+    public static final String column_seasonImagea = "seasonImagea";
+    public static final String column_seasonImageb = "seasonImageb";
     public static final String column_seasondescription = "seasondescription";
     public static final String column_Lat2 = "Lat";
     public static final String column_Lng2 = "Lng";
     public static final String column_seasonopen = "seasonopen";
     public static final String column_seasonemail = "seasonemail";
     public static final String column_seasonprice = "seasonprice";
-    public static final String column_seasontours = "seasontours";
+
 
     public static final String travel_table = "travel";
     public static final String column_travelname = "travelname";
@@ -111,14 +129,24 @@ public class MyManage {
         return writeSqLiteDatabase.insert(user_table, null, contentValues);
     }
 
+
     public long addTour(String strProvince,
                         String strDistrict,
                         String strName,
                         String strCategory,
                         String strDescription,
+                        String strTumboon,
+                        String strMuban,
                         String strImage,
+                        String strImage1,
+                        String strImage2,
                         String strLat,
                         String strLng,
+                        String stradd,
+                        String strcall,
+                        String stropen,
+                        String stremail,
+                        String strprice,
                         String strpoint,
                         String strres,
                         String strhotel) {
@@ -129,9 +157,18 @@ public class MyManage {
         contentValues.put(column_Name1, strName);
         contentValues.put(column_Category, strCategory);
         contentValues.put(column_Description, strDescription);
+        contentValues.put(column_Tumboon, strTumboon);
+        contentValues.put(column_Muban, strMuban);
         contentValues.put(column_Image, strImage);
+        contentValues.put(column_Image1, strImage1);
+        contentValues.put(column_Image2, strImage2);
         contentValues.put(column_Lat, strLat);
         contentValues.put(column_Lng, strLng);
+        contentValues.put(column_add, stradd);
+        contentValues.put(column_call, strcall);
+        contentValues.put(column_open, stropen);
+        contentValues.put(column_email, stremail);
+        contentValues.put(column_price, strprice);
         contentValues.put(column_point, strpoint);
         contentValues.put(column_res, strres);
         contentValues.put(column_hotel, strhotel);
@@ -159,18 +196,21 @@ public class MyManage {
 
     public long addinterested(String interestedname,
                               String interestedimage,
+                              String interestedimaged,
+                              String interestedimagee,
                               String interesteddescription,
                               String Lat,
                               String Lag,
                               String interestedopen,
                               String interestedcall,
                               String interestedemail,
-                              String interestedprice,
-                              String interestedtravel) {
+                              String interestedprice) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_interestedname, interestedname);
         contentValues.put(column_interestedimage, interestedimage);
+        contentValues.put(column_interestedimaged, interestedimaged);
+        contentValues.put(column_interestedimagee, interestedimagee);
         contentValues.put(column_interesteddescription, interesteddescription);
         contentValues.put(column_Lat1, Lat);
         contentValues.put(column_Lag1, Lag);
@@ -178,27 +218,32 @@ public class MyManage {
         contentValues.put(column_interestedcall, interestedcall);
         contentValues.put(column_interestedemail, interestedemail);
         contentValues.put(column_interestedprice, interestedprice);
-        contentValues.put(column_interestedtravel, interestedtravel);
 
         return writeSqLiteDatabase.insert(interested_table, null, contentValues);
     }
 
     public long addhotel(String hotelname,
                          String hotelimage,
+                         String hotelimageB,
+                         String hotelimageC,
                          String hoteldescription,
                          String hotelprice,
                          String hoteltime,
                          String hoteladdress,
-                         String hoteltravel) {
+                         String hoteltravel,
+                         String hotelurl) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_hotelname, hotelname);
         contentValues.put(column_hotelimage, hotelimage);
+        contentValues.put(column_hotelimageB, hotelimageB);
+        contentValues.put(column_hotelimageC, hotelimageC);
         contentValues.put(column_hoteldescription, hoteldescription);
         contentValues.put(column_hotelprice, hotelprice);
         contentValues.put(column_hoteltime, hoteltime);
         contentValues.put(column_hoteladdress, hoteladdress);
         contentValues.put(column_hoteltravel, hoteltravel);
+        contentValues.put(column_hotelurl, hotelurl);
 
         return writeSqLiteDatabase.insert(hotel_table, null, contentValues);
     }
@@ -221,20 +266,26 @@ public class MyManage {
 
     public long addrestaurant(String restaurantname,
                               String restaurantimge,
+                              String restaurantimgeB,
+                              String restaurantimgeC,
                               String restaurantdescription,
                               String restaurantopen,
                               String restaurantaddress,
                               String restauranttravel,
-                              String restaurantprice) {
+                              String restaurantprice,
+                              String resurl) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_restaurantname, restaurantname);
         contentValues.put(column_restaurantimge, restaurantimge);
+        contentValues.put(column_restaurantimgeB, restaurantimgeB);
+        contentValues.put(column_restaurantimgeC, restaurantimgeC);
         contentValues.put(column_restaurantdescription, restaurantdescription);
         contentValues.put(column_restaurantopen, restaurantopen);
         contentValues.put(column_restaurantaddress, restaurantaddress);
         contentValues.put(column_restauranttravel, restauranttravel);
         contentValues.put(column_restaurantprice, restaurantprice);
+        contentValues.put(column_resurl, resurl);
 
         return writeSqLiteDatabase.insert(restaurant_table, null, contentValues);
     }
@@ -242,25 +293,27 @@ public class MyManage {
     public long addseason(String seasonname,
                           String seasontour,
                           String seasonImage,
+                          String seasonImagea,
+                          String seasonImageb,
                           String seasondescription,
                           String Lat2,
                           String Lng2,
                           String seasonopen,
                           String seasonemail,
-                          String seasonprice,
-                          String seasontours) {
+                          String seasonprice) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_seasonname, seasonname);
         contentValues.put(column_seasontour, seasontour);
         contentValues.put(column_seasonImage, seasonImage);
+        contentValues.put(column_seasonImagea, seasonImagea);
+        contentValues.put(column_seasonImageb, seasonImageb);
         contentValues.put(column_seasondescription, seasondescription);
         contentValues.put(column_Lat2, Lat2);
         contentValues.put(column_Lng2, Lng2);
         contentValues.put(column_seasonopen, seasonopen);
         contentValues.put(column_seasonemail, seasonemail);
         contentValues.put(column_seasonprice, seasonprice);
-        contentValues.put(column_seasontours, seasontours);
 
         return writeSqLiteDatabase.insert(season_table, null, contentValues);
     }

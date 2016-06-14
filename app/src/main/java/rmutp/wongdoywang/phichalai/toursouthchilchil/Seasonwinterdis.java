@@ -39,24 +39,27 @@ public class Seasonwinterdis extends AppCompatActivity implements OnMapReadyCall
         ImageView imageView8 = (ImageView) findViewById(R.id.imageView8);
         Picasso.with(this).load(getIntent().getStringExtra("season3")).resize(480, 200).into(imageView8);
 
+        ImageView imageView55 = (ImageView) findViewById(R.id.imageView55);
+        Picasso.with(this).load(getIntent().getStringExtra("season4")).resize(480, 200).into(imageView55);
+
+        ImageView imageView56 = (ImageView) findViewById(R.id.imageView56);
+        Picasso.with(this).load(getIntent().getStringExtra("season5")).resize(480, 200).into(imageView56);
+
         TextView newtext = (TextView) findViewById(R.id.newtext);
-        newtext.setText(getIntent().getStringExtra("season4"));
+        newtext.setText(getIntent().getStringExtra("season6"));
 
 
         TextView open = (TextView) findViewById(R.id.open);
-        open.setText(getIntent().getStringExtra("season5"));
+        open.setText(getIntent().getStringExtra("season7"));
 
 
         TextView emaill = (TextView) findViewById(R.id.emaill);
-        emaill.setText(getIntent().getStringExtra("season6"));
+        emaill.setText(getIntent().getStringExtra("season8"));
 
 
         TextView price = (TextView) findViewById(R.id.price);
-        price.setText(getIntent().getStringExtra("season7"));
+        price.setText(getIntent().getStringExtra("season9"));
 
-
-        TextView traval = (TextView) findViewById(R.id.traval);
-        traval.setText(getIntent().getStringExtra("season8"));
 
 
             }
@@ -66,8 +69,8 @@ public class Seasonwinterdis extends AppCompatActivity implements OnMapReadyCall
 
         mMap = googleMap;
 
-        String strLat = getIntent().getStringExtra("season9");
-        String strLng = getIntent().getStringExtra("season10");
+        String strLat = getIntent().getStringExtra("season10");
+        String strLng = getIntent().getStringExtra("season11");
         double douLat = Double.parseDouble(strLat);
         double douLng = Double.parseDouble(strLng);
 

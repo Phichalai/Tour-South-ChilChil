@@ -46,15 +46,15 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:text="NEW"
-            android:id="@+id/button18"
+            android:text="สถานที่ท่องเที่ยว"
+            android:id="@+id/travel"
             android:background="@drawable/button_shape1" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:text="สถานที่ท่องเที่ยวที่น่าสนใจ"
-            android:id="@+id/button19"
+            android:id="@+id/travelhit"
             android:background="@drawable/button_shape6"
             android:layout_marginTop="10dp" />
 
@@ -62,7 +62,7 @@
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:text="สถานที่ท่องเที่ยวตามฤดูกาล"
-            android:id="@+id/button34"
+            android:id="@+id/travelseason"
             android:background="@drawable/button_shape4"
             android:layout_marginTop="10dp" />
 
@@ -70,7 +70,7 @@
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:text="ข่าวสารการท่องเที่ยว"
-            android:id="@+id/button39"
+            android:id="@+id/travelnews"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_shape7" />
     </LinearLayout>

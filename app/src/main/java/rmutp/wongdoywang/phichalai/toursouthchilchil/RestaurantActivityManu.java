@@ -45,11 +45,14 @@ public class RestaurantActivityManu extends AppCompatActivity {
 
                 intent.putExtra("restaurant1", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantname)));
                 intent.putExtra("restaurant2", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimge)));
-                intent.putExtra("restaurant3", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription)));
-                intent.putExtra("restaurant4", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen)));
-                intent.putExtra("restaurant5", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress)));
-                intent.putExtra("restaurant6", cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel)));
-                intent.putExtra("restaurant7", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice)));
+                intent.putExtra("restaurant3", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeB)));
+                intent.putExtra("restaurant4", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeC)));
+                intent.putExtra("restaurant5", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription)));
+                intent.putExtra("restaurant6", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen)));
+                intent.putExtra("restaurant7", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress)));
+                intent.putExtra("restaurant8", cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel)));
+                intent.putExtra("restaurant9", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice)));
+                intent.putExtra("restaurant10", cursor.getString(cursor.getColumnIndex(MyManage.column_resurl)));
                 cursor.moveToNext();
                 cursor.close();
 
@@ -63,7 +66,7 @@ public class RestaurantActivityManu extends AppCompatActivity {
 
         String temp_sql = null;
 
-        switch (name){
+        switch (name) {
             case "เกาะกระดาน":
                 temp_sql = " _id >= 0 AND _id <= 3";
                 break;
@@ -92,22 +95,27 @@ public class RestaurantActivityManu extends AppCompatActivity {
         final String[] id = new String[cursor.getCount()];
         final String[] restaurantname = new String[cursor.getCount()];
         final String[] restaurantimge = new String[cursor.getCount()];
+        final String[] restaurantimgeB = new String[cursor.getCount()];
+        final String[] restaurantimgeC = new String[cursor.getCount()];
         final String[] restaurantdescription = new String[cursor.getCount()];
         final String[] restaurantopen = new String[cursor.getCount()];
         final String[] restaurantaddress = new String[cursor.getCount()];
         final String[] restauranttravel = new String[cursor.getCount()];
         final String[] restaurantprice = new String[cursor.getCount()];
+        final String[] resurl = new String[cursor.getCount()];
 
         for (int i = 0; i < cursor.getCount(); i++) {
 
             restaurantname[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantname));
             restaurantimge[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimge));
+            restaurantimgeB[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeB));
+            restaurantimgeC[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeC));
             restaurantdescription[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription));
             restaurantopen[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen));
             restaurantaddress[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress));
             restauranttravel[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel));
             restaurantprice[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice));
-
+            resurl[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_resurl));
             cursor.moveToNext();
         }
         cursor.close();
@@ -122,8 +130,5 @@ public class RestaurantActivityManu extends AppCompatActivity {
 
             }//onItem
         });
-
-            }//onItem
-        }
-
-
+    }
+}
