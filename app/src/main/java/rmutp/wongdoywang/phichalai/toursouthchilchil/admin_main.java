@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class admin_main extends AppCompatActivity {
 
-    Intent intent = new Intent(admin_main.this, admin_menu.class);
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,7 @@ public class admin_main extends AppCompatActivity {
     }
 
     void intent(String name){
+        intent = new Intent(admin_main.this, admin_menu.class);
         intent.putExtra("name",name);
         startActivity(intent);
     }

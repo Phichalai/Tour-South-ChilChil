@@ -54,6 +54,7 @@ public class TourActivity extends AppCompatActivity {
 
 
         Log.d("sgsagsag", "count " + String.valueOf(cursor.getCount()));
+
         final String[] id = new String[cursor.getCount()];
         final String[] provinceStrings = new String[cursor.getCount()];
         final String[] districtStrings = new String[cursor.getCount()];

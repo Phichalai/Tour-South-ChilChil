@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         deleteAllData(); //Delete All data
 
-        synJSONtoSQLite(); //Syn JSON to SQLIte
+        synJSONtoSQLite(); //Syn JSON to SQLIte*/
     }
 
     @Override
@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
     //--------------------------- Login --------------------------------------
 
     public void clickSignUpMain(View view) {
-        startActivity(new Intent(MainActivity.this, SignUpActivity.class));
+        //startActivity(new Intent(MainActivity.this, SignUpActivity.class));
+        startActivity(new Intent(MainActivity.this, admin_main.class));
     }
 
     public void clickSignInMain(View view) {
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             cursor.close();
 
 
-           //Check Password
+            //Check Password
             if (passwordString.equals(resultStrings[2])) {
                 Toast.makeText(this, "ยินดีต้อนรับ" + resultStrings[3], Toast.LENGTH_SHORT).show();
                 //startActivity(new Intent(MainActivity.this, ProvinceActivity.class));
@@ -236,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
 
                             myManage.addinterested(interestedname, interestedimage, interestedimaged,
                                     interestedimagee, interesteddescription, strLat1, strLag1,
-                                    interestedopen, interestedcall, interestedemail, interestedprice );
+                                    interestedopen, interestedcall, interestedemail, interestedprice);
                             break;
 
                         case 4: //hotelTable
@@ -251,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                             String hoteltravel = jsonObject.getString(MyManage.column_hoteltravel);
                             String hotelurl = jsonObject.getString(MyManage.column_hotelurl);
 
-                            myManage.addhotel(hotelname, hotelimage, hotelimageB, hotelimageC,  hoteldescription, hotelprice, hoteltime,
+                            myManage.addhotel(hotelname, hotelimage, hotelimageB, hotelimageC, hoteldescription, hotelprice, hoteltime,
                                     hoteladdress, hoteltravel, hotelurl);
 
                             break;
@@ -280,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
 
                             myManage.addrestaurant(restaurantname, restaurantimge, restaurantimgeB,
                                     restaurantimgeC, restaurantdescription,
-                                    restaurantopen, restaurantaddress, restauranttravel, restaurantprice,resurl);
+                                    restaurantopen, restaurantaddress, restauranttravel, restaurantprice, resurl);
                             break;
 
                         case 7: //seasonTable
@@ -297,8 +298,8 @@ public class MainActivity extends AppCompatActivity {
                             String seasonprice = jsonObject.getString(MyManage.column_seasonprice);
 
 
-                            myManage.addseason(seasonname, seasontour, seasonImage,seasonImagea,seasonImageb, seasondescription, strLat2, strLng2,
-                                    seasonopen, seasonemail, seasonprice );
+                            myManage.addseason(seasonname, seasontour, seasonImage, seasonImagea, seasonImageb, seasondescription, strLat2, strLng2,
+                                    seasonopen, seasonemail, seasonprice);
                             break;
 
                         case 8: //travelTable

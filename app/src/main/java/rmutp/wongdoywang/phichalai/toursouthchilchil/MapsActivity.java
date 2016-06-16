@@ -37,12 +37,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private TextView tourTextView, provinceTextView,
-            descripTextView, tumbonTextView, mobanTextView,
+            descripTextView, MobanTextView, TumbonTextView,
             addtourTextView, calltourTextView, oprntourTextView,
             emailtourTextView, pricetourTextView;
     private ImageView imageView3, imageView6, imageView15;
     private RatingBar ratingBar;
-    private String strTour, strProcivce;
+    private String strTour;
     private float score;
     private int star = 0;
 
@@ -66,17 +66,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void showView() {
 
         strTour = getIntent().getStringExtra("Tour");
-        tourTextView.setText(strTour);
+        tourTextView.setText(getIntent().getStringExtra("Tour"));
 
-        String strDistrict = getIntent().getStringExtra("District");
-        strProcivce = getIntent().getStringExtra("Province");
-        provinceTextView.setText(strDistrict + " : " + strProcivce);
-
-        String strtumbon = getIntent().getStringExtra("Tumbon");
-        tumbonTextView.setText(strtumbon);
-
-        String strmoban = getIntent().getStringExtra("Moban");
-        mobanTextView.setText(strmoban);
+        provinceTextView.setText(getIntent().getStringExtra("District")
+                + " : " + getIntent().getStringExtra("Province"));
+        TumbonTextView.setText(getIntent().getStringExtra("Tumboon"));
+        MobanTextView.setText(" : " + getIntent().getStringExtra("Muban"));
 
         String strDescrip = getIntent().getStringExtra("Description");
         descripTextView.setText(strDescrip);
@@ -85,10 +80,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Picasso.with(this).load(strImge).resize(480,200).into(imageView3);
 
         String strImge6 = getIntent().getStringExtra("Image1");
-        Picasso.with(this).load(strImge).resize(480,200).into(imageView6);
+        Picasso.with(this).load(strImge6).resize(480,200).into(imageView6);
+        imageView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("Image1"));
+            }
+        });
 
         String strImge5 = getIntent().getStringExtra("Image2");
-        Picasso.with(this).load(strImge).resize(480,200).into(imageView15);
+        Picasso.with(this).load(strImge5).resize(480,200).into(imageView15);
+        imageView15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("Image2"));
+            }
+        });
 
         String straddtour = getIntent().getStringExtra("add");
         addtourTextView.setText(straddtour);
@@ -106,12 +113,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         pricetourTextView.setText(strpricetour);
     }//showView
 
+    private void showBigpic(String tempImage) {
+
+        final Dialog dialog = new Dialog(MapsActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // no titlebar
+        dialog.setContentView(R.layout.activity_pic_big);
+
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        Picasso.with(this).load(tempImage).into(image);
+
+        ImageView btnClose = (ImageView) dialog.findViewById(R.id.btnClose);
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+
+        dialog.show();
+
+    }
+
     private void bindWidget() {
         tourTextView = (TextView) findViewById(R.id.textView9);
         provinceTextView = (TextView) findViewById(R.id.textView10);
         descripTextView = (TextView) findViewById(R.id.textView12);
-        tumbonTextView = (TextView) findViewById(R.id.tumbon);
-        mobanTextView = (TextView) findViewById(R.id.moban);
+        TumbonTextView = (TextView) findViewById(R.id.Tumbon);
+        MobanTextView = (TextView) findViewById(R.id.Moban);
         imageView3 = (ImageView) findViewById(R.id.imageView3);
         imageView6 = (ImageView) findViewById(R.id.imageView6);
         imageView15 = (ImageView) findViewById(R.id.imageView15);

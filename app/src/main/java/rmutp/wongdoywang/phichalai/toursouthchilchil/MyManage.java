@@ -30,7 +30,7 @@ public class MyManage {
     public static final String column_Lat = "Lat";
     public static final String column_Lng = "Lng";
     public static final String column_add = "add_tour";
-    public static final String column_call = "call";
+    public static final String column_call = "call_1";
     public static final String column_open = "open";
     public static final String column_email = "email";
     public static final String column_price = "price";

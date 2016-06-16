@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MyOpenHelper extends SQLiteOpenHelper {
 
     public static final String database_name = "tour.db";
-    private static final int datebase_version = 6;
+    private static final int datebase_version = 13;
 
     private static final String create_user_table = "create table userTABLE (" +
             "_id integer primary key, " +
@@ -16,7 +16,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "Name text, " +
             "Email text);";
 
-    private static  final  String create_tour_table = "create table tourTABLE (" +
+    private static final String create_tour_table = "create table tourTABLE (" +
             "_id integer primary key, " +
             "Province text, " +
             "District text, " +
@@ -31,9 +31,9 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "Lat text, " +
             "Lng text, " +
             "add_tour text, " +
-            "call text, " +
+            "call_1 text, " +
             "open text, " +
-            "email text, "+
+            "email text, " +
             "price text, " +
             "point text, " +
             "res text, " +
