@@ -3,6 +3,7 @@ package rmutp.wongdoywang.phichalai.toursouthchilchil;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,6 +18,17 @@ public class RestaurantActivityManu extends AppCompatActivity {
 
     private ListView listView;
     private String name;
+
+    String[] restaurantname;
+    String[] restaurantimge;
+    String[] restaurantimgeB;
+    String[] restaurantimgeC;
+    String[] restaurantdescription;
+    String[] restaurantopen;
+    String[] restaurantaddress;
+    String[] restauranttravel;
+    String[] restaurantprice;
+    String[] resurl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +48,7 @@ public class RestaurantActivityManu extends AppCompatActivity {
         Button52.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RestaurantActivityManu.this, RestaurantActivityManu.class);
+               /* Intent intent = new Intent(RestaurantActivityManu.this, RestaurantActivity.class);
 
                 SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                         MODE_PRIVATE, null);
@@ -57,7 +69,10 @@ public class RestaurantActivityManu extends AppCompatActivity {
                 cursor.close();
 
 
-                startActivity(intent);
+                startActivity(intent);*/
+
+                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("resurl") );
+                startActivity( browse );
             }
         });
     }
@@ -77,13 +92,13 @@ public class RestaurantActivityManu extends AppCompatActivity {
                 temp_sql = " _id >= 7 AND _id <= 9";
                 break;
             case "เกาะไข่นอก ":
-                temp_sql = " _id >= 7 AND _id <= 9";
+                temp_sql = " _id >= 10 AND _id <= 12";
                 break;
             case "เกาะพยาม ":
-                temp_sql = " _id >= 7 AND _id <= 9";
+                temp_sql = " _id >= 13 AND _id <= 15";
                 break;
             case "เกาะลันตา ":
-                temp_sql = " _id >= 7 AND _id <= 9";
+                temp_sql = " _id >= 16 AND _id <= 18";
                 break;
         }
 
@@ -92,17 +107,16 @@ public class RestaurantActivityManu extends AppCompatActivity {
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM restaurant WHERE" + temp_sql, null);
         cursor.moveToFirst();
 
-        final String[] id = new String[cursor.getCount()];
-        final String[] restaurantname = new String[cursor.getCount()];
-        final String[] restaurantimge = new String[cursor.getCount()];
-        final String[] restaurantimgeB = new String[cursor.getCount()];
-        final String[] restaurantimgeC = new String[cursor.getCount()];
-        final String[] restaurantdescription = new String[cursor.getCount()];
-        final String[] restaurantopen = new String[cursor.getCount()];
-        final String[] restaurantaddress = new String[cursor.getCount()];
-        final String[] restauranttravel = new String[cursor.getCount()];
-        final String[] restaurantprice = new String[cursor.getCount()];
-        final String[] resurl = new String[cursor.getCount()];
+        restaurantname = new String[cursor.getCount()];
+        restaurantimge = new String[cursor.getCount()];
+        restaurantimgeB = new String[cursor.getCount()];
+        restaurantimgeC = new String[cursor.getCount()];
+        restaurantdescription = new String[cursor.getCount()];
+        restaurantopen = new String[cursor.getCount()];
+        restaurantaddress = new String[cursor.getCount()];
+        restauranttravel = new String[cursor.getCount()];
+        restaurantprice = new String[cursor.getCount()];
+        resurl = new String[cursor.getCount()];
 
         for (int i = 0; i < cursor.getCount(); i++) {
 
@@ -126,8 +140,19 @@ public class RestaurantActivityManu extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(RestaurantActivityManu.this, RestaurantActivity.class);
 
-
+                intent.putExtra("restaurant1", restaurantname[i]);
+                intent.putExtra("restaurant2", restaurantimge[i]);
+                intent.putExtra("restaurant3", restaurantimgeB[i]);
+                intent.putExtra("restaurant4", restaurantimgeC[i]);
+                intent.putExtra("restaurant5", restaurantdescription[i]);
+                intent.putExtra("restaurant6", restaurantopen[i]);
+                intent.putExtra("restaurant7", restaurantaddress[i]);
+                intent.putExtra("restaurant8", restauranttravel[i]);
+                intent.putExtra("restaurant9", restaurantprice[i]);
+                intent.putExtra("restaurant10", resurl[i]);
+                startActivity(intent);
             }//onItem
         });
     }

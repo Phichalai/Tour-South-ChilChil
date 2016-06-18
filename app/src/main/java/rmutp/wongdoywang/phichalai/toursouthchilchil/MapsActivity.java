@@ -2,6 +2,8 @@ package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.StrictMode;
 import android.support.v4.app.FragmentActivity;
@@ -80,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Picasso.with(this).load(strImge).resize(480,200).into(imageView3);
 
         String strImge6 = getIntent().getStringExtra("Image1");
-        Picasso.with(this).load(strImge6).resize(480,200).into(imageView6);
+        Picasso.with(this).load(strImge6).resize(280,100).into(imageView6);
         imageView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +91,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         String strImge5 = getIntent().getStringExtra("Image2");
-        Picasso.with(this).load(strImge5).resize(480,200).into(imageView15);
+        Picasso.with(this).load(strImge5).resize(280,100).into(imageView15);
         imageView15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

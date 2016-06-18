@@ -32,7 +32,5 @@ public class SeasonActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }

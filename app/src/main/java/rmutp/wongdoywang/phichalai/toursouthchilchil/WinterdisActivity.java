@@ -39,8 +39,6 @@ public class WinterdisActivity extends AppCompatActivity {
         TextView price = (TextView) findViewById(R.id.price);
         price.setText(getIntent().getStringExtra("season7"));
 
-        TextView traval = (TextView) findViewById(R.id.traval);
-        traval.setText(getIntent().getStringExtra("season8"));
 
     }
 }

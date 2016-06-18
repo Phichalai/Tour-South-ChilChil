@@ -69,6 +69,10 @@
             android:label="@string/title_activity_maps" />
 
         <activity android:name=".admin_menu"></activity>
+        <activity android:name=".admin_update_tourTABLE"></activity>
+        <activity android:name=".admin_update_interested"></activity>
+        <activity android:name=".admin_update_report"></activity>
+        <activity android:name=".admin_update_season"></activity>
     </application>
 
 </manifest>

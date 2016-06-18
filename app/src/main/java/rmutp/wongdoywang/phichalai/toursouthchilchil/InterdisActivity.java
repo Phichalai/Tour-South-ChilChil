@@ -1,5 +1,6 @@
 package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -25,7 +27,7 @@ import com.squareup.picasso.Picasso;
 public class InterdisActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private ImageView imageView3, imageView6, imageView15;
+    private ImageView imagez, imagezz, imageView10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +38,29 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
                 .findFragmentById(R.id.fragment);
         mapFragment.getMapAsync(this);
 
-         TextView TextView44 = (TextView) findViewById(R.id.textView44);
+        TextView TextView44 = (TextView) findViewById(R.id.textView44);
         TextView44.setText(getIntent().getStringExtra("interested1"));
 
         ImageView ImageView10 = (ImageView) findViewById(R.id.imageView10);
         Picasso.with(this).load(getIntent().getStringExtra("interested2")).resize(480, 200).into(ImageView10);
 
         ImageView imagez = (ImageView) findViewById(R.id.imagez);
-        Picasso.with(this).load(getIntent().getStringExtra("interested3")).resize(480, 200).into(imagez);
+        Picasso.with(this).load(getIntent().getStringExtra("interested3")).resize(280, 100).into(imagez);
+        imagez.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("interested3"));
+            }
+        });
 
         ImageView imagezz = (ImageView) findViewById(R.id.imagezz);
-        Picasso.with(this).load(getIntent().getStringExtra("interested4")).resize(480, 200).into(imagezz);
+        Picasso.with(this).load(getIntent().getStringExtra("interested4")).resize(280, 100).into(imagezz);
+        imagezz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("interested4"));
+            }
+        });
 
 
         TextView TextView43 = (TextView) findViewById(R.id.textView43);
@@ -67,7 +81,6 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
 
         TextView price2 = (TextView) findViewById(R.id.price2);
         price2.setText(getIntent().getStringExtra("interested9"));
-
 
 
         Button button28 = (Button) findViewById(R.id.button28);
@@ -132,7 +145,26 @@ public class InterdisActivity extends AppCompatActivity implements OnMapReadyCal
             }
         });
     }
+    private void showBigpic(String tempImage) {
 
+        final Dialog dialog = new Dialog(InterdisActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // no titlebar
+        dialog.setContentView(R.layout.activity_pic_big);
+
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        Picasso.with(this).load(tempImage).into(image);
+
+        ImageView btnClose = (ImageView) dialog.findViewById(R.id.btnClose);
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+
+        dialog.show();
+
+    }
     @Override
     public void onMapReady(GoogleMap googleMap) {
 

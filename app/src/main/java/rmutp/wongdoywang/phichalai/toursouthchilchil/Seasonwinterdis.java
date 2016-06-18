@@ -40,10 +40,10 @@ public class Seasonwinterdis extends AppCompatActivity implements OnMapReadyCall
         Picasso.with(this).load(getIntent().getStringExtra("season3")).resize(480, 200).into(imageView8);
 
         ImageView imageView55 = (ImageView) findViewById(R.id.imageView55);
-        Picasso.with(this).load(getIntent().getStringExtra("season4")).resize(480, 200).into(imageView55);
+        Picasso.with(this).load(getIntent().getStringExtra("season4")).resize(280, 100).into(imageView55);
 
         ImageView imageView56 = (ImageView) findViewById(R.id.imageView56);
-        Picasso.with(this).load(getIntent().getStringExtra("season5")).resize(480, 200).into(imageView56);
+        Picasso.with(this).load(getIntent().getStringExtra("season5")).resize(280, 100).into(imageView56);
 
         TextView newtext = (TextView) findViewById(R.id.newtext);
         newtext.setText(getIntent().getStringExtra("season6"));

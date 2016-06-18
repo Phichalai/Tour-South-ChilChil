@@ -46,8 +46,21 @@ public class admin_menu extends AppCompatActivity {
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(admin_menu.this, admin_edit.class);
-                intent.putExtra("name",name);
+
+                switch (name){
+                    case "tourTABLE":
+                        intent = new Intent(admin_menu.this, admin_update_tourTABLE.class);
+                        break;
+                    case "interested":
+                        intent = new Intent(admin_menu.this, admin_update_interested.class);
+                        break;
+                    case "season":
+                        intent = new Intent(admin_menu.this, admin_update_season.class);
+                        break;
+                    case "report":
+                        intent = new Intent(admin_menu.this, admin_update_report.class);
+                        break;
+                }
                 startActivity(intent);
             }
         });

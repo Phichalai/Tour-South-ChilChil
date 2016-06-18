@@ -104,7 +104,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="หมู่บ้าน" />
-
             <EditText
                 android:id="@+id/namemooban"
                 android:layout_width="fill_parent"
@@ -114,7 +113,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="รูปที่1" />
-
             <EditText
                 android:id="@+id/imagea"
                 android:layout_width="fill_parent"

@@ -17,6 +17,7 @@ import com.squareup.picasso.Picasso;
 
 
 public class RestaurantActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +42,17 @@ public class RestaurantActivity extends AppCompatActivity {
         TextView open3 = (TextView) findViewById(R.id.open3);
         open3.setText(getIntent().getStringExtra("restaurant6"));
 
-        TextView email2 = (TextView) findViewById(R.id.email2);
-        email2.setText(getIntent().getStringExtra("restaurant7"));
-
-        TextView price3 = (TextView) findViewById(R.id.price3);
-        price3.setText(getIntent().getStringExtra("restaurant8"));
+        TextView addd = (TextView) findViewById(R.id.addd);
+        addd.setText(getIntent().getStringExtra("restaurant7"));
 
         TextView traval2 = (TextView) findViewById(R.id.traval2);
-        traval2.setText(getIntent().getStringExtra("restaurant9"));
+        traval2.setText(getIntent().getStringExtra("restaurant8"));
+
+        TextView price3 = (TextView) findViewById(R.id.price3);
+        price3.setText(getIntent().getStringExtra("restaurant9"));
+
+        Button button22 = (Button) findViewById(R.id.button22);
+        button22.setText(getIntent().getStringExtra("restaurant10"));
     }
 }
 

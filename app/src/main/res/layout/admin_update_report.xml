@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout19"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:background="#0011ff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:shadowColor="#333333"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="UPDATE"
+            android:textColor="@color/text"
+            android:textSize="@dimen/h1" />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp">
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="ค้นหาสถานที่"
+        android:imeOptions="actionDone"
+        android:textColorHint="@color/text"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ค้นหา"
+        android:background="#168eff"
+        android:textColor="#ffffff" />
+
+</LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout21"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#70ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ชื่อข่าว" />
+
+        <EditText
+            android:id="@+id/namereport"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="หัวข้อข่าว" />
+
+        <EditText
+            android:id="@+id/titlereport"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="รูปข่าว" />
+
+        <EditText
+            android:id="@+id/imagereport"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="รายละเอียดข่าว" />
+
+        <EditText
+            android:id="@+id/desoriptionreport"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ข่าวมาจากที่ไหน" />
+
+        <EditText
+            android:id="@+id/fromreport"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="80dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="200dp">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="UPDATE"
+        android:layout_weight="1"
+        android:id="@+id/update"
+        android:background="@drawable/button_shape1"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:layout_weight="1"
+        android:id="@+id/delete"
+        android:background="@drawable/button_shape1"
+        android:textColor="#ffffff" />
+
+</LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

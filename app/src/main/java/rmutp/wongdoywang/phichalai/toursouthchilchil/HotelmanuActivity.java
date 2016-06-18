@@ -66,7 +66,7 @@ public class HotelmanuActivity extends AppCompatActivity {
 
         startActivity(intent);
 */
-                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("http://www.centarahotelsresorts.com/centara/ckk/") );
+                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("hotelurl") );
                 startActivity( browse );
             }
         });

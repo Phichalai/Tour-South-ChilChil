@@ -1,5 +1,6 @@
 package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,10 +44,22 @@ public class SummerdisActivity extends AppCompatActivity implements OnMapReadyCa
         Picasso.with(this).load(getIntent().getStringExtra("season3")).resize(480, 200).into(ImageView);
 
         ImageView imageView57 = (ImageView) findViewById(R.id.imageView57);
-        Picasso.with(this).load(getIntent().getStringExtra("season4")).resize(480, 200).into(imageView57);
+        Picasso.with(this).load(getIntent().getStringExtra("season4")).resize(280, 100).into(imageView57);
+        imageView57.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("season4"));
+            }
+        });
 
         ImageView imageView58 = (ImageView) findViewById(R.id.imageView58);
-        Picasso.with(this).load(getIntent().getStringExtra("season5")).resize(480, 200).into(imageView58);
+        Picasso.with(this).load(getIntent().getStringExtra("season5")).resize(280, 100).into(imageView58);
+        imageView58.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("season5"));
+            }
+        });
 
         TextView newtext = (TextView) findViewById(R.id.newtext);
         newtext.setText(getIntent().getStringExtra("season6"));
@@ -146,5 +160,25 @@ public class SummerdisActivity extends AppCompatActivity implements OnMapReadyCa
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
         mMap.addMarker(new MarkerOptions().position(latLng));
+    }
+
+    private void showBigpic(String tempImage) {
+
+        final Dialog dialog = new Dialog(SummerdisActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // no titlebar
+        dialog.setContentView(R.layout.activity_pic_big);
+
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        Picasso.with(this).load(tempImage).into(image);
+
+        ImageView btnClose = (ImageView) dialog.findViewById(R.id.btnClose);
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+
+        dialog.show();
     }
 }

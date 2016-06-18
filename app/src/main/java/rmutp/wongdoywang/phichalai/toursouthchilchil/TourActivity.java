@@ -79,8 +79,6 @@ public class TourActivity extends AppCompatActivity {
 
         for (int i = 0; i < cursor.getCount(); i++) {
 
-
-
             id[i] = cursor.getString(cursor.getColumnIndex("_id"));
 
             provinceStrings[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Province));
