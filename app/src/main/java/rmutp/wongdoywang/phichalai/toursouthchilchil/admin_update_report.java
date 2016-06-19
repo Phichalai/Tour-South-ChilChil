@@ -88,14 +88,6 @@ public class admin_update_report extends AppCompatActivity {
             }
         });
 
-        Button update = (Button) findViewById(R.id.update);
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         Button delete = (Button) findViewById(R.id.delete);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,6 +110,61 @@ public class admin_update_report extends AppCompatActivity {
 
                         check = false;
                         Toast.makeText(admin_update_report.this, "ลบข้อมูลเรียบร้อยแล้ว ขอบคุณค่ะ",
+                                Toast.LENGTH_SHORT).show();
+                        finish();
+                    } catch (Exception e) {
+                        MyAlertDialog myAlertDialog = new MyAlertDialog();
+                        myAlertDialog.myDialog(admin_update_report.this, "Error", "ไม่สามารถเชื่อมต่อ Server ได้");
+                        Log.d("test", "e =" + e.toString());
+                    }
+                }else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(admin_update_report.this);
+                    builder.setMessage("กรุณากรอกข้อมูล");
+                    builder.setPositiveButton("ตกลง", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                    Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+                    pbutton.setTextColor(Color.parseColor("#147cce"));
+                    pbutton.setTypeface(null, Typeface.BOLD);
+                }
+
+            }
+        });
+
+        Button update = (Button) findViewById(R.id.update);
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (check == true) {
+                    StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
+                            .Builder().permitAll().build();
+                    StrictMode.setThreadPolicy(threadPolicy);
+
+                    try {
+
+                        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                        nameValuePairs.add(new BasicNameValuePair("countpoint", "update_report"));
+                        nameValuePairs.add(new BasicNameValuePair("tempName", searchText.getText().toString()));
+
+                        nameValuePairs.add(new BasicNameValuePair("reportname", namereport.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("reporttitel", titlereport.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Imagere", imagereport.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("reportdesoription", desoriptionreport.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("reportform", fromreport.getText().toString()));
+
+
+                        HttpClient httpClient = new DefaultHttpClient();
+                        HttpPost httpPost = new HttpPost("http://swiftcodingthai.com/saa/php_add_user_phichalai.php");
+                        httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
+                        httpClient.execute(httpPost);
+
+                        check = false;
+                        Toast.makeText(admin_update_report.this, "แก้ไขข้อมูลเรียบร้อยแล้ว ขอบคุณค่ะ",
                                 Toast.LENGTH_SHORT).show();
                         finish();
                     } catch (Exception e) {

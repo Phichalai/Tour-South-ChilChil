@@ -106,14 +106,6 @@ public class admin_update_season extends AppCompatActivity {
             }
         });
 
-        Button update = (Button) findViewById(R.id.update);
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         Button delete = (Button) findViewById(R.id.delete);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,5 +153,66 @@ public class admin_update_season extends AppCompatActivity {
             }
         });
 
+
+
+        Button update = (Button) findViewById(R.id.update);
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (check == true) {
+                    StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
+                            .Builder().permitAll().build();
+                    StrictMode.setThreadPolicy(threadPolicy);
+
+                    try {
+
+                        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                        nameValuePairs.add(new BasicNameValuePair("countpoint", "update_season"));
+                        nameValuePairs.add(new BasicNameValuePair("tempName", searchText.getText().toString()));
+
+                        nameValuePairs.add(new BasicNameValuePair("seasonname", nameseason.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasontour", nametour.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasonImage", imagee.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasonImagea", imagef.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasonImageb", imageg.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasondescription", descriptionseason.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Lat", latijudb.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Lng", longtijudb.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasonopen", openseason.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasonemail", emailseason.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("seasonprice", priceseason.getText().toString()));
+
+                        HttpClient httpClient = new DefaultHttpClient();
+                        HttpPost httpPost = new HttpPost("http://swiftcodingthai.com/saa/php_add_user_phichalai.php");
+                        httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
+                        httpClient.execute(httpPost);
+
+                        check = false;
+                        Toast.makeText(admin_update_season.this, "แก้ไขข้อมูลเรียบร้อยแล้ว ขอบคุณค่ะ",
+                                Toast.LENGTH_SHORT).show();
+                        finish();
+                    } catch (Exception e) {
+                        MyAlertDialog myAlertDialog = new MyAlertDialog();
+                        myAlertDialog.myDialog(admin_update_season.this, "Error", "ไม่สามารถเชื่อมต่อ Server ได้");
+                        Log.d("test", "e =" + e.toString());
+                    }
+                }else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(admin_update_season.this);
+                    builder.setMessage("กรุณากรอกข้อมูล");
+                    builder.setPositiveButton("ตกลง", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                    Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+                    pbutton.setTextColor(Color.parseColor("#147cce"));
+                    pbutton.setTypeface(null, Typeface.BOLD);
+                }
+
+            }
+        });
     }
 }

@@ -114,65 +114,73 @@ public class admin_update_tourTABLE extends AppCompatActivity {
                     pbutton.setTextColor(Color.parseColor("#147cce"));
                     pbutton.setTypeface(null, Typeface.BOLD);
                 }
-
                 cursor.close();
             }
         });
 
 
-
-
-      /*  Button addtour = (Button) findViewById(R.id.addtour);
-        addtour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //conected http การคอนเน็ตปรค
-                StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
-                        .Builder().permitAll().build();
-                StrictMode.setThreadPolicy(threadPolicy);
-
-                try {
-
-                    ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-                    nameValuePairs.add(new BasicNameValuePair("countpoint","add_tour"));
-
-                    nameValuePairs.add(new BasicNameValuePair("Province",nameprovince.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("District",namedistrict.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Name", nametour.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Description", descriptions.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Tumboon",nametumbon.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Muban",namemooban.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Image", imagea.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Image1", imagea.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Image2",imageb.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Lat",latijud.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("Lng", longtijud.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("add_tour", address.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("call",calltour.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("open", opentour.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("email", emailtour.getText().toString()));
-                    nameValuePairs.add(new BasicNameValuePair("price",pricetour.getText().toString()));
-
-                    HttpClient httpClient = new DefaultHttpClient();
-                    HttpPost httpPost = new HttpPost("http://swiftcodingthai.com/saa/php_add_user_phichalai.php");
-                    httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs,"UTF-8"));
-                    httpClient.execute(httpPost);
-
-                    Toast.makeText(admin_update_tourTABLE.this, "บันทึกข้อมูลเรียบร้อยแล้ว ขอบคุณค่ะ",
-                            Toast.LENGTH_SHORT).show();
-                    finish();
-                } catch (Exception e) {
-                    MyAlertDialog myAlertDialog = new MyAlertDialog();
-                    myAlertDialog.myDialog(admin_update_tourTABLE.this,"Error", "ไม่สามารถเชื่อมต่อ Server ได้");
-                    Log.d("test", "e =" + e.toString());
-                }
-            }
-        });*/
-
         Button update = (Button) findViewById(R.id.update);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (check == true) {
+                    StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
+                            .Builder().permitAll().build();
+                    StrictMode.setThreadPolicy(threadPolicy);
+
+                    try {
+
+                        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                        nameValuePairs.add(new BasicNameValuePair("countpoint", "update_tour"));
+                        nameValuePairs.add(new BasicNameValuePair("tempName", searchText.getText().toString()));
+
+                        nameValuePairs.add(new BasicNameValuePair("Province", nameprovince.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("District", namedistrict.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Name", nametour.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Description", descriptions.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Tumboon", nametumbon.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Muban", namemooban.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Image", imagea.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Image1", imageb.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Image2", imagec.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Lat", latijud.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("Lng", longtijud.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("add_tour", address.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("call", calltour.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("open", opentour.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("email", emailtour.getText().toString()));
+                        nameValuePairs.add(new BasicNameValuePair("price", pricetour.getText().toString()));
+
+
+                        HttpClient httpClient = new DefaultHttpClient();
+                        HttpPost httpPost = new HttpPost("http://swiftcodingthai.com/saa/php_add_user_phichalai.php");
+                        httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
+                        httpClient.execute(httpPost);
+
+                        check = false;
+                        Toast.makeText(admin_update_tourTABLE.this, "แก้ไขข้อมูลเรียบร้อยแล้ว ขอบคุณค่ะ",
+                                Toast.LENGTH_SHORT).show();
+                        finish();
+                    } catch (Exception e) {
+                        MyAlertDialog myAlertDialog = new MyAlertDialog();
+                        myAlertDialog.myDialog(admin_update_tourTABLE.this, "Error", "ไม่สามารถเชื่อมต่อ Server ได้");
+                        Log.d("test", "e =" + e.toString());
+                    }
+                }else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(admin_update_tourTABLE.this);
+                    builder.setMessage("กรุณากรอกข้อมูล");
+                    builder.setPositiveButton("ตกลง", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                    Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+                    pbutton.setTextColor(Color.parseColor("#147cce"));
+                    pbutton.setTypeface(null, Typeface.BOLD);
+                }
 
             }
         });
@@ -222,7 +230,6 @@ public class admin_update_tourTABLE extends AppCompatActivity {
                     pbutton.setTextColor(Color.parseColor("#147cce"));
                     pbutton.setTypeface(null, Typeface.BOLD);
                 }
-
             }
         });
 
