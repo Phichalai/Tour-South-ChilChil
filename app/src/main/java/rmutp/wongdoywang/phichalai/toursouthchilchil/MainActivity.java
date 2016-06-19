@@ -58,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
     //--------------------------- Login --------------------------------------
 
     public void clickSignUpMain(View view) {
-        //startActivity(new Intent(MainActivity.this, SignUpActivity.class));
-        startActivity(new Intent(MainActivity.this, admin_main.class));
+        startActivity(new Intent(MainActivity.this, SignUpActivity.class));
     }
 
     public void clickSignInMain(View view) {
@@ -68,17 +67,18 @@ public class MainActivity extends AppCompatActivity {
         passwordString = passwordEditText.getText().toString().trim();
 
 
-        startActivity(new Intent(MainActivity.this, ManuActivity.class));
-        finish();
-
-      /*  //Ceck Space
+        //Ceck Space
         if (userString.equals("") || passwordString.equals("")) {
             //Have Space
             MyAlertDialog myAlertDialog = new MyAlertDialog();
             myAlertDialog.myDialog(this, "มีช่องว่าง", "กรุณากรอกทุกช่อง ค่ะ ");
+        } else if (userString.equals("adminzaza") &&
+                passwordString.equals("55555zaza")) {
+            startActivity(new Intent(MainActivity.this, admin_main.class));
+            finish();
         } else {
             checkUser();    //No space
-        }*/
+        }
     }
 
     private void checkUser() {
