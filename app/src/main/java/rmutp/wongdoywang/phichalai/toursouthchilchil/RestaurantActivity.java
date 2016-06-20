@@ -51,8 +51,6 @@ public class RestaurantActivity extends AppCompatActivity {
         TextView price3 = (TextView) findViewById(R.id.price3);
         price3.setText(getIntent().getStringExtra("restaurant9"));
 
-        Button button22 = (Button) findViewById(R.id.button22);
-        button22.setText(getIntent().getStringExtra("restaurant10"));
     }
 }
 

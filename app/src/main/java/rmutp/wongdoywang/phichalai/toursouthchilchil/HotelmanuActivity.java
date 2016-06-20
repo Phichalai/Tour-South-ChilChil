@@ -42,37 +42,9 @@ public class HotelmanuActivity extends AppCompatActivity {
 
         showListTour();
 
-        Button Button53 = (Button) findViewById(R.id.button53);
-        Button53.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-    /*        Intent intent = new Intent(HotelmanuActivity.this, HotelmanuActivity.class);
-
-            SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
-                MODE_PRIVATE, null);
-            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM interested WHERE _id = 1", null);
-            cursor.moveToFirst();
-
-        intent.putExtra("hotel1", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelname)));
-        intent.putExtra("hotel2", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimage)));
-        intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
-        intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
-        intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
-        intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
-        intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
-        cursor.moveToNext();
-        cursor.close();
-
-
-        startActivity(intent);
-*/
-                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("hotelurl") );
-                startActivity( browse );
-            }
-        });
     }
 
-    private void showListTour() {
+    void showListTour() {
         String temp_sql = null;
 
         switch (name) {
@@ -145,8 +117,9 @@ public class HotelmanuActivity extends AppCompatActivity {
                     intent.putExtra("hotel5", hoteldescription[i]);
                     intent.putExtra("hotel6", hotelprice[i]);
                     intent.putExtra("hotel7",  hoteltime[i]);
-                    intent.putExtra("hotel8",hoteladdress[i]);
-                    intent.putExtra("hotel9",  hotelurl[i]);
+                    intent.putExtra("hotel8", hoteladdress[i]);
+                    intent.putExtra("hotel9", hoteltravel[i]);
+                    intent.putExtra("hotel10",  hotelurl[i]);
 
                     startActivity(intent);
                 }//onItem

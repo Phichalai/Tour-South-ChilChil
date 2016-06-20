@@ -12,9 +12,7 @@ import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
 import com.squareup.picasso.Picasso;
 
-/**
- * Created by Phichalai on 2/6/2559.
- */
+
 public class HotelActivity extends AppCompatActivity {
 
     @Override
@@ -26,31 +24,29 @@ public class HotelActivity extends AppCompatActivity {
         textView20.setText(getIntent().getStringExtra("hotel1"));
 
         ImageView hotela = (ImageView) findViewById(R.id.hotela);
-        Picasso.with(this).load(getIntent().getStringExtra("hotela")).resize(480, 200).into(hotela);
+        Picasso.with(this).load(getIntent().getStringExtra("hotel2")).resize(480, 200).into(hotela);
 
         ImageView hotelb = (ImageView) findViewById(R.id.hotelb);
-        Picasso.with(this).load(getIntent().getStringExtra("hotelb")).resize(480, 200).into(hotelb);
+        Picasso.with(this).load(getIntent().getStringExtra("hotel3")).resize(480, 200).into(hotelb);
 
         ImageView hotelc = (ImageView) findViewById(R.id.hotelc);
-        Picasso.with(this).load(getIntent().getStringExtra("hotelc")).resize(480, 200).into(hotelc);
+        Picasso.with(this).load(getIntent().getStringExtra("hotel4")).resize(480, 200).into(hotelc);
 
         TextView textView19 = (TextView) findViewById(R.id.textView19);
-        textView19.setText(getIntent().getStringExtra("hotel3"));
+        textView19.setText(getIntent().getStringExtra("hotel5"));
 
-        TextView open1 = (TextView) findViewById(R.id.open1);
-        open1.setText(getIntent().getStringExtra("hotel4"));
+        TextView pricehotel = (TextView) findViewById(R.id.pricehotel);
+        pricehotel.setText(getIntent().getStringExtra("hotel6"));
 
-        TextView email1 = (TextView) findViewById(R.id.email1);
-        email1.setText(getIntent().getStringExtra("hotel5"));
+        TextView openhotel = (TextView) findViewById(R.id.openhotel);
+        openhotel.setText(getIntent().getStringExtra("hotel7"));
 
-        TextView price1 = (TextView) findViewById(R.id.price1);
-        price1.setText(getIntent().getStringExtra("hotel6"));
+        TextView addhotel = (TextView) findViewById(R.id.addhotel);
+        addhotel.setText(getIntent().getStringExtra("hotel8"));
 
-        TextView tavel1 = (TextView) findViewById(R.id.tavel1);
-        tavel1.setText(getIntent().getStringExtra("hotel7"));
+        TextView tavelhotel = (TextView) findViewById(R.id.tavelhotel);
+        tavelhotel.setText(getIntent().getStringExtra("hotel9"));
 
-        Button hotelurl = (Button) findViewById(R.id.hotelurl);
-        hotelurl.setText(getIntent().getStringExtra("hotelurl"));
 
 
     }

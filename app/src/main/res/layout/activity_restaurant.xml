@@ -174,15 +174,6 @@
 
                 </LinearLayout>
 
-                <Button
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ร้านอาหารเพิ่มเติม"
-                    android:id="@+id/button22"
-                    android:textSize="20dp"
-                    android:background="@drawable/button_shape3"
-                    android:textColor="#ffffff" />
-
                 //เบอร์โทรศัพท์
 
             </LinearLayout>

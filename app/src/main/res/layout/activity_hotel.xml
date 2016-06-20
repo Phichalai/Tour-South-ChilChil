@@ -85,18 +85,18 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:id="@+id/imageView16"
-                        android:src="@drawable/zacall" />
+                        android:id="@+id/imageView19"
+                        android:src="@drawable/zaprice" />
 
                     <TextView
-                        android:id="@+id/call1"
+                        android:id="@+id/pricehotel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="New Text"
                         android:textColor="#000000"
-                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -112,7 +112,7 @@
                         android:src="@drawable/zaopen" />
 
                     <TextView
-                        android:id="@+id/open1"
+                        android:id="@+id/openhotel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="New Text"
@@ -132,10 +132,10 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:id="@+id/imageView18"
-                        android:src="@drawable/zaemail" />
+                        android:src="@drawable/zaadd" />
 
                     <TextView
-                        android:id="@+id/email1"
+                        android:id="@+id/addhotel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="New Text"
@@ -154,34 +154,11 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:id="@+id/imageView19"
-                        android:src="@drawable/zaprice" />
-
-                    <TextView
-                        android:id="@+id/price1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="New Text"
-                        android:textColor="#000000"
-                        android:layout_marginTop="10dp"
-                        android:textSize="20sp"
-                        android:layout_marginLeft="10dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp" >
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
                         android:id="@+id/imageView20"
                         android:src="@drawable/zatravel" />
 
                     <TextView
-                        android:id="@+id/tavel1"
+                        android:id="@+id/tavelhotel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="New Text"
@@ -191,14 +168,7 @@
                         android:layout_marginLeft="10dp" />
                 </LinearLayout>
 
-                <Button
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ที่พักเพิ่มเติม"
-                    android:id="@+id/hotelurl"
-                    android:textSize="20dp"
-                    android:background="@drawable/button_shape2"
-                    android:textColor="#ffffff" />
+
 
             </LinearLayout>
         </ScrollView>
