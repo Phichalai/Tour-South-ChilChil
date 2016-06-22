@@ -135,42 +135,6 @@ public class TourActivity extends AppCompatActivity {
                 intent.putExtra("hotel", hotelStrings[i]);
 
 
-
-/*
-
-                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
-                        MODE_PRIVATE, null);
-                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM restaurant WHERE _id = " + "'" + id[i] + "'", null);
-                cursor.moveToFirst();
-
-                intent.putExtra("res1", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantname)));
-                intent.putExtra("res2", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimge)));
-                intent.putExtra("res3", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription)));
-                intent.putExtra("res4", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen)));
-                intent.putExtra("res5", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress)));
-                intent.putExtra("res6", cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel)));
-                intent.putExtra("res7", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice)));
-                cursor.moveToNext();
-                cursor.close();
-
-                cursor = sqLiteDatabase.rawQuery("SELECT * FROM hotel WHERE _id = " + "'" + id[i] + "'", null);
-                cursor.moveToFirst();
-
-                intent.putExtra("hotel1", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelname)));
-                intent.putExtra("hotel2", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimage)));
-                intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
-                intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
-                intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
-                intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
-                intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
-                cursor.moveToNext();
-                cursor.close();
-*/
-
-
-
-
-
                 startActivity(intent);
             }//onItem
         });

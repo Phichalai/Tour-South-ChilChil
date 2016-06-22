@@ -34,6 +34,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -82,6 +83,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Picasso.with(this).load(strImge).resize(480,200).into(imageView3);
 
         String strImge6 = getIntent().getStringExtra("Image1");
+        Log.d("safasfsaf", strImge6);
         Picasso.with(this).load(strImge6).resize(280,100).into(imageView6);
         imageView6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -231,7 +233,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-
         final String strRes = getIntent().getStringExtra("res");
         final String strHotel = getIntent().getStringExtra("hotel");
 
@@ -240,8 +241,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View view) {
 
-                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( strRes ) );
-                startActivity( browse );
+        /*        Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( strRes ) );
+                startActivity( browse );*/
+
+                Intent intent = new Intent(MapsActivity.this, RestaurantActivityManu.class);
+
+                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                        MODE_PRIVATE, null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM restaurant WHERE _id = 1", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("restaurant1", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantname)));
+                intent.putExtra("restaurant2", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimge)));
+                intent.putExtra("restaurant3", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeB)));
+                intent.putExtra("restaurant4", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantimgeC)));
+                intent.putExtra("restaurant5", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantdescription)));
+                intent.putExtra("restaurant6", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantopen)));
+                intent.putExtra("restaurant7", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantaddress)));
+                intent.putExtra("restaurant8", cursor.getString(cursor.getColumnIndex(MyManage.column_restauranttravel)));
+                intent.putExtra("restaurant9", cursor.getString(cursor.getColumnIndex(MyManage.column_restaurantprice)));
+                intent.putExtra("restaurant10", cursor.getString(cursor.getColumnIndex(MyManage.column_resurl)));
+                intent.putExtra("name", strTour);
+
+                cursor.moveToNext();
+                cursor.close();
+                startActivity(intent);
+
 
             }
         });
@@ -250,8 +275,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( strHotel ) );
-                startActivity( browse );
+            /*    Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( strHotel ) );
+                startActivity( browse );*/
+
+                Intent intent = new Intent(MapsActivity.this, HotelmanuActivity.class);
+
+                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                        MODE_PRIVATE, null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM hotel WHERE _id = 1", null);
+                cursor.moveToFirst();
+
+                intent.putExtra("hotel1", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelname)));
+                intent.putExtra("hotel2", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimage)));
+                intent.putExtra("hotel3", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageB)));
+                intent.putExtra("hotel4", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelimageC)));
+                intent.putExtra("hotel5", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteldescription)));
+                intent.putExtra("hotel6", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelprice)));
+                intent.putExtra("hotel7", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltime)));
+                intent.putExtra("hotel8", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteladdress)));
+                intent.putExtra("hotel9", cursor.getString(cursor.getColumnIndex(MyManage.column_hoteltravel)));
+                intent.putExtra("hotel10", cursor.getString(cursor.getColumnIndex(MyManage.column_hotelurl)));
+                intent.putExtra("name", strTour);
+
+
+                cursor.moveToNext();
+                cursor.close();
+
+                startActivity(intent);
             }
         });
 
