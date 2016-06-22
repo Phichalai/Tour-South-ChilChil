@@ -895,6 +895,31 @@ public class HotelmanuActivity extends AppCompatActivity {
                 case "เกาะมุก":
                     temp_sql = " _id >= 844 AND _id <= 846";
                     break;
+
+                // สถานที่ท่อเงที่ยวที่น่าสนใจ
+                case "เกาะไข่นอก":
+                    temp_sql = " _id >= 844 AND _id <= 846";
+                    break;
+                case "เกาะลันตา":
+                     temp_sql = " _id >= 844 AND _id <= 846";
+                    break;
+
+                //ฤดู
+                case "หมู่เกาะสิมิลัน":
+                    temp_sql = " _id >= 844 AND _id <= 846";
+                    break;
+                case "อุทยานแห่งชาติตะรุเตา":
+                    temp_sql = " _id >= 844 AND _id <= 846";
+                    break;
+                case "น้ำตกพะโต๊ะ":
+                    temp_sql = " _id >= 844 AND _id <= 846";
+                    break;
+                case "หาดสมิหลา":
+                    temp_sql = " _id >= 844 AND _id <= 846";
+                    break;
+                case "เกาะราวี":
+                    temp_sql = " _id >= 844 AND _id <= 846";
+                    break;
             }
         SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                 MODE_PRIVATE, null);
