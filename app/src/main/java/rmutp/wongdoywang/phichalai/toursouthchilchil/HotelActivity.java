@@ -1,7 +1,10 @@
 package rmutp.wongdoywang.phichalai.toursouthchilchil;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -14,7 +17,7 @@ import com.squareup.picasso.Picasso;
 
 
 public class HotelActivity extends AppCompatActivity {
-
+    private ImageView hotela, hotelb, hotelc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +28,30 @@ public class HotelActivity extends AppCompatActivity {
 
         ImageView hotela = (ImageView) findViewById(R.id.hotela);
         Picasso.with(this).load(getIntent().getStringExtra("hotel2")).resize(480, 200).into(hotela);
+        hotela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("hotel2"));
+            }
+        });
 
         ImageView hotelb = (ImageView) findViewById(R.id.hotelb);
         Picasso.with(this).load(getIntent().getStringExtra("hotel3")).resize(480, 200).into(hotelb);
+        hotelb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("hotel3"));
+            }
+        });
 
         ImageView hotelc = (ImageView) findViewById(R.id.hotelc);
         Picasso.with(this).load(getIntent().getStringExtra("hotel4")).resize(480, 200).into(hotelc);
+        hotelc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBigpic(getIntent().getStringExtra("hotel4"));
+            }
+        });
 
         TextView textView19 = (TextView) findViewById(R.id.textView19);
         textView19.setText(getIntent().getStringExtra("hotel5"));
@@ -48,6 +69,26 @@ public class HotelActivity extends AppCompatActivity {
         tavelhotel.setText(getIntent().getStringExtra("hotel9"));
 
 
+
+    }
+    private void showBigpic(String tempImage) {
+
+        final Dialog dialog = new Dialog(HotelActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // no titlebar
+        dialog.setContentView(R.layout.activity_pic_big);
+
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        Picasso.with(this).load(tempImage).into(image);
+
+        ImageView btnClose = (ImageView) dialog.findViewById(R.id.btnClose);
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+
+        dialog.show();
 
     }
 }

@@ -44,7 +44,7 @@ public class RestaurantActivityManu extends AppCompatActivity {
         showListTour();
 
 
-        Button Button52 = (Button) findViewById(R.id.button52);
+      /*  Button Button52 = (Button) findViewById(R.id.button52);
         Button52.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +52,7 @@ public class RestaurantActivityManu extends AppCompatActivity {
                 Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("resurl") );
                 startActivity( browse );
             }
-        });
+        });*/
     }
 
     private void showListTour() {

@@ -51,14 +51,7 @@
             android:layout_alignParentTop="false"
             android:layout_below="@+id/linearLayout33" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="ร้านอาหารเพิ่มเติม"
-            android:id="@+id/button52"
-            android:textSize="20dp"
-            android:background="@drawable/button_shape3"
-            android:textColor="#ffffff" />
+
 
     </LinearLayout>
 
