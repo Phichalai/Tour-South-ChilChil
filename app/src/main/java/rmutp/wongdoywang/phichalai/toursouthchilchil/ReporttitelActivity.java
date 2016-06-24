@@ -19,8 +19,8 @@ public class ReporttitelActivity extends AppCompatActivity {
         TextView reporttitel = (TextView) findViewById(R.id.reporttitel);
         reporttitel.setText(getIntent().getStringExtra("report1"));
 
-        TextView report = (TextView) findViewById(R.id.report);
-        report.setText(getIntent().getStringExtra("report2"));
+        TextView reporttitell = (TextView) findViewById(R.id.reporttitell);
+        reporttitell.setText(getIntent().getStringExtra("report2"));
 
         ImageView ImageView7 = (ImageView) findViewById(R.id.imageView7);
         Picasso.with(this).load(getIntent().getStringExtra("report3")).resize(480, 200).into(ImageView7);

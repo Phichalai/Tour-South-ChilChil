@@ -6,115 +6,75 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
-/**
- * Created by Phichalai on 2/6/2559.
- */
+
 public class ReportActivity extends AppCompatActivity {
+
+    private ListView listView;
+    private TextView tourTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
 
-        Button Button25 = (Button) findViewById(R.id.button25);
-        Button25.setText("ลอดท้องมังกร");
-        Button25.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        //Bind Widget
+        listView = (ListView) findViewById(R.id.listView3);
+        tourTextView = (TextView) findViewById(R.id.textView8);
+        tourTextView.setText("ข่าวสาร");
 
-                Intent intent = new Intent(ReportActivity.this, ReporttitelActivity.class);
+        //Show List Tour
+        showListTour();
 
-                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
-                        MODE_PRIVATE, null);
-                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM report WHERE _id = 1", null);
-                cursor.moveToFirst();
+    }
 
-                intent.putExtra("report1", cursor.getString(cursor.getColumnIndex(MyManage.column_reportname)));
-                intent.putExtra("report2", cursor.getString(cursor.getColumnIndex(MyManage.column_reporttitel)));
-                intent.putExtra("report3", cursor.getString(cursor.getColumnIndex(MyManage.column_Imagere)));
-                intent.putExtra("report4", cursor.getString(cursor.getColumnIndex(MyManage.column_reportdesoription)));
-                intent.putExtra("report5", cursor.getString(cursor.getColumnIndex(MyManage.column_reportform)));
-
-                cursor.moveToNext();
-                cursor.close();
-
-               startActivity(intent);
-            }
-        });
-        Button Button26 = (Button) findViewById(R.id.button26);
-        Button26.setText("ทะเลแหวก");
-        Button26.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ReportActivity.this, ReporttitelActivity.class);
-                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
-                        MODE_PRIVATE, null);
-                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM report WHERE _id = 2", null);
-                cursor.moveToFirst();
-
-                intent.putExtra("report1", cursor.getString(cursor.getColumnIndex(MyManage.column_reportname)));
-                intent.putExtra("report2", cursor.getString(cursor.getColumnIndex(MyManage.column_reporttitel)));
-                intent.putExtra("report3", cursor.getString(cursor.getColumnIndex(MyManage.column_Imagere)));
-                intent.putExtra("report4", cursor.getString(cursor.getColumnIndex(MyManage.column_reportdesoription)));
-                intent.putExtra("report5", cursor.getString(cursor.getColumnIndex(MyManage.column_reportform)));
-
-                cursor.moveToNext();
-                cursor.close();
-                startActivity(intent);
-            }
-        });
-
-        Button Button32 = (Button) findViewById(R.id.button32);
-        Button32.setText("ถ้ำภูผาเพชร");
-        Button32.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(ReportActivity.this, ReporttitelActivity.class);
-                SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
-                        MODE_PRIVATE, null);
-                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM report WHERE _id = 3", null);
-                cursor.moveToFirst();
-
-                intent.putExtra("report1", cursor.getString(cursor.getColumnIndex(MyManage.column_reportname)));
-                intent.putExtra("report2", cursor.getString(cursor.getColumnIndex(MyManage.column_reporttitel)));
-                intent.putExtra("report3", cursor.getString(cursor.getColumnIndex(MyManage.column_Imagere)));
-                intent.putExtra("report4", cursor.getString(cursor.getColumnIndex(MyManage.column_reportdesoription)));
-                intent.putExtra("report5", cursor.getString(cursor.getColumnIndex(MyManage.column_reportform)));
-
-                cursor.moveToNext();
-                cursor.close();
-                startActivity(intent);
-            }
-        });
-        Button Button27 = (Button) findViewById(R.id.button27);
-        Button27.setText("สระมรกต");
-        Button27.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ReportActivity.this, ReporttitelActivity.class);
+        private void showListTour() {
 
                 SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                         MODE_PRIVATE, null);
-                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM report WHERE _id = 4", null);
+                Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM report", null);
                 cursor.moveToFirst();
 
-                intent.putExtra("report1", cursor.getString(cursor.getColumnIndex(MyManage.column_reportname)));
-                intent.putExtra("report2", cursor.getString(cursor.getColumnIndex(MyManage.column_reporttitel)));
-                intent.putExtra("report3", cursor.getString(cursor.getColumnIndex(MyManage.column_Imagere)));
-                intent.putExtra("report4", cursor.getString(cursor.getColumnIndex(MyManage.column_reportdesoription)));
-                intent.putExtra("report5", cursor.getString(cursor.getColumnIndex(MyManage.column_reportform)));
+                final String[] column_reportname = new String[cursor.getCount()];
+                final String[] column_reporttitel = new String[cursor.getCount()];
+                final String[] column_Imagere = new String[cursor.getCount()];
+                final String[] column_reportdesoription = new String[cursor.getCount()];
+                final String[] column_reportform = new String[cursor.getCount()];
+
+            for (int i = 0; i < cursor.getCount(); i++) {
+
+                column_reportname[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_reportname));
+                column_reporttitel[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_reporttitel));
+                column_Imagere[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_Imagere));
+                column_reportdesoription[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_reportdesoription));
+                column_reportform[i] = cursor.getString(cursor.getColumnIndex(MyManage.column_reportform));
 
                 cursor.moveToNext();
-                cursor.close();
-                startActivity(intent);
             }
-        });
+            cursor.close();
+
+            MyAdpter2 myAdapter = new MyAdpter2(this, column_reportname, column_Imagere);
+            listView.setAdapter(myAdapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Intent intent = new Intent(ReportActivity.this, ReporttitelActivity.class);
+
+                    intent.putExtra("report1", column_reportname[i]);
+                    intent.putExtra("report2", column_reporttitel[i]);
+                    intent.putExtra("report3", column_Imagere[i]);
+                    intent.putExtra("report4", column_reportdesoription[i]);
+                    intent.putExtra("report5", column_reportform[i]);
 
 
-    };
+                    startActivity(intent);
+                }//onItem
+            });
 
-
+        }   // showListTour
 }

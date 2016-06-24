@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
-        android:background="#0011ff"
+        android:background="#00bb0c"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="ชื่อ"
         android:inputType="textPersonName" />
@@ -73,11 +73,12 @@
 
     <Button
         android:id="@+id/button24"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/button_shape1"
         android:onClick="clickSubmit"
-        android:text="SUBMIT" />
+        android:text="SUBMIT"
+        android:layout_marginLeft="35dp" />
 
 </LinearLayout>
