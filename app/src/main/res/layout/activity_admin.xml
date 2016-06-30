@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beerza">
+    android:background="@drawable/zazazazatour">
 
     <LinearLayout
         android:id="@+id/linearLayout13"
@@ -19,7 +19,7 @@
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:shadowColor="#333333"
+            android:shadowColor="#ffffff"
             android:shadowDx="3"
             android:shadowDy="2"
             android:shadowRadius="1"
@@ -48,7 +48,9 @@
             android:layout_height="80dp"
             android:text="สถานที่ท่องเที่ยว"
             android:id="@+id/travel"
-            android:background="@drawable/button_shape1" />
+            android:background="@drawable/button_shape16"
+            android:textSize="20dp"
+            android:textColor="#ffffff" />
 
         <Button
             android:layout_width="fill_parent"
@@ -56,7 +58,9 @@
             android:text="สถานที่ท่องเที่ยวที่น่าสนใจ"
             android:id="@+id/travelhit"
             android:background="@drawable/button_shape6"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff" />
 
         <Button
             android:layout_width="fill_parent"
@@ -64,7 +68,9 @@
             android:text="สถานที่ท่องเที่ยวตามฤดูกาล"
             android:id="@+id/travelseason"
             android:background="@drawable/button_shape4"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff" />
 
         <Button
             android:layout_width="fill_parent"
@@ -72,7 +78,9 @@
             android:text="ข่าวสารการท่องเที่ยว"
             android:id="@+id/travelnews"
             android:layout_marginTop="10dp"
-            android:background="@drawable/button_shape7" />
+            android:background="@drawable/button_shape7"
+            android:textSize="20dp"
+            android:textColor="#ffffff" />
     </LinearLayout>
 
 </LinearLayout>

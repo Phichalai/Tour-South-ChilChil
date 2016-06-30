@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -39,13 +40,19 @@ public class MyAdpter extends BaseAdapter{
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view1 = layoutInflater.inflate(R.layout.my_listview, viewGroup, false);
 
-        TextView titleTextView = (TextView) view1.findViewById(R.id.txttest);
-        titleTextView.setText(titleStrings[i]);
+        de.hdodenhof.circleimageview.CircleImageView tempthumbnail = (de.hdodenhof.circleimageview.CircleImageView) view1.findViewById(R.id.imageView2);
+        tempthumbnail.setVisibility(View.GONE);
 
+        TextView titleTextView = (TextView) view1.findViewById(R.id.txttest);
+
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)titleTextView.getLayoutParams();
+        params.setMargins(10, 10, 10, 10); //substitute parameters for left, top, right, bottom
+        titleTextView.setLayoutParams(params);
+
+        titleTextView.setText(titleStrings[i]);
 
         return view1;
     }

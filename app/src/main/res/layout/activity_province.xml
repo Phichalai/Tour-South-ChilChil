@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beerza"
 
-    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.ProvinceActivity">
+
+    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.ProvinceActivity"
+    android:background="@drawable/zabgpage">
 
     <TextView
         android:id="@+id/textView6"
@@ -20,7 +21,7 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:paddingLeft="30dp"
-        android:background="#059de4" />
+        android:background="#0000c1" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -32,15 +33,18 @@
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="45dp">
 
         <ListView
             android:id="@+id/listView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textView6" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textView6"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:scrollbars="none"/>
     </LinearLayout>
 
 </RelativeLayout>

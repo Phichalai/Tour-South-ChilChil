@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_centerHorizontal="true"
-            android:background="#9d00ff"
+            android:background="#ff6a00"
             android:gravity="center_horizontal"
             android:orientation="vertical" >
 
@@ -105,7 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:background="#80caa6"
+            android:background="#009712"
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:layout_marginTop="48dp" >

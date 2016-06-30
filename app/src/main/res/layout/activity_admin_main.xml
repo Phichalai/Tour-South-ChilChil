@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beerza">
+    android:background="@drawable/zazazazatour">
 
     <LinearLayout
         android:id="@+id/linearLayout16"
@@ -48,7 +48,9 @@
             android:text="เพิ่ม"
             android:id="@+id/add"
             android:background="@drawable/button_shape1"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
 
         <Button
             android:layout_width="fill_parent"
@@ -56,7 +58,9 @@
             android:text="แก้ไข - ลบ"
             android:id="@+id/edit"
             android:background="@drawable/button_shape6"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 

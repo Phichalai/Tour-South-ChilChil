@@ -135,8 +135,8 @@ public class SummerdisActivity extends AppCompatActivity implements OnMapReadyCa
             }
         });
 
-    Button Button33 = (Button) findViewById(R.id.button33);
-    Button33.setOnClickListener(new View.OnClickListener() {
+    Button Button11 = (Button) findViewById(R.id.button11);
+    Button11.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(SummerdisActivity.this, CounselActivity.class);

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/zazazazatour">
 
     <LinearLayout
         android:id="@+id/linearLayout25"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
-        android:background="#9d00ff"
+        android:background="#0011ff"
         android:gravity="center_horizontal"
         android:orientation="vertical" >
 
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:text="SUMMER"
         android:id="@+id/button35"
-        android:background="@drawable/button_shape2"
+        android:background="@drawable/button_shape17"
         android:layout_marginTop="10dp"
         android:textColor="#FFFFFF"/>
 
@@ -56,7 +57,7 @@
         android:layout_height="wrap_content"
         android:text="RAINY"
         android:id="@+id/button36"
-        android:background="@drawable/button_shape1"
+        android:background="@drawable/button_shape16"
         android:layout_marginTop="10dp"
         android:textColor="#FFFFFF"/>
 

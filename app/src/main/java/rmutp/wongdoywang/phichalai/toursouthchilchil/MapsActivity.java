@@ -83,7 +83,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Picasso.with(this).load(strImge).resize(480,200).into(imageView3);
 
         String strImge6 = getIntent().getStringExtra("Image1");
-        Log.d("safasfsaf", strImge6);
         Picasso.with(this).load(strImge6).resize(280,100).into(imageView6);
         imageView6.setOnClickListener(new View.OnClickListener() {
             @Override

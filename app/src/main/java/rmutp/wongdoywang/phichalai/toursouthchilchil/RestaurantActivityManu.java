@@ -661,7 +661,7 @@ public class RestaurantActivityManu extends AppCompatActivity {
             case "เกาะช้าง":
                 temp_sql = " _id >= 599 AND _id <= 601";
                 break;
-            case "เกาะพยาม":
+            case "เกาะพยาม ":
                 temp_sql = " _id >= 602 AND _id <= 604";
                 break;
             case "น้ำพุร้อนพรรั้ง":
@@ -909,27 +909,27 @@ public class RestaurantActivityManu extends AppCompatActivity {
                 break;
 
             // สถานที่ท่อเงที่ยวที่น่าสนใจ
-            case "เกาะไข่นอก":
+            case "เกาะไข่นอก ":
                 temp_sql = " _id >= 844 AND _id <= 846";
                 break;
-            case "เกาะลันตา":
+            case "เกาะลันตา ":
                 temp_sql = " _id >= 844 AND _id <= 846";
                 break;
 
             //ฤดู
-            case "หมู่เกาะสิมิลัน":
+            case "หมู่เกาะสิมิลัน ":
                 temp_sql = " _id >= 844 AND _id <= 846";
                 break;
-            case "อุทยานแห่งชาติตะรุเตา":
+            case "อุทยานแห่งชาติตะรุเตา ":
                 temp_sql = " _id >= 844 AND _id <= 846";
                 break;
-            case "น้ำตกพะโต๊ะ":
+            case "น้ำตกพะโต๊ะ ":
                 temp_sql = " _id >= 844 AND _id <= 846";
                 break;
-            case "หาดสมิหลา":
+            case "หาดสมิหลา ":
                 temp_sql = " _id >= 844 AND _id <= 846";
                 break;
-            case "เกาะราวี":
+            case "เกาะราวี ":
                 temp_sql = " _id >= 844 AND _id <= 846";
                 break;
         }
@@ -966,7 +966,8 @@ public class RestaurantActivityManu extends AppCompatActivity {
         }
         cursor.close();
 
-        MyAdpter myAdapter = new MyAdpter(this, restaurantname);
+       // MyAdpter myAdapter = new MyAdpter(this, restaurantname);
+        MyAdpter2 myAdapter = new MyAdpter2(this, restaurantname,restaurantimge);
         listView.setAdapter(myAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

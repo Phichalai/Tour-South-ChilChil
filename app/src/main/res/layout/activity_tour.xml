@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beerza"
+    android:background="@drawable/zazazazatour"
     tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.TourActivity">
 
     <LinearLayout
@@ -16,59 +16,67 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text="New Text"
-            android:id="@+id/textView8"
-            android:textSize="@dimen/h1"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/text"
+            android:layout_marginTop="5dp"
             android:shadowColor="#333333"
             android:shadowDx="3"
             android:shadowDy="2"
             android:shadowRadius="1"
-            android:layout_marginTop="5dp" />
+            android:text="New Text"
+            android:textColor="@color/text"
+            android:textSize="@dimen/h1" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="250dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ค้นหาสถานที่"
-        android:imeOptions="actionDone"
-        android:textColorHint="@color/text"
-        android:layout_marginTop="65dp"
-        android:layout_marginLeft="20dp" />
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="280dp"
-        android:text="ค้นหา"
-        android:background="#168eff"
-        android:textColor="#ffffff"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="65dp" />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="ค้นหาสถานที่"
+            android:imeOptions="actionDone"
+            android:textColorHint="@color/text" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#168eff"
+            android:text="ค้นหา"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="120dp"
         android:background="#70ffffff"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp" >
+        android:padding="20dp">
 
         <ListView
             android:id="@+id/listView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentBottom="false"
             android:layout_alignParentLeft="false"
             android:layout_alignParentTop="false"

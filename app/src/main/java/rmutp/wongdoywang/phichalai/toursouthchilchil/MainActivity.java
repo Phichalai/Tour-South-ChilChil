@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void synJSONtoSQLite() {
 
+        // gig
         StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy
                 .Builder().permitAll().build();
         StrictMode.setThreadPolicy(threadPolicy);
@@ -333,13 +334,6 @@ public class MainActivity extends AppCompatActivity {
         sqLiteDatabase.delete(MyManage.restaurant_table, null, null);
         sqLiteDatabase.delete(MyManage.season_table, null, null);
         sqLiteDatabase.delete(MyManage.travel_table, null, null);
-    }
-
-    private void testAddValue() {
-        myManage.addUser("user", "pass", "name", "email");
-        myManage.addTour("province", "district", "name", "Cat", "descrip", "Tumboon",
-                "Muban", "image", "Image1", "Image2", "add", "call", "open", "email", "price",
-                "lat", "lng", "point", "res", "hotel");
     }
 }
 

@@ -280,7 +280,7 @@ public class HotelmanuActivity extends AppCompatActivity {
                 case "อุทยานนกน้ำคลองลำซาน":
                     temp_sql = " _id >= 229 AND _id <= 231";
                     break;
-                case "เกาะเหลาเหลียง":
+                case "เกาะเหลาเหลียง ":
                     temp_sql = " _id >= 232 AND _id <= 234";
                     break;
                 case "เกาะสุกร":
@@ -649,7 +649,7 @@ public class HotelmanuActivity extends AppCompatActivity {
                 case "เกาะช้าง":
                     temp_sql = " _id >= 599 AND _id <= 601";
                     break;
-                case "เกาะพยาม":
+                case "เกาะพยาม ":
                     temp_sql = " _id >= 602 AND _id <= 604";
                     break;
                 case "น้ำพุร้อนพรรั้ง":
@@ -897,10 +897,10 @@ public class HotelmanuActivity extends AppCompatActivity {
                     break;
 
                 // สถานที่ท่อเงที่ยวที่น่าสนใจ
-                case "เกาะไข่นอก":
+                case "เกาะไข่นอก ":
                     temp_sql = " _id >= 844 AND _id <= 846";
                     break;
-                case "เกาะลันตา":
+                case "เกาะลันตา ":
                      temp_sql = " _id >= 844 AND _id <= 846";
                     break;
 
@@ -954,8 +954,11 @@ public class HotelmanuActivity extends AppCompatActivity {
         }
             cursor.close();
 
-            MyAdpter myAdapter = new MyAdpter(this, hotelname);
-            listView.setAdapter(myAdapter);
+          //  MyAdpter myAdapter = new MyAdpter(this, hotelname);
+
+        MyAdpter2 myAdapter = new MyAdpter2(this, hotelname,hotelimage);
+
+        listView.setAdapter(myAdapter);
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

@@ -29,8 +29,8 @@ public class RestaurantActivity extends AppCompatActivity {
         TextView TextView16 = (TextView) findViewById(R.id.textView16);
         TextView16.setText(getIntent().getStringExtra("restaurant1"));
 
-        ImageView ImageView5 = (ImageView) findViewById(R.id.imageView5);
-        Picasso.with(this).load(getIntent().getStringExtra("restaurant2")).resize(480, 200).into(ImageView5);
+        ImageView imageView5 = (ImageView) findViewById(R.id.imageView5);
+        Picasso.with(this).load(getIntent().getStringExtra("restaurant2")).resize(480, 200).into(imageView5);
         imageView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

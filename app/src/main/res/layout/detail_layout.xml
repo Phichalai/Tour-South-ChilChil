@@ -221,23 +221,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="Range"
-                    android:background="@drawable/button_shape"
-                    android:textColor="#ffffff" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ร้านอาหาร"
-                    android:id="@+id/button4"
-                    android:textSize="20dp"
-                    android:background="@drawable/button_shape3"
+                    android:background="@drawable/button_shape7"
                     android:textColor="#ffffff" />
 
             </LinearLayout>
@@ -255,6 +239,22 @@
                     android:textSize="20dp"
                     android:background="@drawable/button_shape2"
                     android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ร้านอาหาร"
+                    android:id="@+id/button4"
+                    android:textSize="20dp"
+                    android:background="@drawable/button_shape3"
+                    android:textColor="#ffffff" />
+
             </LinearLayout>
 
         </LinearLayout>

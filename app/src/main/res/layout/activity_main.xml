@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beerza"
-    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.MainActivity">
+    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.MainActivity"
+    android:background="@drawable/zasingin2">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -17,25 +17,21 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
-        android:background="#70ffffff"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
+        android:background="#56ffffff">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:layout_marginTop="50dp"
             android:contentDescription="photo"
-            android:src="@drawable/south" />
+            android:src="@drawable/south"
+            android:layout_marginTop="50dp" />
 
         <EditText
             android:id="@+id/editText"
@@ -43,7 +39,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:hint="Username "
             android:inputType="text"
             android:paddingLeft="5dp"

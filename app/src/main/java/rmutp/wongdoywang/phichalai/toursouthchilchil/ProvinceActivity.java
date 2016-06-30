@@ -20,9 +20,25 @@ public class ProvinceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_province);
 
+        int[] resId = {R.drawable.kabi
+                , R.drawable.chompron
+                , R.drawable.trung
+                , R.drawable.nakronsri
+                , R.drawable.naratiwad
+                , R.drawable.pattani
+                , R.drawable.zapang
+                , R.drawable.zapat
+                , R.drawable.zaphukat
+                , R.drawable.zayala
+                , R.drawable.zaranong
+                , R.drawable.zasongkar
+                , R.drawable.zasatun
+                , R.drawable.zasurat};
+
         //create ListView
         final String[] provinceStrings = getResources().getStringArray(R.array.province);
-        MyAdpter myAdpter = new MyAdpter(this, provinceStrings);
+        MyAdpter1 myAdpter = new MyAdpter1(this, provinceStrings,resId);
+
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(myAdpter);
 

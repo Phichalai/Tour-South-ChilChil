@@ -26,7 +26,7 @@ public class SeasonwinterActivity extends AppCompatActivity {
         //Bind Widget
         listView = (ListView) findViewById(R.id.listView3);
         tourTextView = (TextView) findViewById(R.id.textView8);
-        tourTextView.setText("SUMMER");
+        tourTextView.setText("WINTER");
 
         //Show List Tour
         showListTour();

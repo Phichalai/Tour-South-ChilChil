@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beerza"
     android:orientation="vertical"
-    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.TourActivity">
+    tools:context="rmutp.wongdoywang.phichalai.toursouthchilchil.TourActivity"
+    android:background="@drawable/zazazazatour">
 
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
-        android:background="#9d00ff"
+        android:background="#00aaff"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -31,11 +31,26 @@
             android:textSize="@dimen/h1" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listView3"
+    <LinearLayout
+        android:id="@+id/linearLayout31"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp" />
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="#70ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="45dp" >
+
+        <ListView
+            android:id="@+id/listView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp" />
+    </LinearLayout>
 
 
 </LinearLayout>

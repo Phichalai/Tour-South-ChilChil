@@ -65,12 +65,11 @@ public class MyAdpter2 extends BaseAdapter{
         Bitmap bmp = null;
         try {
             bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        ImageView imageView2 = (ImageView) view1.findViewById(R.id.imageView2);
+        de.hdodenhof.circleimageview.CircleImageView imageView2 = (de.hdodenhof.circleimageview.CircleImageView) view1.findViewById(R.id.imageView2);
         imageView2.setImageBitmap(bmp);
         
         return view1;
